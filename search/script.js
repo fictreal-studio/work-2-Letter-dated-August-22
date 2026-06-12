@@ -14,19 +14,19 @@ const searchEntries = [
   {
     keywords: ['近藤銅一'],
     title: '近藤銅一｜よろずや代表インタビュー',
-    url: '/article/kondo',
+    url: '/kondo',
     description: '人助けを仕事に変えた男。よろずや代表・近藤銅一が語る、依頼と記録への考え方。',
   },
   {
     keywords: ['東翔琉'],
     title: '東翔琉｜東建設代表インタビュー',
-    url: '/article/kakeru',
+    url: '/Kakeru',
     description: '「我らの未来は過去にあり」。富谷県永海市で東建設を率いる東翔琉の思想と家族観。',
   },
   {
     keywords: ['仁士守仁'],
     title: '仁士守仁｜ウェストテレビ代表インタビュー',
-    url: '/article/morihito',
+    url: '/Morihito',
     description: '「常に変化し、最先端であり続ける。」石山県服部市から事業を広げた仁士守仁の歩み。',
   },
   {
