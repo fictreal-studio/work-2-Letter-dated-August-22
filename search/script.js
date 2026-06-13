@@ -63,6 +63,13 @@ const searchEntries = [
     restricted: true,
   },
   {
+    keywords: ['日記', '二人の日記', '二人の日記②', '育児記録', '大樹', '辰也', '鏡花', '東辰也', '仁士鏡花'],
+    title: '二人の日記②',
+    url: '../diary/couple-2/',
+    description: '辰也と鏡花が知られずの村で残した共有育児記録。大樹が生まれた日の記録が含まれている。',
+    restricted: true,
+  },
+  {
     keywords: ['日記', '鏡花', '仁士鏡花', '大樹'],
     title: '鏡花の日記②',
     url: '../diary/kyoka-2/',
