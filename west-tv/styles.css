@@ -27,6 +27,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   margin: 0;
   color: var(--ink);
   font-family:
@@ -245,10 +246,11 @@ main,
 .hero h1 {
   max-width: 10em;
   margin: 0;
-  font-size: clamp(3.1rem, 7.5vw, 6.7rem);
+  font-size: clamp(2.8rem, 7vw, 6.1rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.08em;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
@@ -875,28 +877,9 @@ main,
   }
 }
 
-@media (max-width: 760px) {
-  html {
-    scroll-padding-top: 112px;
-  }
-
-  .fiction-header {
-    display: block;
-    min-height: 46px;
-    padding: 0.36rem 0.85rem;
-    text-align: left;
-  }
-
-  .fiction-header__text {
-    margin-top: 0.05rem;
-  }
-
+@media (max-width: 900px) {
   .site-header {
-    top: 46px;
-    min-height: 66px;
     width: min(100% - 1rem, 1180px);
-    margin-top: 46px;
-    border-radius: 0 0 22px 22px;
   }
 
   .menu-button {
@@ -905,7 +888,7 @@ main,
 
   .site-nav {
     position: fixed;
-    top: 112px;
+    top: 118px;
     right: 0.65rem;
     left: 0.65rem;
     display: grid;
@@ -934,6 +917,44 @@ main,
     justify-content: flex-start;
     width: 100%;
     padding-inline: 1rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .hero__visual {
+    min-height: 30rem;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 112px;
+  }
+
+  .fiction-header {
+    display: block;
+    min-height: 46px;
+    padding: 0.36rem 0.85rem;
+    text-align: left;
+  }
+
+  .fiction-header__text {
+    margin-top: 0.05rem;
+  }
+
+  .site-header {
+    top: 46px;
+    min-height: 66px;
+    width: min(100% - 1rem, 1180px);
+    margin-top: 46px;
+    border-radius: 0 0 22px 22px;
+  }
+
+  .site-nav {
+    top: 112px;
   }
 
   main,
@@ -969,7 +990,7 @@ main,
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 15vw, 4.8rem);
+    font-size: clamp(2.45rem, 14vw, 4.3rem);
   }
 
   .hero__visual {
