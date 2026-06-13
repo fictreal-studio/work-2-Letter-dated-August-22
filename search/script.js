@@ -69,13 +69,6 @@ const searchEntries = [
     description: '母となった鏡花が、病と向き合いながら残した記録。大樹への思いが中心になっている。',
     restricted: true,
   },
-  {
-    keywords: ['東大樹'],
-    title: '関連記録が制限されています',
-    url: '../west-tv/',
-    description: 'この人物に関する詳細記録は、よろずや社内アーカイブの認証後に閲覧できます。',
-    restricted: true,
-  },
 ];
 
 const form = document.querySelector('#search-form');
