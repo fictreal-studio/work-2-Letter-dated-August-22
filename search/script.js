@@ -2,7 +2,7 @@ const searchEntries = [
   {
     keywords: ['よろずや'],
     title: 'よろずや｜どんな依頼も、記録に残す',
-    url: 'yorozuya/',
+    url: '../yorozuya/',
     description: '石山県尾羽市に拠点を置く総合依頼窓口。引っ越し、代筆、配達、記録整理など幅広い依頼に対応している。',
   },
   {
