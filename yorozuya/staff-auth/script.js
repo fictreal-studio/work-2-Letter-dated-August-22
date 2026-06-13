@@ -1,5 +1,5 @@
 const CORRECT_EMPLOYEE_CODE = 'YRZ-2060-0422';
-const ARCHIVE_URL = '/yorozuya/archive';
+const ARCHIVE_URL = '/yorozuya/archive/';
 const ERROR_MESSAGE = '社員番号を確認できませんでした。配属時の指示書をご確認ください。';
 
 const authForm = document.querySelector('#staff-auth-form');
