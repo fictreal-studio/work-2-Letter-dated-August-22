@@ -41,6 +41,14 @@ const searchEntries = [
     url: '../west-tv/',
     description: '1995年設立。テレビ、不動産、通信事業を横断する仁士家の中核企業。',
   },
+
+  {
+    keywords: ['社員用記録', '社員番号', 'アーカイブ', '達成書', 'archive auth required'],
+    title: 'ARCHIVE AUTH REQUIRED',
+    url: '../yorozuya/staff-auth/',
+    displayUrl: 'https://fictreal-studio/work-2-Letter-dated-August-22/…',
+    description: '社員用記録へのアクセスには認証が必要です。指示書に記載された社員番号を確認してください。',
+  },
   {
     keywords: ['日記', '辰也', '東辰也'],
     title: '辰也の日記',
@@ -82,14 +90,7 @@ const normalize = (value) => value.trim().toLowerCase();
 
 const createResultCard = (entry) => {
   const card = document.createElement('article');
-  card.className = entry.restricted ? 'result-card result-card--restricted' : 'result-card';
-
-  if (entry.restricted) {
-    const label = document.createElement('span');
-    label.className = 'restricted-label';
-    label.textContent = 'ARCHIVE AUTH REQUIRED';
-    card.append(label);
-  }
+  card.className = 'result-card';
 
   const title = document.createElement('h3');
   title.className = 'result-title';
@@ -114,7 +115,7 @@ const createResultCard = (entry) => {
   if (entry.url) {
     const url = document.createElement('p');
     url.className = 'result-url';
-    url.textContent = entry.url;
+    url.textContent = entry.displayUrl || entry.url;
     card.append(url);
   }
 
