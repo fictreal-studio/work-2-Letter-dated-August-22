@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>辰也の日記｜制限記録</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
-    <link rel="stylesheet" href="/route-pages.css" />
+    <title>東辰也の日記</title>
+    <meta
+      name="description"
+      content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。東辰也が逃げる前に残した個人日記の復元データ。"
+    />
+    <link rel="stylesheet" href="/diary/tatsuya/styles.css" />
     <script src="/route-pages.js" defer></script>
   </head>
   <body>
@@ -14,17 +17,206 @@
       <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">PRIVATE DIARY</p>
-        <h1 id="page-title">辰也の日記</h1>
-        <p class="lead">東辰也が残した個人的な記録を、達成書作成のために参照する架空日記ページです。</p>
-        
-<form id="diary-tatsuya-form" class="auth-form"><label for="diary-tatsuya-pass">パスワード</label><input id="diary-tatsuya-pass" autocomplete="off" inputmode="numeric" placeholder="8桁" /><button type="submit">日記を開く</button><p class="auth-message" aria-live="polite"></p></form>
-<section id="record-open" class="section-block"><h2>記録抜粋</h2><ul class="timeline"><li>「俺が守る」という言葉は、家に対してではなく、鏡花とこれから作る生活へ向けられていた。</li><li>2024/04/05、初デートの記録。</li><li>次の照合対象：鏡花の日記①。</li></ul></section>
-<nav class="nav-row" aria-label="導線"><a class="button-link" href="/diary/kyoka-1/">鏡花の日記①へ</a><a class="button-link button-link--ghost" href="/archive/log-nishi/">仁士家メイドログへ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
-      </article>
+
+    <main class="diary-shell" aria-labelledby="page-title">
+      <nav class="top-link" aria-label="補助導線">
+        <a href="/yorozuya/archive/">アーカイブへ戻る</a>
+      </nav>
+
+      <section class="diary-hero">
+        <p class="diary-kicker">PRIVATE DIARY / RESTORED DATA</p>
+        <h1 id="page-title">東辰也の日記</h1>
+        <p class="diary-subtitle">誰にも見せるつもりのなかった、逃げる前の記録。</p>
+        <p class="diary-intro">
+          この記録は、よろずや依頼アーカイブ内に保管されていた個人日記の復元データです。<br />
+          一部の表記揺れ・空白・未送信メモは、原文の雰囲気を残して表示しています。
+        </p>
+        <dl class="diary-meta" aria-label="復元データ概要">
+          <div><dt>記録者</dt><dd>東辰也（あずま たつや）</dd></div>
+          <div><dt>照合キー</dt><dd>生年月日記録 / 2001.09.13</dd></div>
+          <div><dt>収録期間</dt><dd>2024.02.06 - 2024.07.12</dd></div>
+        </dl>
+      </section>
+
+      <section class="auth-panel" aria-labelledby="auth-title">
+        <div>
+          <p class="panel-label">LOCKED ARCHIVE</p>
+          <h2 id="auth-title">日記データを開く</h2>
+          <p>
+            東家側ログに記録されていた本人情報と照合してください。解錠後、復元された本文の先頭へ移動します。
+          </p>
+        </div>
+        <form id="diary-tatsuya-form" class="auth-form">
+          <label for="diary-tatsuya-pass">パスワード</label>
+          <input
+            id="diary-tatsuya-pass"
+            autocomplete="off"
+            inputmode="numeric"
+            placeholder="8桁"
+          />
+          <button type="submit">日記を開く</button>
+          <p class="auth-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="record-open" class="diary-record" aria-label="東辰也の日記本文">
+        <article class="diary-entry">
+          <header><time datetime="2024-02-06">2024/02/06</time><h2>雪の日</h2></header>
+          <div class="entry-body">
+            <p>今日は変な日だった。</p>
+            <p>朝から親父に呼ばれて、東建設の会議に顔を出した。<br />また「お前は東家の人間だ」「家の看板を背負え」って話。<br />わかってます。わかってるんですけど、たぶん俺は、その言葉を聞くたびに自分の体がちょっとずつ他人のものになっていく感じがする。</p>
+            <p>帰りに雪が降ってきて、適当に入ったカフェでぼーっとしてた。<br />そしたら、知らない女の人に「すみません、あったかい飲み物って何がありますか」って聞かれた。</p>
+            <p>俺、店員じゃないです。</p>
+            <p>そう言ったら、その人めちゃくちゃ焦って、でもすぐ笑った。<br />その笑い方が、なんか変だった。<br />強いというか、まっすぐというか。<br />俺の周りにはいないタイプだった。</p>
+            <p>名前は鏡花さん。<br />仁士鏡花。</p>
+            <p>その名前を聞いた瞬間、ほんとは少し固まった。<br />仁士家。<br />うちとずっと揉めてる家。</p>
+            <p>でも、彼女はそんなこと知らないみたいに、普通に話してくれた。<br />いや、知ってたのかもしれない。<br />知ってて、あえて普通にしてくれたのかもしれない。</p>
+            <p>帰り際に連絡先を交換した。<br />俺、何やってるんだろうな。</p>
+            <p>でも、久しぶりに息がしやすかった。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header><time datetime="2024-02-09">2024/02/09</time><h2>連絡</h2></header>
+          <div class="entry-body">
+            <p>鏡花さんから毎日連絡が来る。</p>
+            <p>「今日はプリンを食べました」<br />「カフェの窓際が寒すぎました」<br />「辰也さんって、ちゃんと笑うんですね」</p>
+            <p>最後のやつ、ちょっと失礼じゃないですか。<br />でも、なんか嬉しかった。</p>
+            <p>俺はいつも、東家の息子として扱われる。<br />東建設の跡取り。<br />翔琉の息子。<br />次の代表候補。<br />ちゃんとしろ、軽く見られるな、弱みを見せるな。</p>
+            <p>でも鏡花さんは、俺のことをただの辰也として見てくる。<br />それが怖い。<br />怖いけど、うれしい。</p>
+            <p>俺はたぶん、自分が何を好きで、何が嫌で、どこに行きたいのかも、ちゃんと考えたことがなかった。<br />ずっと決められてきたから。<br />それが楽だったから。</p>
+            <p>でも最近、連絡が来るたびに思う。</p>
+            <p>俺、ほんとは誰になりたいんだろう。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header><time datetime="2024-04-05">2024/04/05</time><h2>桜</h2></header>
+          <div class="entry-body">
+            <p>今日は鏡花さんと公園に行った。</p>
+            <p>桜がすごかった。<br />いや、桜もすごかったけど、鏡花さんがずっと楽しそうで、それを見るのが一番よかった。</p>
+            <p>写真を撮った。<br />俺のカメラで。<br />鏡花さんは「撮るならちゃんとかわいく撮ってくださいね」と言ってたけど、正直、どう撮ってもかわいかった。</p>
+            <p>こういうことを書く自分が気持ち悪い。<br />でも、日記だから許してください。</p>
+            <p>彼女は歩きながら、いろんな話をしてくれた。<br />家族のこと、仕事のこと、カフェのこと、将来行きたい場所のこと。<br />俺はあんまり自分の話をしなかった。<br />何を話せばいいかわからなかった。</p>
+            <p>でも帰り際に、鏡花さんが言った。</p>
+            <p>「辰也さんは、何かを我慢してる顔をしますね」</p>
+            <p>びっくりした。<br />そんなこと、誰にも言われたことなかった。</p>
+            <p>俺は笑ってごまかした。<br />ごまかしたけど、本当は泣きそうだった。</p>
+            <p>俺のこと、ちゃんと見てくれる人がいる。<br />それだけで、こんなに苦しいんだな。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header><time datetime="2024-05-29">2024/05/29</time><h2>誕生日</h2></header>
+          <div class="entry-body">
+            <p>今日は鏡花さんの誕生日。</p>
+            <p>一緒にウィンドウショッピングをした。<br />レストランでご飯を食べて、靴を見て、服を見て、ゲーセンに行って、プリクラを撮って、最後にカフェに入った。</p>
+            <p>あの人、ずっと笑ってた。<br />俺もたぶん、ずっと笑ってた。</p>
+            <p>途中で「辰也さん、今日なんか高校生みたいですね」って言われた。<br />悪口ですかって聞いたら、「いい意味です」って。<br />いい意味の高校生ってなんだよ。</p>
+            <p>でも、そのあと最悪なことがあった。<br />東家の関係者に見られた。<br />たぶん、もう家に伝わる。</p>
+            <p>鏡花さんはすぐ気づいて、「大丈夫ですか」と聞いてくれた。<br />俺は大丈夫って言った。<br />でも大丈夫じゃない。</p>
+            <p>大丈夫じゃないけど、俺は今日、初めて思った。</p>
+            <p>この人を守りたい。</p>
+            <p>口だけなら何回でも言える。<br />俺が守る。<br />そんなの簡単だ。</p>
+            <p>でも本当に守るって、たぶん、何かを捨てることなんだと思う。<br />俺はまだ、その覚悟ができてない。</p>
+            <p>情けない。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header><time datetime="2024-06-18">2024/06/18</time><h2>親父</h2></header>
+          <div class="entry-body">
+            <p>親父に呼ばれた。</p>
+            <p>「彼女と会うな」</p>
+            <p>それだけだった。<br />理由はいくらでもあった。<br />仁士家の人間だから。<br />東家の立場があるから。<br />会社に迷惑がかかるから。<br />お前は自由に恋愛していい立場じゃないから。</p>
+            <p>わかってます。<br />全部わかってます。</p>
+            <p>でも、俺は初めて親父の言葉を聞いて、心の中で「嫌だ」と思った。<br />声には出せなかった。<br />出したら終わると思った。</p>
+            <p>親父は怖い。<br />いや、親父そのものが怖いんじゃなくて、親父の後ろにある東家が怖い。<br />歴史とか、土地とか、会社とか、従業員とか、親戚とか、そういう全部が俺の上に乗ってくる。</p>
+            <p>俺は逃げたい。<br />逃げたいって思った。</p>
+            <p>でも鏡花さんを置いて逃げるのは違う。<br />それは絶対に違う。</p>
+            <p>俺は弱い。<br />追い詰められたら逃げる。<br />でも、逃げるなら一人じゃなくて、守るために逃げたい。</p>
+            <p>こんなの、言い訳かな。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header><time datetime="2024-07-10">2024/07/10</time><h2>再会</h2></header>
+          <div class="entry-body">
+            <p>交流会で鏡花さんに会った。</p>
+            <p>会わないようにしてた。<br />連絡も減らしてた。<br />俺が近づくと迷惑がかかると思ったから。</p>
+            <p>でも、鏡花さんは怒らなかった。<br />ただ、少しだけ寂しそうに笑って、<br />「辰也さんが決めたことなら、ちゃんと聞きます」<br />と言った。</p>
+            <p>その瞬間、もう無理だと思った。</p>
+            <p>俺はこの人に、ずっと我慢させるのか。<br />東家の都合で、仁士家の都合で、周りの顔色で、この人の人生まで曲げるのか。</p>
+            <p>違う。<br />それは違う。</p>
+            <p>俺は、鏡花さんに言った。</p>
+            <p>「俺と一緒に来てください」</p>
+            <p>プロポーズみたいになった。<br />いや、ほぼプロポーズだったと思う。<br />準備も指輪も何もない。<br />言葉だけ。<br />最低かもしれない。</p>
+            <p>でも鏡花さんは笑った。<br />「どこへですか」って聞いた。</p>
+            <p>俺は答えられなかった。<br />場所なんて決まってなかったから。</p>
+            <p>それでも、鏡花さんは言った。</p>
+            <p>「辰也さんが本気なら、私は行きます」</p>
+            <p>俺はたぶん、あの瞬間に初めて、東家の跡取りじゃなくなった。<br />ただの東辰也になった。</p>
+            <p>怖い。<br />めちゃくちゃ怖い。</p>
+            <p>でも、俺が守る。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header><time datetime="2024-07-11">2024/07/11</time><h2>準備</h2></header>
+          <div class="entry-body">
+            <p>明日、出る。</p>
+            <p>荷物は少ない。<br />笑えるくらい少ない。<br />東家の人間として持たされてきたものは山ほどあるのに、自分で選んで持っていきたいものはほとんどなかった。</p>
+            <p>カメラ。<br />少しの服。<br />古いノート。<br />仕事用のPC。</p>
+            <p>それだけ。</p>
+            <p>よろずやの人が動いてくれている。<br />どうしてこんなに手際がいいのか、正直まだよくわからない。<br />でも、あの人たちは余計なことを聞かない。<br />「どこへ行くか」より、「本当に行きたいか」を確認してくる。</p>
+            <p>俺は行きたい。<br />鏡花さんと生きたい。</p>
+            <p>でも親父と母さんのことを考えると、胸が変になる。<br />俺は親不孝だ。<br />それは間違いない。</p>
+            <p>親父は怒るだろう。<br />母さんは泣くかもしれない。<br />東家は仁士家を責める。<br />仁士家は東家を責める。</p>
+            <p>俺たちが逃げたあと、全部ぐちゃぐちゃになると思う。</p>
+            <p>それでも行く。</p>
+            <p>これが正しいかはわからない。<br />でも、ここに残って鏡花さんを失う方が、俺には間違ってる。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry diary-entry--final">
+          <header><time datetime="2024-07-12">2024/07/12</time><h2>逃げる日</h2></header>
+          <div class="entry-body">
+            <p>今日、東家を出る。</p>
+            <p>逃げる。<br />この言葉はたぶん、俺に似合ってる。</p>
+            <p>でも、今日だけは情けない逃げじゃないと思いたい。<br />守るために逃げる。<br />生きるために逃げる。<br />自分の人生を、自分で選ぶために逃げる。</p>
+            <p>鏡花さんに会ったら、まず謝る。<br />こんな道に巻き込んでごめんって。<br />それから言う。</p>
+            <p>俺が守る。</p>
+            <p>何回も言ってきたけど、今日からは本当にそうする。<br />家とか、名前とか、会社とか、全部より先に、あの人を守る。</p>
+            <p>もし子どもができたら、ちゃんと遊ぶ。<br />写真を撮る。<br />一緒に走る。<br />怒るときは怒るけど、怖がらせるためには怒らない。<br />東家で俺が言えなかったことを、ちゃんと言える子にしたい。</p>
+            <p>いつか親父にも会いに行きたい。<br />「俺は幸せです」と言いたい。<br />母さんにも、ちゃんと謝りたい。</p>
+            <p>今はまだ無理です。<br />すみません。</p>
+            <p>でも、いつか必ず。</p>
+            <p>だから今日は行く。</p>
+            <p>俺は、俺の家族を作りに行く。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="related-record" aria-labelledby="related-title">
+        <p class="panel-label">RELATED REQUEST</p>
+        <h2 id="related-title">関連する依頼記録</h2>
+        <p>
+          この日記の最終更新日と同じ日付で、よろずやの依頼アーカイブに未整理の引っ越し依頼が残されています。
+        </p>
+        <dl class="request-meta">
+          <div><dt>依頼日</dt><dd>2024/07/12</dd></div>
+          <div><dt>依頼種別</dt><dd>移住支援・身辺整理</dd></div>
+          <div><dt>記録状態</dt><dd>未整理</dd></div>
+        </dl>
+        <a class="primary-link" href="/yorozuya/archive/#moving-request">引っ越し依頼の記録を見る</a>
+      </section>
     </main>
+
+    <footer class="diary-footer">
+      <p>東辰也の日記 / 復元表示</p>
+      <p>
+        このページは創作作品内の架空Webページです。実在の人物・団体・企業・地域・手続きとは関係ありません。
+      </p>
+    </footer>
   </body>
 </html>
