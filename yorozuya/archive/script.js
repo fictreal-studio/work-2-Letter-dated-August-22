@@ -1,11 +1,11 @@
 const RECORDS = {
-  azuma: { password: '1885', url: '/archive/log-azuma/' },
-  nishi: { password: '1990', url: '/archive/log-nishi/' },
-  tatsuya: { password: '20010913', url: '/diary/tatsuya/' },
-  kyokaEarly: { password: '20030527', url: '/diary/kyoka-1/' },
-  couple: { password: '20240712', url: '/diary/couple/' },
-  kyokaLate: { password: '20250822', url: '/diary/kyoka-2/' },
-  letters: { password: '20380822', url: '/archive/letters/' },
+azuma: { password: '1885', url: '../../archive/log-azuma/' },
+nishi: { password: '1990', url: '../../archive/log-nishi/' },
+tatsuya: { password: '20010913', url: '../../diary/tatsuya/' },
+kyokaEarly: { password: '20030527', url: '../../diary/kyoka-1/' },
+couple: { password: '20240712', url: '../../diary/couple/' },
+kyokaLate: { password: '20250822', url: '../../diary/kyoka-2/' },
+letters: { password: '20380822', url: '../../archive/letters/' },
 };
 
 const state = {
