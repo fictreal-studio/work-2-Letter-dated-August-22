@@ -1,11 +1,12 @@
 const RECORDS = {
 azuma: { password: '1885', url: '../../archive/log-azuma/', hint: 'ヒント：東家が今の形で歩み始めた年を確認してください。' },
-nishi: { password: '1990', url: '../../archive/log-nishi/', hint: 'ヒント：ウェストテレビの会社概要に記された設立年を確認してください。' },
+nishi: { password: '1995', url: '../../archive/log-nishi/', hint: 'ヒント：ウェストテレビの会社概要に記された設立年を確認してください。' },
 tatsuya: { password: '20010913', url: '../../diary/tatsuya/', hint: 'ヒント：東家の内部情報に残された、辰也が生まれた日の記録を確認してください。' },
 kyokaEarly: { password: '20030527', url: '../../diary/kyoka-1/', hint: 'ヒント：仁士家の内部情報に残された、鏡花が生まれた日の記録を確認してください。' },
 couple: { password: '20240712', url: '../../diary/couple/', hint: 'ヒント：二人が家を離れ、新しい生活へ向かった日を確認してください。' },
 kyokaLate: { password: '20250822', url: '../../diary/kyoka-2/', hint: 'ヒント：二人にとって、家族が一人増えた日の記録を確認してください。' },
-letters: { password: '20380822', url: '../../archive/letters/', hint: 'ヒント：鏡花の時間が止まり、大樹への手紙が始まった日を確認してください。' },
+letters: { password: '20380822', url: '../../archive/letters/', hint: 'ヒント：最初の手紙が届いた日。母がいなくなった日。' },
+firstLetters: { password: '20380822', url: '../../archive/letters-2/', hint: 'ヒント：鏡花さんが眠った日。8桁の数字で入力してください。' },
 };
 
 const state = {

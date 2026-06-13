@@ -1003,3 +1003,16 @@ main,
     margin-bottom: 1.4rem;
   }
 }
+
+/* 2026-06-13: tune oversized body/support text */
+.hero__lead,
+.section-heading__text,
+.business-card p,
+.program-card__body p,
+.archive-profile p,
+.news-card p,
+.company-grid dd,
+.culture-card p {
+  font-size: clamp(0.88rem, 1.2vw, 1rem);
+  line-height: 1.85;
+}

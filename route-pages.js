@@ -12,16 +12,10 @@ const routePasswords = {
     ng: 'パスワードが一致しません。東建設の創業年を確認してください。',
   },
   'log-nishi-form': {
-    expected: '1990',
+    expected: '1995',
     success: '/archive/log-nishi/#record-open',
     ok: '認証しました。仁士家メイドログを表示します。',
     ng: 'パスワードが一致しません。ウェストテレビの設立年を確認してください。',
-  },
-  'letters-form': {
-    expected: '20380822',
-    success: '/archive/letters/#record-open',
-    ok: '認証しました。手紙記録を表示します。',
-    ng: 'パスワードが一致しません。鏡花の没日を確認してください。',
   },
 };
 

@@ -1,22 +1,26 @@
-const nextRecordForm = document.querySelector('#next-record-form');
+const form = document.querySelector('#couple-unlock-form');
+const input = document.querySelector('#couple-password');
+const message = document.querySelector('#couple-lock .auth-message');
+const lock = document.querySelector('#couple-lock');
+const content = document.querySelector('[data-protected-content]');
+const PASSWORD = '20240712';
 
-if (nextRecordForm) {
-  const input = nextRecordForm.querySelector('#next-record-code');
-  const message = nextRecordForm.querySelector('.auth-message');
+function openDiary() {
+  if (lock) lock.hidden = true;
+  if (content) content.hidden = false;
+  sessionStorage.setItem('coupleDiaryUnlocked', 'true');
+}
 
-  nextRecordForm.addEventListener('submit', (event) => {
+if (form) {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    if (!input) return;
-
-    if (input.value.trim() === '20250822') {
-      if (message) message.textContent = '日付を確認しました。鏡花の日記②へ移動します。';
-      window.setTimeout(() => {
-        window.location.href = '/diary/kyoka-2/';
-      }, 360);
+    if (input && input.value.trim() === PASSWORD) {
+      if (message) message.textContent = '';
+      openDiary();
       return;
     }
-
     if (message) message.textContent = '記録と日付をもう一度確認してください。';
   });
 }
+
+if (sessionStorage.getItem('coupleDiaryUnlocked') === 'true') openDiary();

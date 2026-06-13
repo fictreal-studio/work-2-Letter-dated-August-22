@@ -4,27 +4,84 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>手紙記録｜制限記録</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
+    <title>手紙記録｜LETTER ARCHIVE</title>
+    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空の手紙アーカイブです。" />
     <link rel="stylesheet" href="/route-pages.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="/route-pages.js" defer></script>
+    <script src="./script.js" defer></script>
   </head>
-  <body>
+  <body class="letters-page">
     <header class="fiction-header" aria-label="フィクション表記">
       <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">LETTER ARCHIVE</p>
-        <h1 id="page-title">手紙記録</h1>
-        <p class="lead">仁士鏡花が東大樹へ残した手紙に関する、よろずやアーカイブ内の架空記録ページです。</p>
-        
-<form id="letters-form" class="auth-form"><label for="letters-pass">パスワード</label><input id="letters-pass" autocomplete="off" inputmode="numeric" placeholder="8桁" /><p class="password-hint">ヒント：鏡花の時間が止まり、大樹への手紙が始まった日を確認してください。</p><button type="submit">手紙記録を開く</button><p class="auth-message" aria-live="polite"></p></form>
-<section id="record-open" class="section-block"><h2>記録抜粋</h2><ul class="timeline"><li>2038/08/22、鏡花の死。以後、毎年手紙が届く。</li><li>手紙は大樹の誕生日と、鏡花の命日が重なる日に届き続けた。</li><li>2070/08/22、最後の手紙。</li><li>残る作業：未作成だった達成書の下書き。</li></ul></section>
-<nav class="nav-row" aria-label="導線"><a class="button-link" href="/archive/completion-report/">達成書作成ページへ</a><a class="button-link button-link--ghost" href="/diary/kyoka-2/">鏡花の日記②へ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
-      </article>
+
+    <main class="letter-shell" aria-labelledby="page-title">
+      <section class="letter-hero">
+        <div>
+          <p class="letter-kicker">LETTER ARCHIVE</p>
+          <h1 id="page-title">手紙記録</h1>
+          <p class="delivery-label">配送記録：毎年8月22日</p>
+        </div>
+        <a class="return-link" href="/yorozuya/archive/">社員用記録へ戻る</a>
+      </section>
+
+      <section class="intro-card" aria-label="記録説明">
+        <p>この記録は、よろずや社内アーカイブに保管されていた手紙配送記録です。<br />配送者の記録は残されていません。<br />残されているのは、毎年八月二十二日に届けられた手紙の写しだけです。</p>
+      </section>
+
+      <section id="lock-panel" class="lock-panel" aria-labelledby="lock-title">
+        <div class="envelope-mark" aria-hidden="true"></div>
+        <div class="lock-copy">
+          <p class="lock-kicker">SEALED LETTER BOX</p>
+          <h2 id="lock-title">封緘された手紙箱</h2>
+          <p>閲覧には、手紙配送記録に紐づく八桁の日付が必要です。</p>
+        </div>
+        <form id="letters-form" class="auth-form">
+          <label for="letters-pass">記録解錠日付</label>
+          <input id="letters-pass" name="letters-pass" autocomplete="off" inputmode="numeric" pattern="[0-9]*" maxlength="8" placeholder="8桁の日付" />
+          <p class="password-hint">ヒント：最初の手紙が届いた日。母がいなくなった日。</p>
+          <button type="submit">手紙記録を開く</button>
+          <p id="auth-message" class="auth-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="archive-panel" class="archive-panel" hidden aria-label="解錠後の手紙アーカイブ">
+        <div class="archive-status">
+          <p>開封済み記録：2039年8月22日〜2070年8月22日</p>
+          <p>保管形態：便箋写し / 年次配送控え</p>
+        </div>
+        <div class="archive-layout">
+          <aside class="timeline-panel" aria-label="手紙年表">
+            <div class="timeline-heading">
+              <span>年表</span>
+              <small>2039–2070</small>
+            </div>
+            <div id="letter-list" class="letter-list" role="listbox" aria-label="手紙一覧"></div>
+          </aside>
+
+          <article id="letter-card" class="letter-card" aria-live="polite">
+            <div class="paper-meta">
+              <p id="letter-date"></p>
+              <p id="letter-age"></p>
+            </div>
+            <h2 id="letter-title"></h2>
+            <div id="letter-body" class="letter-body"></div>
+            <a class="letter-completion-link" href="/archive/completion-report/">達成書を作る</a>
+            <section id="final-note" class="final-note" hidden>
+              <p>配送記録は、2070年8月22日をもって終了。<br />以後、同依頼に関する追加配送記録は確認されていません。</p>
+              <p class="final-note__small">けれど、手紙が終わっただけで、愛が終わったわけではない。</p>
+              <a class="complete-link" href="/archive/completion-report/">達成書を作成する</a>
+            </section>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer class="letters-footer">
+      <p>このページは創作作品内の架空アーカイブです。登場する人物・団体・地名・記録はすべて架空です。</p>
+      <p>FICTIONAL LETTER ARCHIVE / 作中の記録・フォーム・配送表現は演出です。</p>
+    </footer>
   </body>
 </html>

@@ -27,7 +27,7 @@ const searchEntries = [
     keywords: ['仁士守仁'],
     title: '仁士守仁｜ウェストテレビ代表インタビュー',
     url: '../Morihito/',
-    description: '「常に変化し、最先端であり続ける。」石山県服部市から事業を広げた仁士守仁の歩み。',
+    description: '「変わり続ける地域メディアへ。」石山県服部市から事業を広げた仁士守仁の歩み。',
   },
   {
     keywords: ['東建設'],
@@ -39,7 +39,7 @@ const searchEntries = [
     keywords: ['ウェストテレビ'],
     title: 'ウェストテレビ｜石山県服部市の地域メディア企業',
     url: '../west-tv/',
-    description: '平成2年設立。テレビ、不動産、通信事業を横断する仁士家の中核企業。',
+    description: '1995年設立。テレビ、不動産、通信事業を横断する仁士家の中核企業。',
   },
   {
     keywords: ['日記', '辰也', '東辰也'],
@@ -60,13 +60,6 @@ const searchEntries = [
     title: '二人の日記',
     url: '../diary/couple/',
     description: '辰也と鏡花が新しい生活の中で残した記録。大樹が生まれるまでの日々が記されている。',
-    restricted: true,
-  },
-  {
-    keywords: ['日記', '二人の日記', '二人の日記②', '育児記録', '大樹', '辰也', '鏡花', '東辰也', '仁士鏡花'],
-    title: '二人の日記②',
-    url: '../diary/couple-2/',
-    description: '辰也と鏡花が知られずの村で残した共有育児記録。大樹が生まれた日の記録が含まれている。',
     restricted: true,
   },
   {
