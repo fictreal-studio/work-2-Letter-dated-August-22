@@ -6,8 +6,8 @@
     <meta name="robots" content="noindex, nofollow" />
     <title>二人の日記②｜共有育児記録</title>
     <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。東辰也と仁士鏡花が知られずの村で残した共有育児記録。" />
-    <link rel="stylesheet" href="/diary/couple-2/styles.css" />
-    <script src="/diary/couple-2/script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
@@ -26,7 +26,18 @@
         </p>
       </section>
 
-      <section class="timeline-panel" aria-label="記録タイムライン">
+      <section class="diary-auth" id="couple-lock" aria-labelledby="couple-lock-title">
+        <h2 id="couple-lock-title">共有育児記録の確認</h2>
+        <form id="couple-unlock-form" class="next-form" novalidate>
+          <label for="couple-password">確認数字</label>
+          <input id="couple-password" name="couple-password" inputmode="numeric" autocomplete="off" placeholder="8桁の数字" />
+          <p class="password-hint">ヒント：二人が家を離れ、新しい生活へ向かった日</p>
+          <button type="submit">記録を開く</button>
+          <p class="auth-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="timeline-panel" data-protected-content hidden aria-label="記録タイムライン">
         <ol class="timeline-list">
           <li><a href="#entry-2025-08-22">2025/08/22</a></li>
           <li><a href="#entry-2025-09-13">2025/09/13</a></li>
@@ -182,23 +193,8 @@
         </article>
       </section>
 
-      <section class="next-record" aria-labelledby="next-record-title">
-        <div>
-          <p class="section-label">NEXT RECORD</p>
-          <h2 id="next-record-title">次の記録を開く</h2>
-          <p>
-            この先の記録は、鏡花が一人で残したものです。<br />
-            解錠には、二人が親になった日付が必要です。
-          </p>
-        </div>
-        <form id="next-record-form" class="next-form" novalidate>
-          <label for="next-record-code">確認数字</label>
-          <input id="next-record-code" name="next-record-code" inputmode="numeric" autocomplete="off" placeholder="8桁の数字" />
-          <p class="password-hint">ヒント：大樹が生まれた日</p>
-          <button type="submit">鏡花の日記②へ進む</button>
-          <p class="auth-message" aria-live="polite"></p>
-        </form>
-      </section>
+      <!-- 次の記録へ進ませる導線は削除済み。 -->
+
     </main>
 
     <footer class="diary-footer">

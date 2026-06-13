@@ -3,12 +3,12 @@ const input = document.querySelector('#log-password');
 const message = document.querySelector('.auth-message');
 const lock = document.querySelector('#log-lock');
 const content = document.querySelector('#record-open');
-const PASSWORD = '1995';
+const PASSWORD = '1885';
 
 function openLog() {
   if (lock) lock.hidden = true;
   if (content) content.hidden = false;
-  sessionStorage.setItem('logNishiUnlocked', 'true');
+  sessionStorage.setItem('logAzumaUnlocked', 'true');
 }
 
 if (form) {
@@ -23,4 +23,4 @@ if (form) {
   });
 }
 
-if (sessionStorage.getItem('logNishiUnlocked') === 'true') openLog();
+if (sessionStorage.getItem('logAzumaUnlocked') === 'true') openLog();

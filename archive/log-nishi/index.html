@@ -29,7 +29,7 @@
         </div>
         <div>
           <dt>Access Key</dt>
-          <dd>1990 verified</dd>
+          <dd>1995 verified</dd>
         </div>
         <div>
           <dt>Status</dt>
@@ -38,7 +38,19 @@
       </dl>
     </div>
 
-    <main id="record-open" class="nishi-log" aria-labelledby="page-title">
+    <section id="log-lock" class="log-lock" aria-labelledby="log-lock-title">
+      <p class="lock-kicker">SEALED OBSERVATION LOG</p>
+      <h1 id="log-lock-title">仁士家 内部観察記録</h1>
+      <form id="log-unlock-form" class="log-unlock-form">
+        <label for="log-password">確認数字</label>
+        <input id="log-password" type="password" inputmode="numeric" autocomplete="off" placeholder="4桁" />
+        <p class="password-hint">ヒント：ウェストテレビの会社概要に記された設立年を確認してください。</p>
+        <button type="submit">記録を開く</button>
+        <p class="auth-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <main id="record-open" class="nishi-log" hidden aria-labelledby="page-title">
       <section class="hero">
         <p class="hero__kicker">NISHI HOUSE OBSERVATION LOG</p>
         <h1 id="page-title">仁士家 内部観察記録</h1>
@@ -86,7 +98,7 @@
             </div>
             <div>
               <dt>設立</dt>
-              <dd>1990年</dd>
+              <dd>1995年</dd>
             </div>
             <div>
               <dt>代表</dt>
@@ -401,28 +413,8 @@
         </div>
       </section>
 
-      <section class="diary-access" aria-labelledby="diary-title">
-        <div>
-          <p class="section-label">NEXT RECORD</p>
-          <h2 id="diary-title">鏡花の日記を読む</h2>
-          <p>
-            本人の記録を開くには、仁士鏡花の出生記録に基づく8桁の番号を入力してください。
-          </p>
-        </div>
-        <form id="kyoka-diary-access" class="access-form" novalidate>
-          <label for="kyoka-diary-key">記録番号</label>
-          <input
-            id="kyoka-diary-key"
-            name="key"
-            inputmode="numeric"
-            autocomplete="off"
-            placeholder="YYYYMMDD"
-          />
-          <p class="password-hint">ヒント：仁士家の内部情報に残された、鏡花が生まれた日の記録を確認してください。</p>
-          <button type="submit">鏡花の日記①へ進む</button>
-          <p class="auth-message" aria-live="polite"></p>
-        </form>
-      </section>
+      <!-- 鏡花の日記への直接導線は、調査導線整理のため削除済み。 -->
+
     </main>
 
     <footer class="fiction-footer">

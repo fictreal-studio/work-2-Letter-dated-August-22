@@ -10,6 +10,7 @@
       content="ARG作品『八月二十二日の手紙』内に登場する、よろずやアーカイブ内の架空観察ログです。"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
@@ -37,7 +38,19 @@
       </dl>
     </div>
 
-    <main id="record-open" class="azuma-log" aria-labelledby="page-title">
+    <section id="log-lock" class="log-lock" aria-labelledby="log-lock-title">
+      <p class="lock-kicker">SEALED OBSERVATION LOG</p>
+      <h1 id="log-lock-title">東家邸内記録</h1>
+      <form id="log-unlock-form" class="log-unlock-form">
+        <label for="log-password">確認数字</label>
+        <input id="log-password" type="password" inputmode="numeric" autocomplete="off" placeholder="4桁" />
+        <p class="password-hint">ヒント：東家が今の形で歩み始めた年を確認してください。</p>
+        <button type="submit">記録を開く</button>
+        <p class="auth-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <main id="record-open" class="azuma-log" hidden aria-labelledby="page-title">
       <section class="hero">
         <p class="hero__kicker">
           ARCHIVE ACCESS GRANTED / AZUMA HOUSE INTERNAL LOG
