@@ -4,26 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>社員番号認証｜よろずや</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
-    <link rel="stylesheet" href="/route-pages.css" />
-    <script src="/route-pages.js" defer></script>
+    <title>社員専用ページ｜よろずや</title>
+    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空社内認証ページです。" />
+    <link rel="stylesheet" href="/yorozuya/staff-auth/styles.css" />
+    <script src="/yorozuya/staff-auth/script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
       <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">YOROZUYA STAFF AUTH</p>
-        <h1 id="page-title">社員番号認証</h1>
-        <p class="lead">よろずや記録管理課の依頼アーカイブに入るための架空認証ページです。指示書の社員番号を入力してください。</p>
-        
-<form id="staff-auth-form" class="auth-form"><label for="employee-code">社員番号</label><input id="employee-code" name="employee-code" autocomplete="off" placeholder="YRZ-2060-0000" /><button type="submit">認証する</button><p class="auth-message" aria-live="polite"></p></form>
-<nav class="nav-row" aria-label="導線"><a class="button-link button-link--ghost" href="/briefing/">指示書へ戻る</a><a class="button-link button-link--ghost" href="/yorozuya/">よろずや公開ページへ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
-      </article>
+
+    <main class="auth-page" aria-labelledby="page-title">
+      <section class="auth-card" aria-label="社員番号認証">
+        <div class="auth-card__status" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="system-kicker">YOROZUYA INTERNAL</p>
+        <h1 id="page-title">社員専用ページ</h1>
+        <p class="auth-lead">
+          依頼記録、達成書、社内アーカイブの閲覧には社員番号の確認が必要です。配属時に共有された指示書に記載の社員番号を入力してください。
+        </p>
+        <p class="fiction-note-inline">この認証は作品内演出です。実在の社内システムではありません。</p>
+
+        <form id="staff-auth-form" class="auth-form" novalidate>
+          <label for="employee-code">社員番号</label>
+          <input
+            id="employee-code"
+            name="employee-code"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            maxlength="13"
+            placeholder="例：YRZ-2060-0422"
+            aria-describedby="auth-message"
+          />
+          <button type="submit">認証する</button>
+          <p id="auth-message" class="auth-message" aria-live="polite"></p>
+        </form>
+
+        <nav class="support-links" aria-label="補助導線">
+          <a href="/yorozuya/">よろずや公式サイトへ戻る</a>
+          <a href="/briefing/">指示書を確認する</a>
+        </nav>
+      </section>
     </main>
+
+    <footer class="auth-footer">
+      <p>© YOROZUYA Archive Division</p>
+      <p>本作品に登場する人物・団体・施設等はすべて架空です。実在の人物・団体・施設とは関係ありません。</p>
+    </footer>
   </body>
 </html>
