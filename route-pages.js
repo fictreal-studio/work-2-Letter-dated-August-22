@@ -2,7 +2,7 @@ const routePasswords = {
   'staff-auth-form': {
     expected: 'YRZ-2060-0422',
     success: '/yorozuya/archive/',
-    ok: '社員番号を確認しました。依頼アーカイブへ移動します。',
+    ok: '社員番号を確認しました。社員用記録へ移動します。',
     ng: '社員番号が一致しません。指示書の番号を確認してください。',
   },
   'log-azuma-form': {
@@ -16,30 +16,6 @@ const routePasswords = {
     success: '/archive/log-nishi/#record-open',
     ok: '認証しました。仁士家メイドログを表示します。',
     ng: 'パスワードが一致しません。ウェストテレビの設立年を確認してください。',
-  },
-  'diary-tatsuya-form': {
-    expected: '20010913',
-    success: '/diary/tatsuya/#record-open',
-    ok: '認証しました。辰也の日記を表示します。',
-    ng: 'パスワードが一致しません。辰也の生年月日を確認してください。',
-  },
-  'diary-kyoka-1-form': {
-    expected: '20030527',
-    success: '/diary/kyoka-1/#record-open',
-    ok: '認証しました。鏡花の日記①を表示します。',
-    ng: 'パスワードが一致しません。鏡花の生年月日を確認してください。',
-  },
-  'diary-couple-form': {
-    expected: '20240712',
-    success: '/diary/couple/#record-open',
-    ok: '認証しました。二人の日記を表示します。',
-    ng: 'パスワードが一致しません。二人が逃げ出した日を確認してください。',
-  },
-  'diary-kyoka-2-form': {
-    expected: '20250822',
-    success: '/diary/kyoka-2/#record-open',
-    ok: '認証しました。鏡花の日記②を表示します。',
-    ng: 'パスワードが一致しません。東大樹の誕生日を確認してください。',
   },
   'letters-form': {
     expected: '20380822',
