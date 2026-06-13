@@ -27,6 +27,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   margin: 0;
   color: var(--ink);
   font-family:
@@ -245,10 +246,11 @@ main,
 .hero h1 {
   max-width: 10em;
   margin: 0;
-  font-size: clamp(3.1rem, 7.5vw, 6.7rem);
+  font-size: clamp(2.8rem, 7vw, 6.1rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.08em;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
@@ -749,6 +751,31 @@ main,
   color: rgba(255, 255, 255, 0.78);
 }
 
+.culture-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.72rem 1.1rem;
+  margin-top: 1.6rem;
+  color: var(--ink);
+  font-weight: 900;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.culture-card__button:hover,
+.culture-card__button:focus-visible {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
 .contact-note {
   display: inline-flex;
   padding: 0.55rem 0.8rem;
@@ -850,28 +877,9 @@ main,
   }
 }
 
-@media (max-width: 760px) {
-  html {
-    scroll-padding-top: 112px;
-  }
-
-  .fiction-header {
-    display: block;
-    min-height: 46px;
-    padding: 0.36rem 0.85rem;
-    text-align: left;
-  }
-
-  .fiction-header__text {
-    margin-top: 0.05rem;
-  }
-
+@media (max-width: 900px) {
   .site-header {
-    top: 46px;
-    min-height: 66px;
     width: min(100% - 1rem, 1180px);
-    margin-top: 46px;
-    border-radius: 0 0 22px 22px;
   }
 
   .menu-button {
@@ -880,7 +888,7 @@ main,
 
   .site-nav {
     position: fixed;
-    top: 112px;
+    top: 118px;
     right: 0.65rem;
     left: 0.65rem;
     display: grid;
@@ -909,6 +917,44 @@ main,
     justify-content: flex-start;
     width: 100%;
     padding-inline: 1rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .hero__visual {
+    min-height: 30rem;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 112px;
+  }
+
+  .fiction-header {
+    display: block;
+    min-height: 46px;
+    padding: 0.36rem 0.85rem;
+    text-align: left;
+  }
+
+  .fiction-header__text {
+    margin-top: 0.05rem;
+  }
+
+  .site-header {
+    top: 46px;
+    min-height: 66px;
+    width: min(100% - 1rem, 1180px);
+    margin-top: 46px;
+    border-radius: 0 0 22px 22px;
+  }
+
+  .site-nav {
+    top: 112px;
   }
 
   main,
@@ -944,7 +990,7 @@ main,
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 15vw, 4.8rem);
+    font-size: clamp(2.45rem, 14vw, 4.3rem);
   }
 
   .hero__visual {
@@ -954,6 +1000,7 @@ main,
 
   .hero__actions,
   .hero__actions .button,
+  .culture-card__button,
   .related-links,
   .related-links a {
     width: 100%;
