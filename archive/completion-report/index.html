@@ -4,26 +4,67 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>達成書作成ページ｜よろずや</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
-    <link rel="stylesheet" href="/route-pages.css" />
-    <script src="/route-pages.js" defer></script>
+    <title>達成報告書｜所在秘匿を伴う転居支援</title>
+    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空の社員用達成報告書ページです。" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
-      <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
+      <p class="fiction-header__label">FICTIONAL RECORD INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">COMPLETION REPORT</p>
-        <h1 id="page-title">達成書作成ページ</h1>
-        <p class="lead">未完了依頼について、調査で確認した内容を整理し、達成書の下書きを作成する架空フォームです。</p>
-        
-<form id="completion-form" class="auth-form"><label for="report-title">件名</label><input id="report-title" value="八月二十二日の手紙に関する達成書" /><label for="report-body">確認内容</label><textarea id="report-body">東家と仁士家、東辰也と仁士鏡花、そして東大樹へ届き続けた手紙の記録を確認した。</textarea><button type="submit">達成書の下書きを保存する</button><p class="auth-message" aria-live="polite"></p></form>
-<nav class="nav-row" aria-label="導線"><a class="button-link button-link--ghost" href="/archive/letters/">手紙記録へ戻る</a><a class="button-link button-link--ghost" href="/yorozuya/archive/">アーカイブ一覧へ戻る</a><a class="button-link button-link--ghost" href="/search/">検索ページへ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
+
+    <main class="report-shell" aria-labelledby="page-title">
+      <nav class="quiet-nav" aria-label="補助導線">
+        <a href="../../yorozuya/archive/#moving-request">社員用記録へ戻る</a>
+      </nav>
+
+      <article class="report-card">
+        <p class="report-kicker">YOROZUYA INTERNAL COMPLETION RECORD</p>
+        <h1 id="page-title">達成報告書</h1>
+        <p class="lead">本書は、社員用記録に保管された非公開支援案件の完了状態を整理するための社内用達成報告書である。</p>
+
+        <dl class="report-summary" aria-label="達成報告書概要">
+          <div><dt>対象依頼</dt><dd>所在秘匿を伴う転居支援</dd></div>
+          <div><dt>依頼区分</dt><dd>非公開支援</dd></div>
+          <div><dt>ステータス</dt><dd><span class="status">達成</span></dd></div>
+          <div><dt>受付日</dt><dd>2024年7月12日</dd></div>
+          <div><dt>関係者</dt><dd>東辰也、仁士鏡花、東大樹</dd></div>
+        </dl>
+
+        <section class="report-section" aria-labelledby="background-title">
+          <h2 id="background-title">背景</h2>
+          <p>東家および仁士家の長期的対立により、依頼者両名の生活環境と安全確保には継続的な配慮が必要であった。よろずやは、当人の意思確認を最優先とし、関係者への不必要な露出を避けたうえで移行支援を実施した。</p>
+        </section>
+
+        <section class="report-section" aria-labelledby="support-title">
+          <h2 id="support-title">実施内容</h2>
+          <ul class="report-list">
+            <li>依頼者の移動経路、所持品、連絡手段の整理。</li>
+            <li>新生活開始に必要な住環境・生活用品・記録保管の初期支援。</li>
+            <li>両家からの追跡・干渉を避けるための所在秘匿管理。</li>
+            <li>後年の照合に備えた関連記録の分離保管。</li>
+          </ul>
+          <p>移転先の所在地、協力者、保管手順の詳細は、関係者保護のため本報告書には記載しない。</p>
+        </section>
+
+        <section class="report-section" aria-labelledby="result-title">
+          <h2 id="result-title">達成内容</h2>
+          <p>依頼者は旧来の家同士の管理下から離れ、生活基盤を移した。支援後、東大樹の誕生を含む家族記録が追加され、当該依頼は安全確保および新生活への移行という目的を達成したものとして扱う。</p>
+          <p>本件は、よろずやが依頼者の人生を代わりに決めた記録ではない。選ばれた道を、途中で失われないよう支えた記録である。</p>
+        </section>
+
+        <section class="closing-note" aria-labelledby="note-title">
+          <h2 id="note-title">整理担当者メモ</h2>
+          <p>この報告書だけでは、依頼のすべては完結しない。残された手紙記録を確認し、届けられた言葉が誰に向けられていたのかを照合すること。</p>
+          <a class="primary-link" href="../letters/">手紙記録へ進む</a>
+        </section>
       </article>
     </main>
+
+    <footer class="report-footer">
+      <p>YOROZUYA Archive Division / Completion Record</p>
+      <p>このページは創作作品内の架空記録です。実在の人物・団体・地域・手続きとは関係ありません。所在地秘匿に関する記述は物語演出です。</p>
+    </footer>
   </body>
 </html>

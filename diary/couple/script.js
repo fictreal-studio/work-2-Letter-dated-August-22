@@ -2,13 +2,13 @@ const form = document.querySelector('#couple-unlock-form');
 const input = document.querySelector('#couple-password');
 const message = document.querySelector('#couple-lock .auth-message');
 const lock = document.querySelector('#couple-lock');
-const content = document.querySelector('[data-protected-content]');
+const protectedContents = document.querySelectorAll('[data-protected-content]');
 const PASSWORD = '20240712';
 
 function openDiary() {
   if (lock) lock.hidden = true;
-  if (content) content.hidden = false;
-  sessionStorage.setItem('coupleDiaryUnlocked', 'true');
+  protectedContents.forEach((content) => { content.hidden = false; });
+  localStorage.setItem('work2CoupleDiaryUnlocked', 'true');
 }
 
 if (form) {
@@ -23,4 +23,5 @@ if (form) {
   });
 }
 
-if (sessionStorage.getItem('coupleDiaryUnlocked') === 'true') openDiary();
+protectedContents.forEach((content) => { content.hidden = true; });
+if (localStorage.getItem('work2CoupleDiaryUnlocked') === 'true') openDiary();
