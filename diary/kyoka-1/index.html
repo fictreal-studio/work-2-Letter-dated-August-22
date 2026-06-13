@@ -5,26 +5,254 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <title>鏡花の日記①｜制限記録</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
-    <link rel="stylesheet" href="/route-pages.css" />
-    <script src="/route-pages.js" defer></script>
+    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。仁士鏡花が辰也との出会いから知られずの村への引っ越しまでを書き残した個人記録。" />
+    <link rel="stylesheet" href="/diary/kyoka-1/styles.css" />
+    <script src="/diary/script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
       <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">PRIVATE DIARY</p>
-        <h1 id="page-title">鏡花の日記①</h1>
-        <p class="lead">仁士鏡花が残した個人的な記録のうち、出会いから逃避行前後を扱う架空日記ページです。</p>
-        
-<form id="diary-kyoka-1-form" class="auth-form"><label for="diary-kyoka-1-pass">パスワード</label><input id="diary-kyoka-1-pass" autocomplete="off" inputmode="numeric" placeholder="8桁" /><button type="submit">日記を開く</button><p class="auth-message" aria-live="polite"></p></form>
-<section id="record-open" class="section-block"><h2>記録抜粋</h2><ul class="timeline"><li>鏡花は不安を書き残しながらも、日々の小さな幸福を「私はしあわせ」と結んでいた。</li><li>2024/05/29、誕生日デートの記録。</li><li>次の照合対象：二人の日記。</li></ul></section>
-<nav class="nav-row" aria-label="導線"><a class="button-link" href="/diary/couple/">二人の日記へ</a><a class="button-link button-link--ghost" href="/diary/tatsuya/">辰也の日記へ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
-      </article>
+
+    <main class="diary-page" aria-labelledby="page-title" data-hint="ヒント：仁士家の内部情報に残された、鏡花が生まれた日の記録を確認してください。" data-password="20030527">
+      <section class="diary-hero" aria-labelledby="page-title">
+        <p class="diary-kicker">鏡花の日記① / PRIVATE WEB DIARY</p>
+        <h1 id="page-title">仁士鏡花の日記</h1>
+        <p class="diary-subcopy">これは、まだ全部を失う前の記録。</p>
+        <p class="diary-intro">
+          石山県服部市に残されていた個人記録。<br />
+          一部、よろずや依頼アーカイブ内の記録と照合されています。
+        </p>
+        <dl class="profile-strip" aria-label="記録者情報">
+          <div><dt>記録者</dt><dd>仁士鏡花</dd></div>
+          <div><dt>生年月日</dt><dd>2003年5月27日</dd></div>
+          <div><dt>職業</dt><dd>ウェストテレビ リポーター</dd></div>
+          <div><dt>収録期間</dt><dd>2024年2月9日 - 2024年7月20日</dd></div>
+        </dl>
+      </section>
+
+      <section class="auth-card" aria-labelledby="auth-title">
+        <div>
+          <p class="section-label">LOCKED DIARY</p>
+          <h2 id="auth-title">記録閲覧認証</h2>
+          <p>この記録は社員用記録として保護されています。確認済みの数字を入力してください。</p>
+        </div>
+        <form id="diary-kyoka-1-form" class="auth-form">
+          <label for="diary-kyoka-1-pass">パスワード</label>
+          <input id="diary-kyoka-1-pass" autocomplete="off" inputmode="numeric" placeholder="8桁" />
+          <p class="password-hint">ヒント：仁士家の内部情報に残された、鏡花が生まれた日の記録を確認してください。</p>
+          <button type="submit">記録を開く</button>
+          <p class="auth-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="record-open" class="diary-entries" data-protected-content hidden aria-label="鏡花の日記本文">
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-02-09">2024年2月9日</time>
+            <h2>雪の日、知らない人と話しました</h2>
+          </header>
+          <div class="entry-body">
+            <p>今日は、すごく寒い日でした。</p>
+            <p>指先が痛くなるくらい冷えていて、少しだけ休みたくて、近くのカフェに入りました。<br />そこで、私はとても失礼なことをしてしまいました。</p>
+            <p>店員さんだと思って声をかけた人が、店員さんではありませんでした。</p>
+            <p>でも、その人は怒らずに笑ってくれました。<br />「俺、店員じゃないです」って、少し困った顔をしながら言っていて。<br />私は恥ずかしくて、すぐに謝りました。</p>
+            <p>それが、辰也さんでした。</p>
+            <p>不思議な人でした。<br />初めて会ったのに、ずっと前から知っていたような気がしました。</p>
+            <p>私は普段、人と話すのが苦手な方ではありません。<br />でも、あんなふうに、言葉が自然に出てくる感じは初めてでした。</p>
+            <p>帰り道、雪がまだ少し降っていました。<br />寒いのに、胸の奥だけあたたかくて。</p>
+            <p>変ですね。<br />たった一度話しただけなのに、また会いたいと思ってしまいました。</p>
+            <p class="happiness">私はしあわせ。<br />今日は、そんなふうに思える日でした。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-03-03">2024年3月3日</time>
+            <h2>毎日、連絡しています</h2>
+          </header>
+          <div class="entry-body">
+            <p>最近、辰也さんと毎日連絡しています。</p>
+            <p>朝起きたら「おはよう」と送って、夜寝る前に「おやすみ」と送ります。<br />それだけのことなのに、一日が少し明るくなります。</p>
+            <p>辰也さんは、話し方が少し不思議です。<br />急に敬語になったり、急に友達みたいな言葉になったりします。<br />でも、それが嘘っぽくなくて、安心します。</p>
+            <p>私は仁士家の娘です。<br />家のことも、仕事のことも、将来のことも、ちゃんと考えなきゃいけない立場です。<br />それは分かっています。</p>
+            <p>でも、辰也さんと話している時だけは、肩の力が抜けます。<br />仁士家の娘じゃなくて、ただの鏡花でいられる気がします。</p>
+            <p>お父様には、まだ言えません。<br />言ったら、きっと面倒なことになります。</p>
+            <p>でも、今はまだ、少しだけこの時間を大切にしたいです。</p>
+            <p class="happiness">私はしあわせ。<br />こんなに小さなことで、ちゃんと毎日が変わるんですね。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-04-05">2024年4月5日</time>
+            <h2>桜の下で</h2>
+          </header>
+          <div class="entry-body">
+            <p>今日は辰也さんと、桜のきれいな公園に行きました。</p>
+            <p>桜が本当にきれいで、空まで淡い色になったみたいでした。<br />辰也さんは、ずっとカメラを持っていました。<br />景色を撮って、私を撮って、なぜかベンチまで撮っていました。</p>
+            <p>「こういうの、あとで見るといいんだよ」と言っていました。</p>
+            <p>私は笑ってしまいました。<br />ベンチなんて撮ってどうするんですか、と言ったら、<br />「今日、鏡花さんが座った場所だから」と言われました。</p>
+            <p>そんなことを、まっすぐ言える人がいるんですね。</p>
+            <p>少し恥ずかしかったです。<br />でも、嬉しかったです。</p>
+            <p>私は今日、辰也さんのことが好きだと思いました。<br />もう、たぶん、戻れないくらいに。</p>
+            <p>けれど、同時に少しだけ怖くなりました。<br />この人は、東家の人です。<br />私は、仁士家の人間です。</p>
+            <p>家の名前が、人を好きになることまで邪魔するなんて、私はまだ信じたくありません。</p>
+            <p class="happiness">私はしあわせ。<br />でも、しあわせには、少しだけ怖さも混ざるのですね。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-05-27">2024年5月27日</time>
+            <h2>誕生日</h2>
+          </header>
+          <div class="entry-body">
+            <p>今日は私の誕生日でした。</p>
+            <p>辰也さんが、街へ連れて行ってくれました。<br />レストランに行って、服を見て、靴を見て、ゲームセンターにも行きました。<br />プリクラなんて久しぶりで、二人で笑いすぎて、変な顔の写真ばかりになりました。</p>
+            <p>最後にカフェでプリンを食べました。<br />辰也さんは、私がプリンを好きなことを覚えていてくれました。</p>
+            <p>それだけで、泣きそうになりました。</p>
+            <p>でも、帰り道に少しだけ空気が変わりました。<br />辰也さんの知り合いらしい人とすれ違って、辰也さんの顔が一瞬だけ固くなりました。</p>
+            <p>私は何も聞けませんでした。<br />聞いたら、今日が壊れてしまう気がしたからです。</p>
+            <p>夜になってから、辰也さんから連絡が来ました。</p>
+            <p>「ごめん。少し面倒なことになった」</p>
+            <p>たったそれだけの文なのに、胸が冷たくなりました。</p>
+            <p>分かっていました。<br />いつか、こうなることは。</p>
+            <p>でも私は、今日のことを後悔したくありません。<br />辰也さんと歩いた街も、変なプリクラも、プリンの甘さも、全部本当でした。</p>
+            <p class="happiness">私はしあわせ。<br />だから、怖くても、ちゃんと覚えていたいです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-06-02">2024年6月2日</time>
+            <h2>会うな、と言われたそうです</h2>
+          </header>
+          <div class="entry-body">
+            <p>辰也さんが、お父様から「彼女と会うな」と言われたそうです。</p>
+            <p>その言葉を聞いた時、不思議なくらい驚きませんでした。<br />ああ、やっぱり、と思いました。</p>
+            <p>東家と仁士家。<br />昔から仲が悪いことは知っています。<br />仕事のこと、土地のこと、面子のこと、いろいろあるのだと思います。</p>
+            <p>でも、私たちは何をしたのでしょう。</p>
+            <p>誰かを傷つけたかったわけではありません。<br />奪いたかったわけでもありません。<br />ただ、一緒にいたいと思っただけです。</p>
+            <p>それなのに、家の名前はこんなにも重いのですね。</p>
+            <p>私は長女です。<br />ちゃんとしなきゃいけないことも分かっています。<br />お父様も、お母様も、兄も妹も、私は大切です。</p>
+            <p>それでも、辰也さんをなかったことにはできません。</p>
+            <p class="happiness">私はしあわせ。<br />そう言いたいのに、今日は少しだけ難しいです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-06-18">2024年6月18日</time>
+            <h2>家族を裏切るのでしょうか</h2>
+          </header>
+          <div class="entry-body">
+            <p>私は、家族を裏切るのでしょうか。</p>
+            <p>最近、ずっとそれを考えています。</p>
+            <p>お父様のことは好きです。<br />お母様のことも、兄のことも、妹のことも好きです。<br />仁士家で育ったことを、嫌だと思ったことはありません。</p>
+            <p>でも、好きな人と一緒にいたいと思うことが、<br />家族を捨てることになるのなら、<br />私はどうすればいいのでしょう。</p>
+            <p>辰也さんは「俺が守る」と言いました。<br />いつものように、少し無茶で、少し軽くて、でも本気の顔でした。</p>
+            <p>私はその言葉に甘えていいのでしょうか。<br />それとも、私もちゃんと立たなきゃいけないのでしょうか。</p>
+            <p>たぶん、後者です。</p>
+            <p>私は守られるだけの人にはなりたくありません。<br />一緒に選んで、一緒に責任を持ちたいです。</p>
+            <p>怖いです。<br />すごく怖いです。</p>
+            <p>でも、辰也さんとなら、何とかなる気がしています。<br />根拠はありません。<br />だけど、私は昔から、根拠のない大丈夫を信じて生きてきました。</p>
+            <p class="happiness">私はしあわせ。<br />そう言える場所へ、自分で歩いていきたいです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-07-08">2024年7月8日</time>
+            <h2>準備が進んでいます</h2>
+          </header>
+          <div class="entry-body">
+            <p>少しずつ、準備が進んでいます。</p>
+            <p>荷物は多く持っていけません。<br />服も、カメラも、少しの思い出も、全部は選べません。</p>
+            <p>本当は、家族に手紙を書こうと思いました。<br />でも、何を書いても言い訳に見える気がして、まだ書けていません。</p>
+            <p>ごめんなさい。<br />でも、私は行きます。</p>
+            <p>そう書くだけなら簡単なのに、その先にある顔を想像すると、手が止まってしまいます。</p>
+            <p>手伝ってくれている人がいます。<br />名前はここには書きません。<br />とても静かで、余計なことを聞かない人です。</p>
+            <p>「本当に行くんですね」とだけ言われました。</p>
+            <p>私は「はい」と答えました。<br />声が少し震えていたと思います。</p>
+            <p>その人は、それ以上何も聞きませんでした。<br />ただ、必要なものを一つずつ確認してくれました。</p>
+            <p>不思議です。<br />家を出る準備なのに、まるで新しい生活の準備みたいでした。</p>
+            <p class="happiness">私はしあわせ。<br />そう信じたいから、今は泣かないでおきます。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-07-12">2024年7月12日</time>
+            <h2>行きます</h2>
+          </header>
+          <div class="entry-body">
+            <p>今日、行きます。</p>
+            <p>朝からずっと、胸が落ち着きません。<br />部屋の中のものが、全部いつもより大切に見えます。</p>
+            <p>机も、窓も、カーテンも。<br />子どもの頃から使っていた小さな棚も。<br />何度も見てきた景色なのに、今日だけは全部が私を引き止めているみたいです。</p>
+            <p>家族のことを考えると、足が止まりそうになります。<br />お父様は怒ると思います。<br />お母様は泣くと思います。<br />兄は、たぶん分かりにくい顔をして、でも一番傷つくと思います。<br />妹は、私のことを嫌いになるかもしれません。</p>
+            <p>それでも、私は行きます。</p>
+            <p>辰也さんと生きたいです。</p>
+            <p>これは、きれいな決断ではないと思います。<br />正しいかも分かりません。<br />たぶん、たくさんの人を傷つけます。</p>
+            <p>でも、私の人生を、家の争いの続きにしたくありません。</p>
+            <p>私は仁士鏡花です。<br />仁士家の娘です。<br />でも、それだけではありません。</p>
+            <p class="happiness">私は、私のしあわせを選びます。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-07-13">2024年7月13日</time>
+            <h2>知られずの村</h2>
+          </header>
+          <div class="entry-body">
+            <p>知られずの村に着きました。</p>
+            <p>名前を聞いた時は、不思議な場所だと思いました。<br />でも、来てみると、とても静かなところでした。</p>
+            <p>空気が澄んでいて、風の音がよく聞こえます。<br />人の気配はあるのに、誰もこちらを無理に見ようとしません。<br />それが、今の私にはありがたかったです。</p>
+            <p>辰也さんは、荷物を置くなり「ここから始めよう」と言いました。</p>
+            <p>私は笑いました。<br />本当に、何もない部屋でした。<br />家具も少ないし、生活に必要なものも足りません。<br />これから困ることだらけだと思います。</p>
+            <p>でも、窓から入ってくる光がとてもきれいでした。</p>
+            <p>私は、ここで生きていくのだと思いました。<br />辰也さんと、二人で。</p>
+            <p>家族に会いたいです。<br />もうすでに、会いたいです。</p>
+            <p>でも、戻りたいとは少し違います。</p>
+            <p class="happiness">私はしあわせ。<br />まだ小さくて、危なっかしくて、頼りないしあわせです。<br />それでも、たしかにここにあります。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2024-07-20">2024年7月20日</time>
+            <h2>引っ越し完了</h2>
+          </header>
+          <div class="entry-body">
+            <p>ようやく、生活らしくなってきました。</p>
+            <p>今日は、最後の荷物が届きました。<br />本当に最低限のものだけです。<br />でも、自分たちで選んだものが部屋に増えていくのは、少し嬉しいです。</p>
+            <p>カーテンをつけて、食器を並べて、辰也さんが変なところにカメラを置いて、私が注意して。<br />そんな小さなことで、一日が終わりました。</p>
+            <p>私は今まで、大きな家で暮らしてきました。<br />何でも揃っていて、困る前に誰かが助けてくれる場所でした。</p>
+            <p>ここには、何もありません。<br />でも、だからこそ、自分たちで生活している感じがします。</p>
+            <p>怖くないと言えば嘘になります。<br />これからどうなるか分かりません。<br />両家がどうなっているのかも、考えると胸が苦しくなります。</p>
+            <p>でも、私は今日、ちゃんとご飯を作りました。<br />辰也さんは、少し焦げたところまで「うまい」と言ってくれました。</p>
+            <p>その言い方があまりにも本気だったので、私は笑ってしまいました。</p>
+            <p class="happiness">私はしあわせ。<br />この言葉を、これから何度でも書けるように生きていきたいです。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="related-request" data-protected-content hidden aria-labelledby="related-title">
+        <p class="section-label">RELATED INTERNAL RECORD</p>
+        <h2 id="related-title">関連する依頼記録</h2>
+        <p>
+          この日記には、よろずや依頼アーカイブ内の「引っ越しの依頼」と一致する記述が含まれています。<br />
+          当時の依頼内容を照合することで、二人がどのように仁士家・東家の監視を抜けたのかを確認できます。
+        </p>
+        <a class="archive-link" href="/yorozuya/archive/#moving-request">引っ越しの依頼書を見る</a>
+      </section>
     </main>
+
+    <footer class="diary-footer">
+      <p>鏡花の日記① / 復元表示</p>
+      <p>このページは創作作品内の架空Webページです。実在の人物・団体・企業・地域・手続きとは関係ありません。本作品にはAI生成画像または加工画像を含む場合があります。</p>
+    </footer>
   </body>
 </html>

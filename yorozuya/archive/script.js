@@ -1,11 +1,11 @@
 const RECORDS = {
-azuma: { password: '1885', url: '../../archive/log-azuma/' },
-nishi: { password: '1990', url: '../../archive/log-nishi/' },
-tatsuya: { password: '20010913', url: '../../diary/tatsuya/' },
-kyokaEarly: { password: '20030527', url: '../../diary/kyoka-1/' },
-couple: { password: '20240712', url: '../../diary/couple/' },
-kyokaLate: { password: '20250822', url: '../../diary/kyoka-2/' },
-letters: { password: '20380822', url: '../../archive/letters/' },
+azuma: { password: '1885', url: '../../archive/log-azuma/', hint: 'ヒント：東家が今の形で歩み始めた年を確認してください。' },
+nishi: { password: '1990', url: '../../archive/log-nishi/', hint: 'ヒント：ウェストテレビの会社概要に記された設立年を確認してください。' },
+tatsuya: { password: '20010913', url: '../../diary/tatsuya/', hint: 'ヒント：東家の内部情報に残された、辰也が生まれた日の記録を確認してください。' },
+kyokaEarly: { password: '20030527', url: '../../diary/kyoka-1/', hint: 'ヒント：仁士家の内部情報に残された、鏡花が生まれた日の記録を確認してください。' },
+couple: { password: '20240712', url: '../../diary/couple/', hint: 'ヒント：二人が家を離れ、新しい生活へ向かった日を確認してください。' },
+kyokaLate: { password: '20250822', url: '../../diary/kyoka-2/', hint: 'ヒント：二人にとって、家族が一人増えた日の記録を確認してください。' },
+letters: { password: '20380822', url: '../../archive/letters/', hint: 'ヒント：鏡花の時間が止まり、大樹への手紙が始まった日を確認してください。' },
 };
 
 const state = {
@@ -17,6 +17,7 @@ const modal = document.querySelector('#record-modal');
 const unlockForm = document.querySelector('#record-unlock-form');
 const codeInput = document.querySelector('#record-code');
 const modalMessage = document.querySelector('#modal-message');
+const recordHint = document.querySelector('#record-hint');
 const openButtons = document.querySelectorAll('[data-open-record]');
 const closeButtons = document.querySelectorAll('[data-close-modal]');
 const filterButtons = document.querySelectorAll('[data-filter]');
@@ -37,6 +38,8 @@ const openModal = (recordKey) => {
   modal.hidden = false;
   codeInput.value = '';
   showModalMessage('');
+  const record = RECORDS[recordKey];
+  if (recordHint) recordHint.textContent = record?.hint || 'ヒント：関連記録に残された日付や年を確認してください。';
   requestAnimationFrame(() => codeInput.focus());
 };
 

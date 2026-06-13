@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>依頼アーカイブ｜よろずや</title>
+    <title>社員用記録｜よろずや</title>
     <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空社内アーカイブページです。" />
   <link rel="stylesheet" href="./styles.css" />
 <script src="./script.js" defer></script>
@@ -17,20 +17,18 @@
 
     <main class="archive-shell" aria-labelledby="page-title">
       <nav class="quiet-nav" aria-label="補助導線">
-       <a href="/work-2-Letter-dated-August-22/yorozuya/">よろずやサイトへ戻る</a>
-<a href="/work-2-Letter-dated-August-22/search/">検索画面へ戻る</a>
-<a href="/work-2-Letter-dated-August-22/briefing/">指示書を確認する</a>
+        <a href="/search/">検索に戻る</a>
       </nav>
 
       <section class="hero" aria-labelledby="page-title">
         <div class="hero__copy">
           <p class="archive-kicker">FICTIONAL INTERNAL ARCHIVE</p>
-          <h1 id="page-title">依頼アーカイブ</h1>
+          <h1 id="page-title">社員用記録</h1>
           <p class="hero__subtitle">記録は、依頼人のものです。</p>
           <p class="hero__text">
-            このアーカイブには、よろずやが過去に受けた依頼のうち、完了報告・補足資料・関係者記録の整理が必要なものだけが保管されています。閲覧には社員番号による認証が必要です。記録を読む時は、依頼人の人生に触れていることを忘れないでください。
+            このページは、よろずや社内で管理されている社員用記録です。閲覧には正規の社員番号認証が必要です。記録を読む時は、依頼人の人生に触れていることを忘れないでください。
           </p>
-          <p class="fiction-inline">このページは創作作品内の架空社内アーカイブです</p>
+          <p class="fiction-inline">このページは創作作品内の架空社員用記録です</p>
         </div>
         <dl class="access-panel" aria-label="アクセス情報">
           <div><dt>SYSTEM DATE</dt><dd>2060.04.07</dd></div>
@@ -78,8 +76,36 @@
         </div>
       </section>
 
-      <section class="request-list" aria-label="依頼カード一覧">
-        <article id="moving-request" class="request-card" data-tags="封緘中 引っ越し 所在秘匿 転居 東家 仁士家 共同生活 YRZ-2024-0712">
+      <section class="request-list" aria-label="社員用記録一覧">
+        <article class="request-card" data-tags="封緘中 内部情報 東家 富谷県 永海市 家族構成 後継者 辰也">
+          <header class="request-card__header">
+            <div>
+              <p class="request-id">INTERNAL-AZUMA</p>
+              <h2>東家の内部情報</h2>
+            </div>
+            <span class="status status--sealed">封緘中 / 関係者保護</span>
+          </header>
+          <p class="request-summary">富谷県永海市を拠点とする東家に関する内部記録。家族構成、後継者問題、辰也に関する記録を含む。</p>
+          <div class="card-actions">
+            <button type="button" data-open-record="azuma">東家側記録を開く</button>
+          </div>
+        </article>
+
+        <article class="request-card" data-tags="封緘中 内部情報 仁士家 石山県 服部市 鏡花 家族関係 東家 接触記録">
+          <header class="request-card__header">
+            <div>
+              <p class="request-id">INTERNAL-NISHI</p>
+              <h2>仁士家の内部情報</h2>
+            </div>
+            <span class="status status--sealed">封緘中 / 関係者保護</span>
+          </header>
+          <p class="request-summary">石山県服部市を拠点とする仁士家に関する内部記録。鏡花の成長、家族関係、東家との接触記録を含む。</p>
+          <div class="card-actions">
+            <button type="button" data-open-record="nishi">仁士家側記録を開く</button>
+          </div>
+        </article>
+
+        <article id="moving-request" class="request-card" data-tags="封緘中 所在秘匿 転居 支援 二人の日記 2024 0712">
           <header class="request-card__header">
             <div>
               <p class="request-id">YRZ-2024-0712</p>
@@ -87,75 +113,38 @@
             </div>
             <span class="status status--sealed">封緘中 / 関係者保護</span>
           </header>
-          <dl class="request-meta">
-            <div><dt>受付日</dt><dd>2024.07.12</dd></div>
-            <div><dt>関係者表示</dt><dd>依頼者名 非公開</dd></div>
-          </dl>
-          <p class="request-summary">対立する二つの家から離れ、依頼人二名が新しい生活を始めるための転居支援。家族・関係者・外部業者に悟られない形で、住居確保、移動、生活基盤の初期整備を実施。移転先は社内規定により非公開。</p>
-          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>この依頼は、荷物を運ぶ仕事ではなかった。二人が、自分たちの人生を選ぶための逃げ道を作る仕事だった。</span></aside>
+          <p class="request-summary">依頼者の身元と移転先を秘匿したまま実施された転居支援記録。関係者保護のため、一部情報は伏せられている。</p>
           <div class="card-actions">
-            <button type="button" data-open-record="azuma">東家側記録を開く</button>
-            <button type="button" data-open-record="nishi">仁士家側記録を開く</button>
             <button type="button" data-open-record="couple">共同生活記録を開く</button>
           </div>
         </article>
 
-        <article class="request-card" data-tags="未整理 代筆 記録補助 長期保管 鏡花 手紙 YRZ-2038-0505">
+        <article class="request-card" data-tags="未整理 代筆 記録 補助 文書作成 記録整理 鏡花 手紙">
           <header class="request-card__header">
             <div>
               <p class="request-id">YRZ-2038-0505</p>
-              <h2>代筆・記録補助</h2>
+              <h2>代筆・記録の補助</h2>
             </div>
             <span class="status status--pending">未整理 / 長期保管</span>
           </header>
-          <dl class="request-meta">
-            <div><dt>受付日</dt><dd>2038.05.05</dd></div>
-            <div><dt>関係者表示</dt><dd>依頼者名 非公開</dd></div>
-          </dl>
-          <p class="request-summary">余命宣告を受けた依頼人からの依頼。本人が今後伝えきれなくなる可能性のある言葉を、よろずや立会いのもとで記録・整理。家族ごとに宛先を分け、必要な時期に届くよう配送計画を作成。</p>
-          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>依頼人は、自分がいなくなった後のことばかり話していた。それでも最後には必ず、『私はしあわせです』と書いた。</span></aside>
+          <p class="request-summary">依頼者本人の意思を確認したうえで、文書作成・記録整理を補助した業務記録。</p>
           <div class="card-actions">
-            <button type="button" data-open-record="kyokaLate">鏡花の後期記録を開く</button>
-            <button type="button" data-open-record="letters">手紙配送記録を確認する</button>
+            <button type="button" data-open-record="letters">手紙記録を確認する</button>
           </div>
         </article>
 
-        <article class="request-card" data-tags="未整理 手紙 初回配送 達成書 配送記録 YRZ-2038-0822">
+        <article class="request-card" data-tags="定期処理 手紙 定期配送 長期配送 2038 0822">
           <header class="request-card__header">
             <div>
               <p class="request-id">YRZ-2038-0822</p>
-              <h2>手紙初回配送</h2>
+              <h2>手紙の定期配送</h2>
             </div>
             <span class="status status--report">処理済 / 達成書未作成</span>
           </header>
-          <dl class="request-meta">
-            <div><dt>受付日</dt><dd>2038.08.22</dd></div>
-            <div><dt>関係者表示</dt><dd>宛先 三系統</dd></div>
-          </dl>
-          <p class="request-summary">依頼人の死去確認後、同日夕刻に初回配送を実施。宛先は三通。仁士家宛、東家宛、東大樹宛。配送方法および担当者情報は、よろずや保護規定により非公開。</p>
-          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>誰かの死を知らせる手紙ではなく、残された人が次の朝を迎えるための手紙だった。</span></aside>
+          <p class="request-summary">指定日に指定の宛先へ手紙を届ける長期配送記録。配送者情報および保管場所は非公開。</p>
           <div class="card-actions">
             <button type="button" data-open-record="letters">手紙記録を開く</button>
             <button type="button" data-report-pending>達成書を作成する</button>
-          </div>
-        </article>
-
-        <article class="request-card request-card--future" data-tags="定期処理 手紙 未来予約 閲覧不可 東大樹 YRZ-2070-0822">
-          <header class="request-card__header">
-            <div>
-              <p class="request-id">YRZ-2070-0822</p>
-              <h2>定期配送終了処理</h2>
-            </div>
-            <span class="status status--future">未来予約 / 閲覧不可</span>
-          </header>
-          <dl class="request-meta">
-            <div><dt>受付日</dt><dd>2070.08.22</dd></div>
-            <div><dt>関係者表示</dt><dd>東大樹</dd></div>
-          </dl>
-          <p class="request-summary">毎年8月22日に実施される手紙配送の最終処理予定。依頼人の指定により、東大樹が45歳を迎える年をもって定期配送を終了する。</p>
-          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>母が生きた年齢より、十年先まで。そこまで見届けたら、あとは本人の人生に返す。</span></aside>
-          <div class="card-actions">
-            <button type="button" disabled>現在は閲覧できません</button>
           </div>
         </article>
       </section>
@@ -169,9 +158,7 @@
       </section>
 
       <nav class="quiet-nav quiet-nav--bottom" aria-label="戻る導線">
-        <a href="/yorozuya/">よろずやサイトへ戻る</a>
-        <a href="/search/">検索画面へ戻る</a>
-        <a href="/briefing/">指示書を確認する</a>
+        <a href="/search/">検索に戻る</a>
       </nav>
     </main>
 
@@ -185,6 +172,7 @@
         <form id="record-unlock-form" class="modal-form">
           <label for="record-code">確認数字</label>
           <input id="record-code" name="record-code" type="text" inputmode="numeric" autocomplete="off" placeholder="数字を入力" />
+          <p class="password-hint" id="record-hint">ヒント：関連記録に残された日付や年を確認してください。</p>
           <p class="modal-message" id="modal-message" aria-live="polite"></p>
           <div class="modal-actions">
             <button type="submit">記録を開く</button>

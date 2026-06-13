@@ -4,27 +4,289 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>鏡花の日記②｜制限記録</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
-    <link rel="stylesheet" href="/route-pages.css" />
-    <script src="/route-pages.js" defer></script>
+    <title>仁士鏡花の日記 ②｜制限記録</title>
+    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。仁士鏡花が母になってから最後の夏までを書き残した私的な日記です。" />
+    <link rel="stylesheet" href="/diary/kyoka-2/style.css" />
+    <script src="/diary/kyoka-2/script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
       <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">PRIVATE DIARY</p>
-        <h1 id="page-title">鏡花の日記②</h1>
-        <p class="lead">東大樹の誕生以後、鏡花が家族へ向けて残した記録を扱う架空日記ページです。</p>
-        
-<form id="diary-kyoka-2-form" class="auth-form"><label for="diary-kyoka-2-pass">パスワード</label><input id="diary-kyoka-2-pass" autocomplete="off" inputmode="numeric" placeholder="8桁" /><button type="submit">日記を開く</button><p class="auth-message" aria-live="polite"></p></form>
-<section id="record-open" class="section-block"><h2>記録抜粋</h2><ul class="timeline"><li>2025/08/22、東大樹が生まれた。</li><li>2032/03/16、鏡花は大樹を連れて仁士家へ帰郷した。</li><li>2038/05/05、病気の発覚後、手紙の準備が始まっている。</li><li>次の照合対象：手紙記録。</li></ul></section>
-<nav class="nav-row" aria-label="導線"><a class="button-link" href="/archive/letters/">手紙記録へ</a><a class="button-link button-link--ghost" href="/diary/couple/">二人の日記へ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
-      </article>
+
+    <main class="diary-page" aria-labelledby="page-title" data-password="20250822">
+      <section class="diary-hero" aria-labelledby="page-title">
+        <p class="diary-kicker">PRIVATE DIARY / KYOKA NISHI</p>
+        <h1 id="page-title">仁士鏡花の日記 ②</h1>
+        <p class="diary-subtitle">母になってからの記録</p>
+        <p class="diary-intro">
+          これは、仁士鏡花が残した私的な日記です。<br />
+          辰也を失った日から、最後の夏まで。<br />
+          誰かに見せるためではなく、大樹に残すために書かれた記録です。
+        </p>
+        <dl class="record-meta" aria-label="記録情報">
+          <div><dt>記録者</dt><dd>仁士鏡花</dd></div>
+          <div><dt>収録期間</dt><dd>2028/11/30 - 2038/08/22</dd></div>
+          <div><dt>保管状態</dt><dd>社員用記録 / 私的日記</dd></div>
+        </dl>
+      </section>
+
+      <section class="auth-card" aria-labelledby="auth-title">
+        <div>
+          <p class="section-label">LOCKED DIARY</p>
+          <h2 id="auth-title">記録閲覧認証</h2>
+          <p>この記録は社員用記録として保護されています。確認済みの数字を入力してください。</p>
+        </div>
+        <form id="kyoka-2-auth-form" class="auth-form" novalidate>
+          <label for="kyoka-2-password">パスワード</label>
+          <input id="kyoka-2-password" name="password" autocomplete="off" inputmode="numeric" placeholder="8桁" />
+          <p class="password-hint">ヒント：ふたりにとって、家族が始まった日。</p>
+          <button type="submit">記録を開く</button>
+          <p class="auth-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="record-open" class="diary-entries" data-protected-content hidden aria-label="鏡花の日記本文">
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2028-11-30">2028/11/30</time>
+            <h2>辰也が、帰ってきませんでした。</h2>
+          </header>
+          <div class="entry-body">
+            <p>朝、いつもみたいに「行ってくる」って言って、<br />いつもみたいに笑って、<br />いつもみたいに私の頭をぽんってして、<br />大樹のほっぺを触ってから出ていきました。</p>
+            <p>それが最後になるなんて、思うわけがありません。</p>
+            <p>大樹はまだ三歳で、<br />「おとうさん、おそいね」って何回も言いました。</p>
+            <p>私はそのたびに、<br />「もうすぐ帰ってくるよ」って言いました。</p>
+            <p>嘘をついたつもりはありませんでした。<br />本当に、帰ってくると思っていました。</p>
+            <p>でも、辰也は帰ってきませんでした。</p>
+            <p>私は今日、母親なのに、<br />大樹の前でたくさん泣いてしまいました。</p>
+            <p>あの子は何も分かっていない顔で、<br />私の背中を小さな手で撫でてくれました。</p>
+            <p>辰也。<br />私、どうしたらいいですか。</p>
+            <p>あなたがいない世界で、<br />私は大樹をちゃんと守れるのでしょうか。</p>
+            <p class="happiness">それでも、私はしあわせです。<br />あなたが大樹を残してくれたから。<br />あなたと生きた時間が、ちゃんとここにあるから。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2029-01-14">2029/01/14</time>
+            <h2>大樹が、辰也の写真に向かって話しかけるようになりました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>「おとうさん、きょうね」<br />「おとうさん、これできたよ」<br />「おとうさん、みて」</p>
+            <p>そのたびに、私は台所で手を止めます。<br />返事をしてあげたいのに、<br />辰也の声で返事なんてできないから。</p>
+            <p>知られずの村は、今日も静かです。<br />誰も余計なことを聞かない。<br />誰も私たちを探さない。<br />誰も、東家や仁士家の名前を出さない。</p>
+            <p>ここに来たとき、私は逃げてきたつもりでした。<br />でも今は、守られていたのだと思います。</p>
+            <p>辰也と選んだ場所。<br />大樹が初めて歩いた場所。<br />私が、母親になっていく場所。</p>
+            <p>けれど、少しずつ分かってきました。</p>
+            <p>私は大樹を守りたい。<br />でも、守るだけでは足りない。</p>
+            <p>食べさせて、学校に行かせて、<br />病気をしたら病院に連れて行って、<br />寂しい夜には抱きしめて、<br />父親がいないことを、できるだけ悲しませないようにして。</p>
+            <p>母親って、こんなに忙しいんですね。</p>
+            <p>お母さんに、ちゃんとありがとうって言えばよかったです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2032-03-16">2032/03/16</time>
+            <h2>今日、大樹を連れて仁士家に戻りました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>知られずの村を出る朝、<br />大樹は何も言いませんでした。</p>
+            <p>ただ、辰也のカメラを小さなリュックに入れて、<br />玄関でずっと立っていました。</p>
+            <p>「行こうか」と言ったら、<br />「おとうさんも？」と聞かれました。</p>
+            <p>私は笑って、<br />「もちろん。写真の中にいるから、一緒に行くよ」と言いました。</p>
+            <p>嘘ではありません。<br />でも、胸が痛みました。</p>
+            <p>仁士家に戻ることは、負けたみたいで嫌でした。<br />辰也と二人で選んだ人生を、途中で諦めるみたいで。</p>
+            <p>でも、大樹を育てるにはお金が必要で、<br />学校も、病院も、生活も、<br />私一人の意地だけではどうにもなりませんでした。</p>
+            <p>私は、昔より少しだけ現実を知りました。</p>
+            <p>そしてその分だけ、<br />辰也がどれだけ無茶をして私を守ってくれていたのか、<br />やっと分かりました。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2032-03-20">2032/03/20</time>
+            <h2>東家に手紙と遺品を持っていきました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>怖かったです。</p>
+            <p>東の家に入るだけで、足が震えました。<br />辰也が育った家。<br />辰也が逃げた家。<br />私を、きっと許さない家。</p>
+            <p>翔琉さんは、辰也の時計を見た瞬間、<br />何も言いませんでした。</p>
+            <p>しばらくしてから、<br />「このバカ息子が、、、」<br />とだけ言いました。</p>
+            <p>怒っているようにも、<br />泣いているようにも見えました。</p>
+            <p>私は謝ることしかできませんでした。</p>
+            <p>辰也を連れて行ってしまって、ごめんなさい。<br />最後まで会わせてあげられなくて、ごめんなさい。<br />大樹を、もっと早く見せに来られなくて、ごめんなさい。</p>
+            <p>でも、心のどこかで思ってしまいました。</p>
+            <p>辰也は、最後まで私たちを愛してくれました。<br />だからどうか、辰也のことを、<br />逃げた息子だけで終わらせないでください。</p>
+            <p>そう言いたかったけど、言えませんでした。</p>
+            <p>私はまだ、弱いです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <header class="entry-header">
+            <time datetime="2033-08-22">2033/08/22</time>
+            <h2>大樹が八歳になりました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>誕生日の朝、<br />大樹は辰也のカメラを持って庭に出て、<br />空を撮っていました。</p>
+            <p>「なんで空なの？」と聞いたら、<br />「おとうさんに見せる」と言いました。</p>
+            <p>私は泣きそうになって、<br />でも泣いたら大樹が困るから、<br />「きれいに撮れたね」とだけ言いました。</p>
+            <p>大樹は、東家と仁士家の間で育っています。</p>
+            <p>住む場所は仁士家。<br />習い事や学校のことは東家。<br />どちらも、大樹のことを思っているのは分かります。</p>
+            <p>でも、ときどきあの子の目が、<br />どこにも居場所がない子の目になります。</p>
+            <p>私たちが逃げたせいで、<br />あの子は両方の家に引っ張られている。</p>
+            <p>辰也。<br />ごめんなさい。</p>
+            <p>でも、私は諦めません。<br />大樹には、ちゃんと自分の人生を選べる人になってほしい。</p>
+            <p>東家のためでも、仁士家のためでもなく、<br />お父さんとお母さんに胸を張れる自分のために。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry diary-entry--breathing">
+          <header class="entry-header">
+            <time datetime="2038-05-05">2038/05/05</time>
+            <h2>出先で倒れました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>目を開けたら病院で、<br />父と母がいました。</p>
+            <p>最初は疲れだと思っていました。<br />最近、少し息が苦しい日があって、<br />階段を上るだけで胸が痛くなることもあったけど、<br />大丈夫だと思っていました。</p>
+            <p>大丈夫じゃなかったみたいです。</p>
+            <p>先生は、言葉を選びながら説明してくれました。<br />とても珍しい病気だそうです。<br />治す方法は、今のところほとんどないそうです。</p>
+            <p>余命は、四か月くらい。</p>
+            <p>四か月。</p>
+            <p>大樹の誕生日まで、あと少しです。</p>
+            <p>私は父にお願いしました。<br />大樹にはまだ言わないでください、と。</p>
+            <p>東家にも、まだ言わないでください、と。</p>
+            <p>言わなければいけないことは分かっています。<br />でも、あの子の世界を急に壊す勇気がありません。</p>
+            <p>母親なのに、ずるいです。</p>
+            <p>でも、今日だけは。<br />今日だけは、まだ普通のお母さんでいたいです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry diary-entry--breathing">
+          <header class="entry-header">
+            <time datetime="2038-05-09">2038/05/09</time>
+            <h2>よろずやの方に会いました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>昔、私たちを知られずの村へ連れて行ってくれた人たち。<br />あのときは、逃げるために助けてもらいました。</p>
+            <p>今度は、残すために助けてもらうことになりました。</p>
+            <p>手紙を書きます。</p>
+            <p>大樹へ。<br />仁士家のみんなへ。<br />東家へ。</p>
+            <p>最初は、遺書みたいで嫌でした。<br />でも、近藤さんは静かに言いました。</p>
+            <p>「死ぬ準備ではなく、愛情を残す仕事です」</p>
+            <p>その言葉で、少しだけ息ができました。</p>
+            <p>私は、大樹の毎年の誕生日に手紙を届けてもらうことにしました。</p>
+            <p>大樹が大人になるまで。<br />迷ったときに、少しだけ背中を押せるように。<br />私がいなくても、あなたは愛されていると分かるように。</p>
+            <p>何歳まで書けばいいか、悩みました。</p>
+            <p>私は三十五歳で止まってしまうかもしれない。<br />だから、大樹が四十五歳になるまでにしました。</p>
+            <p>私より十年長く生きた大樹に、<br />最後に「もう大丈夫」と言えるように。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry diary-entry--breathing">
+          <header class="entry-header">
+            <time datetime="2038-06-18">2038/06/18</time>
+            <h2>今日は調子がよかったので、大樹と少しだけ散歩しました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>大樹は私の歩幅に合わせて、<br />ゆっくり歩いてくれました。</p>
+            <p>前は、手を引いていたのは私だったのに。<br />今は、あの子が私を待ってくれます。</p>
+            <p>母親って不思議です。</p>
+            <p>子供を守るために強くなるのだと思っていました。<br />でも本当は、子供に守られていることのほうが多いのかもしれません。</p>
+            <p>大樹は最近、あまり笑いません。<br />何か気づいているのかもしれません。</p>
+            <p>「おかあさん、どこか痛い？」<br />と聞かれました。</p>
+            <p>私は、<br />「少し疲れただけ」<br />と答えました。</p>
+            <p>嘘です。</p>
+            <p>でも、あの子を怖がらせたくありませんでした。</p>
+            <p>ごめんね、大樹。<br />お母さんは、あなたに嘘をついています。</p>
+            <p>でも、あなたを裏切っているわけではありません。<br />あなたを守りたいだけです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry diary-entry--breathing">
+          <header class="entry-header">
+            <time datetime="2038-08-20">2038/08/20</time>
+            <h2>体が、ずいぶん重くなりました。</h2>
+          </header>
+          <div class="entry-body">
+            <p>ペンを持つ時間も短くなっています。<br />それでも、手紙だけは書き終えたいです。</p>
+            <p>仁士家への手紙には、ありがとうを書きました。<br />たくさん心配をかけて、たくさん迷惑をかけて、<br />それでも最後まで娘でいさせてくれたこと。</p>
+            <p>東家への手紙には、ごめんなさいを書きました。<br />辰也を奪ったように見えたこと。<br />大樹を、両家の間に立たせてしまったこと。<br />それでも、大樹をどうか道具にしないでほしいということ。</p>
+            <p>大樹への手紙には、好きだよを書きました。</p>
+            <p>何度書いても足りません。</p>
+            <p>好きだよ。<br />大好きだよ。<br />生まれてきてくれてありがとう。<br />私をお母さんにしてくれてありがとう。</p>
+            <p>大樹が生まれた日。<br />2025年8月22日。</p>
+            <p class="happiness">あの日から、私はずっとしあわせでした。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry diary-entry--breathing">
+          <header class="entry-header">
+            <time datetime="2038-08-21">2038/08/21</time>
+            <h2>大樹が、どこかへ行っていたみたいです。</h2>
+          </header>
+          <div class="entry-body">
+            <p>帰ってきたとき、顔が真っ赤で、<br />目も腫れていて、<br />でも何も言いませんでした。</p>
+            <p>「どうしたの？」と聞いたら、<br />「なんでもない」と言いました。</p>
+            <p>なんでもない顔ではありませんでした。</p>
+            <p>父も、母も、家の人たちも、<br />何かを知っている顔をしていました。</p>
+            <p>たぶん、大樹は何かをしようとしてくれたのだと思います。</p>
+            <p>私のために。<br />小さな体で、大人たちのところへ行って。<br />泣きながら、何かを頼んでくれたのだと思います。</p>
+            <p>大樹。<br />あなたは、もう弱い子ではありません。</p>
+            <p>お母さんは、本当はずっと心配でした。<br />私がいなくなったら、この子はどうやって生きていくのだろう。<br />東家と仁士家の間で、押しつぶされてしまうのではないか。<br />自分の言葉を、飲み込んでばかりになるのではないか。</p>
+            <p>でも今日、少しだけ安心しました。</p>
+            <p>あなたはきっと、自分で歩けます。</p>
+            <p>泣いてもいい。<br />逃げてもいい。<br />でも最後には、自分の足で立てる人です。</p>
+            <p class="happiness">私はしあわせです。</p>
+          </div>
+        </article>
+
+        <article class="diary-entry final-entry">
+          <header class="entry-header">
+            <time datetime="2038-08-22">2038/08/22</time>
+            <h2>朝の風が、気持ちいいです。</h2>
+          </header>
+          <div class="entry-body">
+            <p>今日は大樹の誕生日です。</p>
+            <p>十三年前の今日、<br />あなたは小さな声で泣きました。<br />私はその声を聞いて、<br />世界で一番大切な仕事をもらったと思いました。</p>
+            <p>お母さんにしてくれてありがとう。</p>
+            <p>大樹。<br />これから先、あなたは何度も寂しくなると思います。</p>
+            <p>お父さんがいないこと。<br />お母さんもいなくなること。<br />東家と仁士家の間で、何を選べばいいのか分からなくなること。</p>
+            <p>でも、忘れないでください。</p>
+            <p>あなたは、誰かの代わりではありません。<br />東家の後継ぎでも、仁士家の希望でもありません。<br />あなたは、東大樹です。</p>
+            <p>お父さんが守りたかった子。<br />お母さんが命より大切に思った子。</p>
+            <p>だから、どうか、<br />誰かのためだけに生きないでください。</p>
+            <p>自分の好きなものを選んでください。<br />おいしいものを食べてください。<br />写真を撮ってください。<br />辛いものは無理して食べなくていいです。<br />笑える日は、ちゃんと笑ってください。</p>
+            <p>もし、どうしても寂しくなったら、<br />毎年、手紙を読んでください。</p>
+            <p>私はそこにいます。</p>
+            <p>辰也も、きっとそこにいます。</p>
+            <p>大樹。<br />誕生日おめでとう。</p>
+            <p class="happiness">私は、あなたのお母さんになれて、<br />本当にしあわせでした。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="letter-card" data-protected-content hidden aria-labelledby="letter-title">
+        <p class="section-label">LETTER ARCHIVE</p>
+        <h2 id="letter-title">残された手紙</h2>
+        <p>
+          鏡花が最後の夏に書き続けた手紙は、2038年8月22日の夕暮れ、よろずやによって届けられた。<br />
+          宛先は三つ。<br />
+          仁士家へ。<br />
+          東家へ。<br />
+          そして、大樹へ。
+        </p>
+        <a class="letter-link" href="/archive/letters/">手紙の記録を見る</a>
+        <p class="letter-hint">鍵は、鏡花が最後に眠った日。<br />そして、大樹に最初の手紙が届いた日。</p>
+      </section>
     </main>
+
+    <footer class="diary-footer">
+      <p>仁士鏡花の日記② / 復元表示</p>
+      <p>このページは創作作品内の架空Webページです。実在の人物・団体・企業・地域・医療機関・手続きとは関係ありません。本作品にはAI生成画像または加工画像を含む場合があります。</p>
+    </footer>
   </body>
 </html>

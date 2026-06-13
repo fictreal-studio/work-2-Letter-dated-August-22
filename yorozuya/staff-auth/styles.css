@@ -342,3 +342,10 @@ h1 {
     opacity: 0.25;
   }
 }
+
+.password-hint {
+  margin: -0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}

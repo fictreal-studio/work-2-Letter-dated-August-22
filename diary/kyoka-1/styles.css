@@ -1,0 +1,388 @@
+:root {
+  --ink: #342823;
+  --muted: #806c65;
+  --paper: #fff9f3;
+  --cream: #fff1df;
+  --pink: #f8dfe1;
+  --pink-soft: rgba(246, 198, 202, 0.22);
+  --card: rgba(255, 253, 249, 0.92);
+  --line: rgba(158, 111, 98, 0.18);
+  --line-strong: rgba(158, 111, 98, 0.32);
+  --accent: #b56f73;
+  --accent-deep: #84504d;
+  --archive: #5f5b49;
+  --shadow: rgba(116, 73, 62, 0.13);
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; background: var(--cream); }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.9;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.88), transparent 26rem),
+    radial-gradient(circle at 88% 10%, rgba(248, 208, 212, 0.68), transparent 24rem),
+    linear-gradient(135deg, #fff9f3 0%, #fff1df 52%, #f8e7df 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(181, 111, 115, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(181, 111, 115, 0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.fiction-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 0.42rem 0.9rem;
+  color: rgba(52, 40, 35, 0.72);
+  text-align: center;
+  background: rgba(255, 249, 243, 0.92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.fiction-header p { margin: 0; }
+
+.fiction-header__label {
+  color: var(--accent-deep);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.fiction-header__text { font-size: 0.72rem; }
+
+.diary-page,
+.diary-footer {
+  width: min(100% - 2rem, 1080px);
+  margin: 0 auto;
+}
+
+.diary-page { padding: clamp(1.2rem, 4vw, 3rem) 0 3rem; }
+
+.diary-hero,
+.auth-card,
+.diary-entry,
+.related-request {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 70px var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.diary-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.6rem, 5vw, 3.4rem);
+  border-radius: 32px;
+}
+
+.diary-hero::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -6rem;
+  width: 20rem;
+  height: 20rem;
+  content: "";
+  background: radial-gradient(circle, rgba(246, 198, 202, 0.58), transparent 68%);
+  border-radius: 999px;
+}
+
+.diary-kicker,
+.section-label {
+  margin: 0 0 0.75rem;
+  color: var(--accent-deep);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1,
+.diary-subcopy,
+.entry-header h2,
+.auth-card h2,
+.related-request h2 {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  font-weight: 500;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(2.1rem, 6vw, 4.4rem);
+  line-height: 1.24;
+  letter-spacing: 0.04em;
+}
+
+.diary-subcopy {
+  position: relative;
+  z-index: 1;
+  margin: 0.8rem 0 0;
+  color: var(--accent-deep);
+  font-size: clamp(1.15rem, 3vw, 1.75rem);
+}
+
+.diary-intro {
+  position: relative;
+  z-index: 1;
+  max-width: 46rem;
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 2vw, 1.08rem);
+}
+
+.profile-strip {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 1.6rem 0 0;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.profile-strip div {
+  min-height: 6.4rem;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.54);
+}
+
+.profile-strip dt,
+.profile-strip dd { margin: 0; }
+
+.profile-strip dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.profile-strip dd {
+  margin-top: 0.42rem;
+  font-weight: 800;
+}
+
+.auth-card,
+.related-request {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  gap: clamp(1rem, 4vw, 2rem);
+  align-items: start;
+  padding: clamp(1.2rem, 4vw, 2rem);
+  margin-top: 1.4rem;
+  border-radius: 26px;
+}
+
+.auth-card h2,
+.related-request h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.35;
+}
+
+.auth-card p,
+.related-request p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.78rem;
+}
+
+.auth-form label {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.auth-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.78rem 0.9rem;
+  color: var(--ink);
+  font: inherit;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+}
+
+.password-hint {
+  margin: -0.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.auth-form button,
+.archive-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.78rem 1.2rem;
+  color: #fffaf5;
+  font: inherit;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(132, 80, 77, 0.2);
+}
+
+.auth-message {
+  min-height: 1.5rem;
+  margin: 0;
+  color: var(--accent-deep);
+  font-weight: 800;
+}
+
+.diary-entries {
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 1.4rem;
+}
+
+.diary-entry {
+  padding: clamp(1.2rem, 4vw, 2.35rem);
+  border-radius: 28px;
+}
+
+.entry-header {
+  display: grid;
+  gap: 0.45rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.entry-header time {
+  color: var(--accent-deep);
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.entry-header h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3.2vw, 2.05rem);
+  line-height: 1.42;
+}
+
+.entry-body {
+  max-width: 46rem;
+  margin-top: 1.25rem;
+}
+
+.entry-body p {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.07rem);
+}
+
+.entry-body p + p { margin-top: 1rem; }
+
+.happiness {
+  padding: 1rem 1.1rem;
+  margin-top: 1.45rem !important;
+  color: var(--accent-deep);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.22rem) !important;
+  line-height: 1.9;
+  background: var(--pink-soft);
+  border-left: 4px solid rgba(181, 111, 115, 0.45);
+  border-radius: 18px;
+}
+
+.related-request {
+  border-color: rgba(95, 91, 73, 0.28);
+  background:
+    linear-gradient(135deg, rgba(95, 91, 73, 0.1), rgba(255, 253, 249, 0.92)),
+    var(--card);
+}
+
+.related-request .section-label { color: var(--archive); }
+
+.related-request h2 { color: #4f4b3e; }
+
+.related-request p { color: #665f52; }
+
+.archive-link {
+  align-self: end;
+  background: linear-gradient(135deg, #68614f, #403c32);
+  box-shadow: 0 14px 30px rgba(72, 67, 54, 0.2);
+}
+
+.diary-footer {
+  padding: 1.2rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.diary-footer p { margin: 0.3rem 0 0; }
+
+@media (max-width: 860px) {
+  .profile-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .auth-card,
+  .related-request {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .fiction-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.1rem;
+    text-align: left;
+  }
+
+  .diary-page,
+  .diary-footer {
+    width: min(100% - 1.2rem, 1080px);
+  }
+
+  .diary-page { padding-top: 0.9rem; }
+
+  .diary-hero,
+  .auth-card,
+  .diary-entry,
+  .related-request {
+    border-radius: 22px;
+  }
+
+  .profile-strip { grid-template-columns: 1fr; }
+
+  .profile-strip div { min-height: auto; }
+
+  .auth-form button,
+  .archive-link {
+    width: 100%;
+  }
+}

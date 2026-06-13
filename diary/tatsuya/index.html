@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="/diary/tatsuya/styles.css" />
     <script src="/route-pages.js" defer></script>
+    <script src="/diary/script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
@@ -18,7 +19,7 @@
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
 
-    <main class="diary-shell" aria-labelledby="page-title">
+    <main class="diary-shell" aria-labelledby="page-title" data-hint="ヒント：東家の内部情報に残された、辰也が生まれた日の記録を確認してください。" data-password="20010913">
       <nav class="top-link" aria-label="補助導線">
         <a href="/yorozuya/archive/">アーカイブへ戻る</a>
       </nav>
@@ -28,7 +29,7 @@
         <h1 id="page-title">東辰也の日記</h1>
         <p class="diary-subtitle">誰にも見せるつもりのなかった、逃げる前の記録。</p>
         <p class="diary-intro">
-          この記録は、よろずや依頼アーカイブ内に保管されていた個人日記の復元データです。<br />
+          この記録は、よろずや社員用記録内に保管されていた個人日記の復元データです。<br />
           一部の表記揺れ・空白・未送信メモは、原文の雰囲気を残して表示しています。
         </p>
         <dl class="diary-meta" aria-label="復元データ概要">
@@ -41,9 +42,9 @@
       <section class="auth-panel" aria-labelledby="auth-title">
         <div>
           <p class="panel-label">LOCKED ARCHIVE</p>
-          <h2 id="auth-title">日記データを開く</h2>
+          <h2 id="auth-title">記録閲覧認証</h2>
           <p>
-            東家側ログに記録されていた本人情報と照合してください。解錠後、復元された本文の先頭へ移動します。
+            この記録は社員用記録として保護されています。確認済みの数字を入力してください。
           </p>
         </div>
         <form id="diary-tatsuya-form" class="auth-form">
@@ -54,12 +55,13 @@
             inputmode="numeric"
             placeholder="8桁"
           />
-          <button type="submit">日記を開く</button>
+          <p class="password-hint">ヒント：東家の内部情報に残された、辰也が生まれた日の記録を確認してください。</p>
+          <button type="submit">記録を開く</button>
           <p class="auth-message" aria-live="polite"></p>
         </form>
       </section>
 
-      <section id="record-open" class="diary-record" aria-label="東辰也の日記本文">
+      <section id="record-open" class="diary-record" data-protected-content hidden aria-label="東辰也の日記本文">
         <article class="diary-entry">
           <header><time datetime="2024-02-06">2024/02/06</time><h2>雪の日</h2></header>
           <div class="entry-body">
@@ -197,11 +199,11 @@
         </article>
       </section>
 
-      <section class="related-record" aria-labelledby="related-title">
+      <section class="related-record" data-protected-content hidden aria-labelledby="related-title">
         <p class="panel-label">RELATED REQUEST</p>
         <h2 id="related-title">関連する依頼記録</h2>
         <p>
-          この日記の最終更新日と同じ日付で、よろずやの依頼アーカイブに未整理の引っ越し依頼が残されています。
+          この日記の最終更新日と同じ日付で、よろずやの社員用記録に未整理の引っ越し依頼が残されています。
         </p>
         <dl class="request-meta">
           <div><dt>依頼日</dt><dd>2024/07/12</dd></div>
