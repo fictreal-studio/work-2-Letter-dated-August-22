@@ -5,25 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <title>依頼アーカイブ｜よろずや</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空Webページです。" />
-    <link rel="stylesheet" href="/route-pages.css" />
-    <script src="/route-pages.js" defer></script>
+    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空社内アーカイブページです。" />
+    <link rel="stylesheet" href="/yorozuya/archive/styles.css" />
+    <script src="/yorozuya/archive/script.js" defer></script>
   </head>
   <body>
     <header class="fiction-header" aria-label="フィクション表記">
       <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
       <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
     </header>
-    <main class="page-shell" aria-labelledby="page-title">
-      <article class="record-card">
-        <p class="page-kicker">YOROZUYA ARCHIVE</p>
-        <h1 id="page-title">未完了依頼アーカイブ</h1>
-        <p class="lead">達成書が未作成の依頼に関連する公開情報・制限記録を整理した架空アーカイブです。</p>
-        
-<section class="section-block"><h2>確認順</h2><ol class="route-list"><li><a href="/article/famous-people/">地元の名士記事</a>：関係者の公開プロフィール</li><li><a href="/azuma-construction/">東建設</a>：東家の公開情報</li><li><a href="/west-tv/">ウェストテレビ</a>：仁士家の公開情報</li><li><a href="/archive/log-azuma/">東家メイドログ</a>：パスワード 1885</li><li><a href="/archive/log-nishi/">仁士家メイドログ</a>：パスワード 1990</li><li><a href="/diary/tatsuya/">辰也の日記</a>：パスワード 20010913</li><li><a href="/diary/kyoka-1/">鏡花の日記①</a>：パスワード 20030527</li><li><a href="/diary/couple/">二人の日記</a>：パスワード 20240712</li><li><a href="/diary/kyoka-2/">鏡花の日記②</a>：パスワード 20250822</li><li><a href="/archive/letters/">手紙記録</a>：パスワード 20380822</li><li><a href="/archive/completion-report/">達成書作成ページ</a></li></ol></section>
-<nav class="nav-row" aria-label="導線"><a class="button-link" href="/archive/log-azuma/">最初の制限記録へ</a><a class="button-link button-link--ghost" href="/search/">検索ページへ戻る</a></nav>
-        <p class="footer-note">このページは創作作品内の架空Webページです。実在の企業・団体・人物・手続きとは関係ありません。</p>
-      </article>
+
+    <main class="archive-shell" aria-labelledby="page-title">
+      <nav class="quiet-nav" aria-label="補助導線">
+        <a href="/yorozuya/">よろずやサイトへ戻る</a>
+        <a href="/search/">検索画面へ戻る</a>
+        <a href="/briefing/">指示書を確認する</a>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__copy">
+          <p class="archive-kicker">FICTIONAL INTERNAL ARCHIVE</p>
+          <h1 id="page-title">依頼アーカイブ</h1>
+          <p class="hero__subtitle">記録は、依頼人のものです。</p>
+          <p class="hero__text">
+            このアーカイブには、よろずやが過去に受けた依頼のうち、完了報告・補足資料・関係者記録の整理が必要なものだけが保管されています。閲覧には社員番号による認証が必要です。記録を読む時は、依頼人の人生に触れていることを忘れないでください。
+          </p>
+          <p class="fiction-inline">このページは創作作品内の架空社内アーカイブです</p>
+        </div>
+        <dl class="access-panel" aria-label="アクセス情報">
+          <div><dt>SYSTEM DATE</dt><dd>2060.04.07</dd></div>
+          <div><dt>ACCESS LEVEL</dt><dd>STAFF / TEMPORARY</dd></div>
+          <div><dt>OPERATOR</dt><dd>新入社員</dd></div>
+          <div><dt>ARCHIVE MODE</dt><dd>整理待ち記録</dd></div>
+        </dl>
+      </section>
+
+      <section class="summary-grid" aria-label="ステータスサマリー">
+        <article class="summary-card">
+          <p>未整理</p>
+          <strong>3</strong>
+          <span>達成書または補足記録の作成が必要な依頼</span>
+        </article>
+        <article class="summary-card">
+          <p>封緘中</p>
+          <strong>2</strong>
+          <span>依頼人保護のため詳細が制限されている記録</span>
+        </article>
+        <article class="summary-card">
+          <p>定期処理</p>
+          <strong>1</strong>
+          <span>毎年指定日に自動配送される記録</span>
+        </article>
+        <article class="summary-card">
+          <p>要確認</p>
+          <strong>1</strong>
+          <span>新入社員による内容確認が必要な記録</span>
+        </article>
+      </section>
+
+      <section class="filter-panel" aria-label="検索と絞り込み">
+        <label class="search-box" for="archive-search">
+          <span>記録検索</span>
+          <input id="archive-search" type="search" placeholder="依頼番号・関係者・種別で記録を探す" autocomplete="off" />
+        </label>
+        <div class="filter-buttons" role="group" aria-label="ステータスフィルター">
+          <button type="button" class="is-active" data-filter="all">すべて</button>
+          <button type="button" data-filter="未整理">未整理</button>
+          <button type="button" data-filter="封緘中">封緘中</button>
+          <button type="button" data-filter="引っ越し">引っ越し</button>
+          <button type="button" data-filter="代筆">代筆</button>
+          <button type="button" data-filter="手紙">手紙</button>
+        </div>
+      </section>
+
+      <section class="request-list" aria-label="依頼カード一覧">
+        <article class="request-card" data-tags="封緘中 引っ越し 所在秘匿 転居 東家 仁士家 共同生活 YRZ-2024-0712">
+          <header class="request-card__header">
+            <div>
+              <p class="request-id">YRZ-2024-0712</p>
+              <h2>所在秘匿を伴う転居支援</h2>
+            </div>
+            <span class="status status--sealed">封緘中 / 関係者保護</span>
+          </header>
+          <dl class="request-meta">
+            <div><dt>受付日</dt><dd>2024.07.12</dd></div>
+            <div><dt>関係者表示</dt><dd>依頼者名 非公開</dd></div>
+          </dl>
+          <p class="request-summary">対立する二つの家から離れ、依頼人二名が新しい生活を始めるための転居支援。家族・関係者・外部業者に悟られない形で、住居確保、移動、生活基盤の初期整備を実施。移転先は社内規定により非公開。</p>
+          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>この依頼は、荷物を運ぶ仕事ではなかった。二人が、自分たちの人生を選ぶための逃げ道を作る仕事だった。</span></aside>
+          <div class="card-actions">
+            <button type="button" data-open-record="azuma">東家側記録を開く</button>
+            <button type="button" data-open-record="nishi">仁士家側記録を開く</button>
+            <button type="button" data-open-record="couple">共同生活記録を開く</button>
+          </div>
+        </article>
+
+        <article class="request-card" data-tags="未整理 代筆 記録補助 長期保管 鏡花 手紙 YRZ-2038-0505">
+          <header class="request-card__header">
+            <div>
+              <p class="request-id">YRZ-2038-0505</p>
+              <h2>代筆・記録補助</h2>
+            </div>
+            <span class="status status--pending">未整理 / 長期保管</span>
+          </header>
+          <dl class="request-meta">
+            <div><dt>受付日</dt><dd>2038.05.05</dd></div>
+            <div><dt>関係者表示</dt><dd>依頼者名 非公開</dd></div>
+          </dl>
+          <p class="request-summary">余命宣告を受けた依頼人からの依頼。本人が今後伝えきれなくなる可能性のある言葉を、よろずや立会いのもとで記録・整理。家族ごとに宛先を分け、必要な時期に届くよう配送計画を作成。</p>
+          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>依頼人は、自分がいなくなった後のことばかり話していた。それでも最後には必ず、『私はしあわせです』と書いた。</span></aside>
+          <div class="card-actions">
+            <button type="button" data-open-record="kyokaLate">鏡花の後期記録を開く</button>
+            <button type="button" data-open-record="letters">手紙配送記録を確認する</button>
+          </div>
+        </article>
+
+        <article class="request-card" data-tags="未整理 手紙 初回配送 達成書 配送記録 YRZ-2038-0822">
+          <header class="request-card__header">
+            <div>
+              <p class="request-id">YRZ-2038-0822</p>
+              <h2>手紙初回配送</h2>
+            </div>
+            <span class="status status--report">処理済 / 達成書未作成</span>
+          </header>
+          <dl class="request-meta">
+            <div><dt>受付日</dt><dd>2038.08.22</dd></div>
+            <div><dt>関係者表示</dt><dd>宛先 三系統</dd></div>
+          </dl>
+          <p class="request-summary">依頼人の死去確認後、同日夕刻に初回配送を実施。宛先は三通。仁士家宛、東家宛、東大樹宛。配送方法および担当者情報は、よろずや保護規定により非公開。</p>
+          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>誰かの死を知らせる手紙ではなく、残された人が次の朝を迎えるための手紙だった。</span></aside>
+          <div class="card-actions">
+            <button type="button" data-open-record="letters">手紙記録を開く</button>
+            <button type="button" data-report-pending>達成書を作成する</button>
+          </div>
+        </article>
+
+        <article class="request-card request-card--future" data-tags="定期処理 手紙 未来予約 閲覧不可 東大樹 YRZ-2070-0822">
+          <header class="request-card__header">
+            <div>
+              <p class="request-id">YRZ-2070-0822</p>
+              <h2>定期配送終了処理</h2>
+            </div>
+            <span class="status status--future">未来予約 / 閲覧不可</span>
+          </header>
+          <dl class="request-meta">
+            <div><dt>受付日</dt><dd>2070.08.22</dd></div>
+            <div><dt>関係者表示</dt><dd>東大樹</dd></div>
+          </dl>
+          <p class="request-summary">毎年8月22日に実施される手紙配送の最終処理予定。依頼人の指定により、東大樹が45歳を迎える年をもって定期配送を終了する。</p>
+          <aside class="internal-note"><strong>よろずや内部メモ</strong><span>母が生きた年齢より、十年先まで。そこまで見届けたら、あとは本人の人生に返す。</span></aside>
+          <div class="card-actions">
+            <button type="button" disabled>現在は閲覧できません</button>
+          </div>
+        </article>
+      </section>
+
+      <p class="empty-state" hidden>条件に一致する依頼記録はありません。</p>
+
+      <section class="operator-note" aria-labelledby="operator-title">
+        <h2 id="operator-title">整理担当者へ</h2>
+        <p>依頼の達成書は、記録をすべて読んでから作成してください。よろずやの仕事は、依頼を完了させることだけではありません。誰にも言えなかった願いを、正しい形で残すことまでが仕事です。</p>
+        <p>未確認の記録が残っている場合、達成書の作成ボタンは有効になりません。</p>
+      </section>
+
+      <nav class="quiet-nav quiet-nav--bottom" aria-label="戻る導線">
+        <a href="/yorozuya/">よろずやサイトへ戻る</a>
+        <a href="/search/">検索画面へ戻る</a>
+        <a href="/briefing/">指示書を確認する</a>
+      </nav>
     </main>
+
+    <div class="modal" id="record-modal" hidden>
+      <div class="modal__backdrop" data-close-modal></div>
+      <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+        <button class="modal__close" type="button" data-close-modal aria-label="閉じる">×</button>
+        <p class="modal__kicker">SEALED RECORD</p>
+        <h2 id="modal-title">封緘記録の確認</h2>
+        <p id="modal-description">この記録は、関係者保護のため一部封緘されています。関連資料から確認できる数字を入力してください。</p>
+        <form id="record-unlock-form" class="modal-form">
+          <label for="record-code">確認数字</label>
+          <input id="record-code" name="record-code" type="text" inputmode="numeric" autocomplete="off" placeholder="数字を入力" />
+          <p class="modal-message" id="modal-message" aria-live="polite"></p>
+          <div class="modal-actions">
+            <button type="submit">記録を開く</button>
+            <button type="button" data-close-modal>戻る</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <footer class="archive-footer">
+      <p>© YOROZUYA Archive Division</p>
+      <p>本作品に登場する人物・団体・施設・記録はすべて架空です。実在の人物・団体・施設とは関係ありません。</p>
+    </footer>
   </body>
 </html>
