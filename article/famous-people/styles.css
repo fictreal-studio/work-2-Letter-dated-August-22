@@ -1,0 +1,564 @@
+:root {
+  --ink: #241f1a;
+  --sub-ink: #665d51;
+  --paper: #fffaf0;
+  --paper-soft: #f5eddf;
+  --card: #fffdf7;
+  --line: #ded1bc;
+  --line-dark: #bca785;
+  --accent: #8a6234;
+  --accent-soft: rgba(138, 98, 52, 0.12);
+  --deep: #2b2118;
+  --stamp: #9b3f35;
+  --shadow: rgba(75, 51, 26, 0.13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--paper-soft);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.85;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(138, 98, 52, 0.12), transparent 28rem),
+    linear-gradient(180deg, #fffaf0 0%, #f7efe3 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(138, 98, 52, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 98, 52, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.fiction-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.45rem 1rem;
+  text-align: center;
+  color: rgba(255, 250, 240, 0.78);
+  background: rgba(21, 17, 13, 0.92);
+  border-bottom: 1px solid rgba(238, 219, 184, 0.24);
+  backdrop-filter: blur(10px);
+}
+
+.fiction-header p {
+  margin: 0;
+}
+
+.fiction-header__label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #d8bd86;
+}
+
+.fiction-header__text {
+  font-size: 0.72rem;
+}
+
+.site-page {
+  width: min(100%, 1120px);
+  padding: clamp(1.2rem, 4vw, 3rem) 1rem 3.5rem;
+  margin: 0 auto;
+}
+
+.local-header,
+.article-header,
+.article-disclaimer {
+  background: rgba(255, 253, 247, 0.78);
+  border: 1px solid rgba(138, 98, 52, 0.18);
+  box-shadow: 0 20px 60px var(--shadow);
+}
+
+.local-header,
+.article-header {
+  padding: clamp(1.3rem, 4vw, 2.6rem);
+  border-radius: 28px;
+}
+
+.media-name,
+.category,
+.published-date,
+.byline,
+.role,
+.reading,
+.image-note,
+.profile-label {
+  margin: 0;
+}
+
+.media-name {
+  display: inline-flex;
+  padding: 0.3rem 0.7rem;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(138, 98, 52, 0.2);
+  border-radius: 999px;
+}
+
+.published-date,
+.byline,
+.category {
+  color: var(--sub-ink);
+  font-size: 0.9rem;
+}
+
+.published-date {
+  margin-top: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+h1 {
+  margin: 0.4rem 0 0;
+  font-size: clamp(2.1rem, 7vw, 4.2rem);
+  letter-spacing: 0.04em;
+}
+
+.lead,
+.article-subtitle {
+  max-width: 820px;
+  color: var(--sub-ink);
+}
+
+.lead {
+  margin: 1.2rem 0 0;
+  font-size: clamp(1rem, 2.3vw, 1.12rem);
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.4rem;
+}
+
+.person-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid rgba(138, 98, 52, 0.18);
+  border-radius: 26px;
+  box-shadow: 0 16px 42px rgba(75, 51, 26, 0.08);
+}
+
+.work-image,
+.hero-image {
+  position: relative;
+  min-height: 13rem;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(43, 33, 24, 0.72), rgba(138, 98, 52, 0.32)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 18px);
+}
+
+.person-card--kondo .work-image,
+.article-kondo .hero-image,
+.article-kondo .portrait {
+  background-color: #8a765c;
+}
+
+.person-card--kakeru .work-image,
+.article-kakeru .hero-image,
+.article-kakeru .portrait {
+  background-color: #695846;
+}
+
+.person-card--morihito .work-image,
+.article-morihito .hero-image,
+.article-morihito .portrait {
+  background-color: #6d7c75;
+}
+
+.work-image span,
+.image-note {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.75rem;
+  padding: 0.22rem 0.55rem;
+  color: rgba(255, 250, 240, 0.86);
+  font-size: 0.74rem;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 999px;
+}
+
+.card-body {
+  position: relative;
+  padding: 3rem 1.1rem 1.2rem;
+}
+
+.portrait {
+  position: absolute;
+  top: -2.4rem;
+  left: 1.1rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 4px solid var(--card);
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(35, 25, 15, 0.16);
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255, 248, 232, 0.68) 0 16%, transparent 17%),
+    radial-gradient(circle at 50% 70%, rgba(36, 31, 26, 0.36) 0 25%, transparent 26%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.12));
+}
+
+.role {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.person-card h2 {
+  margin: 0.15rem 0 0;
+  font-size: 1.55rem;
+}
+
+.reading {
+  color: var(--sub-ink);
+  font-size: 0.85rem;
+}
+
+.catch {
+  margin: 0.85rem 0 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: 1.05rem;
+  color: var(--deep);
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.summary {
+  margin: 0.85rem 0 1.1rem;
+  color: var(--sub-ink);
+}
+
+.article-button,
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.72rem 1rem;
+  color: #fff8ec;
+  font-weight: 800;
+  text-decoration: none;
+  background: var(--deep);
+  border-radius: 999px;
+}
+
+.article-button:hover,
+.article-button:focus-visible,
+.back-link:hover,
+.back-link:focus-visible {
+  background: var(--accent);
+}
+
+.article-page {
+  width: min(100%, 980px);
+}
+
+.article-header {
+  margin-bottom: 1rem;
+}
+
+.category {
+  display: inline-flex;
+  padding: 0.25rem 0.65rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(138, 98, 52, 0.2);
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.article-subtitle {
+  margin: 1rem 0 0;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+}
+
+.byline {
+  margin-top: 1rem;
+}
+
+.hero-block {
+  margin: 1rem 0;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid rgba(138, 98, 52, 0.18);
+  border-radius: 26px;
+  box-shadow: 0 20px 60px var(--shadow);
+}
+
+.hero-image {
+  min-height: clamp(18rem, 45vw, 28rem);
+}
+
+.hero-overlay {
+  position: absolute;
+  left: clamp(1rem, 4vw, 2rem);
+  bottom: clamp(1rem, 4vw, 2rem);
+  max-width: min(88%, 38rem);
+  color: #fffaf0;
+}
+
+.hero-name {
+  display: inline-flex;
+  padding: 0.28rem 0.7rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+}
+
+.hero-catch {
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: clamp(1.55rem, 5vw, 3.1rem);
+  line-height: 1.35;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.profile-block,
+.article-body,
+.editor-note {
+  background: rgba(255, 253, 247, 0.86);
+  border: 1px solid rgba(138, 98, 52, 0.18);
+  box-shadow: 0 18px 48px rgba(75, 51, 26, 0.08);
+}
+
+.profile-block {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 24px;
+}
+
+.profile-photo-wrap {
+  text-align: center;
+}
+
+.profile-block .portrait {
+  position: static;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 0 auto;
+  border-radius: 24px;
+}
+
+.profile-block h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.45rem 0.8rem;
+  margin: 0.8rem 0 0;
+}
+
+.profile-grid dt {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.profile-grid dd {
+  margin: 0;
+  color: var(--sub-ink);
+}
+
+.profile-label {
+  margin-top: 0.45rem;
+  font-size: 0.74rem;
+  color: var(--sub-ink);
+}
+
+.article-body {
+  padding: clamp(1.25rem, 4vw, 2.4rem);
+  margin-top: 1rem;
+  border-radius: 24px;
+}
+
+.article-body p {
+  max-width: 780px;
+  margin: 0;
+}
+
+.article-body p + p,
+.qa-item + .qa-item {
+  margin-top: 1rem;
+}
+
+.qa-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.6rem 0;
+}
+
+.qa-item {
+  padding: 1rem;
+  background: #fffaf0;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 16px;
+}
+
+.qa-item dt,
+.qa-item dd {
+  margin: 0;
+}
+
+.qa-item dt {
+  font-weight: 800;
+  color: var(--deep);
+}
+
+.qa-item dt::before {
+  content: "Q. ";
+  color: var(--accent);
+}
+
+.qa-item dd {
+  margin-top: 0.5rem;
+  color: var(--sub-ink);
+}
+
+.qa-item dd::before {
+  content: "A. ";
+  color: var(--stamp);
+  font-weight: 800;
+}
+
+.editor-note {
+  padding: 1.1rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+.editor-note h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.editor-note p {
+  margin: 0;
+  color: var(--sub-ink);
+}
+
+.keyword {
+  color: #7b542b;
+  font-weight: 800;
+  background: linear-gradient(transparent 62%, rgba(188, 167, 133, 0.36) 0);
+}
+
+.article-bottom {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  margin-top: 1.2rem;
+}
+
+.article-disclaimer {
+  width: min(100%, 900px);
+  padding: 0.9rem 1rem;
+  margin: 1.5rem auto 0;
+  color: var(--sub-ink);
+  font-size: 0.82rem;
+  text-align: center;
+  border-radius: 18px;
+}
+
+@media (max-width: 920px) {
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .fiction-header {
+    display: block;
+    padding: 0.42rem 1rem;
+  }
+
+  .fiction-header__text {
+    margin-top: 0.12rem;
+  }
+
+  .local-header,
+  .article-header,
+  .hero-block,
+  .profile-block,
+  .article-body {
+    border-radius: 20px;
+  }
+
+  .people-grid,
+  .profile-block {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-block {
+    text-align: left;
+  }
+
+  .profile-photo-wrap {
+    text-align: left;
+  }
+
+  .profile-block .portrait {
+    margin: 0;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-grid dt {
+    margin-top: 0.55rem;
+  }
+
+  .hero-image {
+    min-height: 22rem;
+  }
+
+  .hero-overlay {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+  }
+}
