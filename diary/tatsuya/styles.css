@@ -399,3 +399,10 @@ dd {
 
   .diary-hero::after { opacity: 0.35; }
 }
+
+.password-hint {
+  margin: -0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}

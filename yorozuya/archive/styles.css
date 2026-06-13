@@ -591,3 +591,10 @@ h1 { font-size: clamp(3.2rem, 9vw, 7.2rem); }
 
   .status { width: fit-content; }
 }
+
+.password-hint {
+  margin: -0.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}

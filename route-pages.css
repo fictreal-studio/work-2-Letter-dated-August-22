@@ -218,3 +218,10 @@ h1 {
   .nav-row { display: grid; }
   .button-link, button { width: 100%; }
 }
+
+.password-hint {
+  margin: -0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
