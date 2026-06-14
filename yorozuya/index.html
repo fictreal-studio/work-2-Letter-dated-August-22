@@ -1,214 +1,162 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>よろずや｜できることを、最後まで。</title>
-    <meta
-      name="description"
-      content="ARG作品『八月二十二日の手紙』内に登場する架空企業・よろずやの公式サイトです。"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="/yorozuya/script.js" defer></script>
-  </head>
-  <body>
-    <header class="fiction-header" aria-label="フィクション表記">
-      <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
-      <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="引っ越し、配達、代筆、記録の補助。人には言えない依頼も、最後まで。よろずやは、できないと言われたことを、できる形に変えます。">
+  <title>よろずや | できないを、できるに変える。</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <aside class="fiction-notice" aria-label="創作ページであることの表示">
+    <strong>FICTIONAL STORY INTERFACE</strong>
+    <span>このページは創作作品内の架空Webページです</span>
+  </aside>
 
-    <header class="site-header" aria-label="よろずやサイトヘッダー">
-      <a class="brand" href="#top" aria-label="よろずや トップへ">
-        <span class="brand__mark">よ</span>
-        <span class="brand__text">よろずや</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
-        <span class="menu-toggle__line"></span>
-        <span class="menu-toggle__text">MENU</span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="主要ナビゲーション">
-        <a href="#about">私たちについて</a>
-        <a href="#services">できること</a>
-        <a href="#flow">依頼の流れ</a>
-        <a href="#privacy">守秘方針</a>
-        <a class="site-nav__staff" href="#staff">社員へ</a>
-      </nav>
-    </header>
+  <header class="site-header">
+    <a class="site-brand" href="#top" aria-label="よろずや ページ上部へ戻る">
+      <span class="site-brand__symbol" aria-hidden="true"><i></i></span>
+      <span><strong>よろずや</strong><small>YOROZUYA / EST. 1870</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="メニューを開く">
+      <span>MENU</span><i aria-hidden="true"></i>
+    </button>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="主要な案内">
+      <a href="#top">ホーム</a>
+      <a href="#services">できること</a>
+      <a href="#process">依頼の流れ</a>
+      <a href="#message">代表メッセージ</a>
+      <a class="primary-navigation__staff" href="/yorozuya/staff-auth">社員へ<span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__content">
-          <p class="eyebrow">YOROZUYA / PUBLIC SITE / 2060.04.07</p>
-          <h1 id="hero-title">できることを、<br />最後まで。</h1>
-          <p class="hero__lead">
-            引っ越し、配達、代筆、事業の立て直し、生活の整理。<br />
-            よろずやは、誰かの暮らしが前に進むために必要なことを、必要な形で引き受けます。
-          </p>
-          <p class="hero__note">
-            明治三年、石山県尾羽市で始まった小さな手伝い屋は、時代ごとに姿を変えながら、人の事情に寄り添い続けてきました。表に出せない悩みも、名前を残したくない依頼も、まずは「困っている」という事実から受け止めます。
-          </p>
-          <div class="hero__actions" aria-label="主要導線">
-            <a class="button button--primary" href="#services">できることを見る</a>
-            <a class="button button--quiet" href="/yorozuya/staff-auth/">社員へ</a>
-          </div>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content reveal">
+        <p class="eyebrow"><span>PRIVATE CONCIERGE</span><span>ISHIYAMA / OBA</span></p>
+        <h1 id="hero-title">できないを、<br>できるに変える。</h1>
+        <p class="hero__copy">引っ越し、配達、代筆、記録の補助。<br>人には言えない依頼も、最後まで。</p>
+        <div class="hero__statement">
+          <p>世の中には、普通の窓口では扱えない依頼があります。</p>
+          <p>家族に言えないこと。<br>会社に残せないこと。<br>誰かに知られると、壊れてしまうこと。</p>
+          <p>よろずやは、そうした事情を預かります。<br>できないと言われたことを、できる形に変える。<br>それが、私たちの仕事です。</p>
         </div>
-        <div class="hero__panel" aria-label="よろずやの業務イメージ">
-          <div class="visual-card visual-card--large">
-            <p class="visual-card__label">総合支援</p>
-            <p>生活 / 移転 / 記録 / 配送 / DX</p>
-          </div>
-          <div class="hero__mini-grid" aria-hidden="true">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p class="image-note">創作UI上の架空ビジュアルです</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#services">依頼について見る<span aria-hidden="true">↓</span></a>
+          <a class="button button--ghost" href="/yorozuya/staff-auth">社員の方はこちら<span aria-hidden="true">↗</span></a>
         </div>
-      </section>
-
-      <section id="about" class="section section--split" aria-labelledby="about-title">
-        <div class="section__heading">
-          <p class="eyebrow">ABOUT</p>
-          <h2 id="about-title">人の事情に、<br />順番をつけない</h2>
-        </div>
-        <div class="section__body prose">
-          <p>よろずやは、石山県尾羽市を拠点とする総合支援会社です。明治三年の創業以来、地域の小さな困りごとから、企業の再建、住まいの移転、記録の整理、手紙の代筆まで、時代に合わせて仕事の形を変えてきました。</p>
-          <p>私たちが扱うのは、作業だけではありません。その人が言葉にできなかった事情、誰にも頼めなかった背景、表に出したくなかった願いまで含めて、ひとつの依頼として受け止めます。</p>
-          <p>表に残る成果よりも、依頼者の人生が少しでも前へ進むこと。それが、よろずやの仕事です。</p>
-          <dl class="company-card" aria-label="会社概要">
-            <div><dt>創業</dt><dd>明治3年</dd></div>
-            <div><dt>所在地</dt><dd>石山県尾羽市</dd></div>
-            <div><dt>代表</dt><dd>近藤銅一</dd></div>
-            <div><dt>業務領域</dt><dd>生活支援／移転支援／記録整理／代筆／配送／DX支援</dd></div>
-            <div><dt>依頼方針</dt><dd>内容非公開・個別対応</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <section id="services" class="section" aria-labelledby="services-title">
-        <div class="section__heading section__heading--center">
-          <p class="eyebrow">SERVICES</p>
-          <h2 id="services-title">できること</h2>
-          <p>分類できる仕事も、分類しづらい事情も。必要な形へ分けてから、動き出します。</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <span class="service-card__number">01</span>
-            <h3>移転支援</h3>
-            <p>住まい、事務所、保管物、生活の拠点。表に出しづらい移動も、事情に合わせて計画します。</p>
-          </article>
-          <article class="service-card">
-            <span class="service-card__number">02</span>
-            <h3>配達・受け渡し</h3>
-            <p>届けるものが物であっても、言葉であっても。必要な相手へ、必要な形で届けます。</p>
-          </article>
-          <article class="service-card">
-            <span class="service-card__number">03</span>
-            <h3>代筆・記録作成</h3>
-            <p>手紙、報告書、達成書、記録簿。残すべき言葉を、依頼者の気持ちに沿って整えます。</p>
-          </article>
-          <article class="service-card">
-            <span class="service-card__number">04</span>
-            <h3>生活整理</h3>
-            <p>身の回りの整理、家族間の連絡、手続きの補助。ひとりでは抱えきれない作業を分解します。</p>
-          </article>
-          <article class="service-card">
-            <span class="service-card__number">05</span>
-            <h3>事業支援・DX</h3>
-            <p>古い業務の見直し、記録の電子化、社内フローの再設計。現場が止まらない形で支えます。</p>
-          </article>
-          <article class="service-card">
-            <span class="service-card__number">06</span>
-            <h3>特殊依頼</h3>
-            <p>人には言えない依頼も、まずは内容を聞くところから始めます。引き受けるかどうかは、依頼者の安全と意思を確認して判断します。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="flow" class="section section--dark" aria-labelledby="flow-title">
-        <div class="section__heading section__heading--center">
-          <p class="eyebrow">PROCESS</p>
-          <h2 id="flow-title">依頼の流れ</h2>
-        </div>
-        <ol class="flow-list">
-          <li>
-            <span>STEP 01</span>
-            <h3>事情を聞く</h3>
-            <p>依頼の大小ではなく、なぜ困っているのかを確認します。</p>
-          </li>
-          <li>
-            <span>STEP 02</span>
-            <h3>できる形に分ける</h3>
-            <p>一度で扱いきれない問題は、作業・記録・移動・連絡に分解します。</p>
-          </li>
-          <li>
-            <span>STEP 03</span>
-            <h3>必要な人だけで動く</h3>
-            <p>依頼内容は必要最小限の担当者だけで扱います。関係のない者には共有しません。</p>
-          </li>
-          <li>
-            <span>STEP 04</span>
-            <h3>記録を残す</h3>
-            <p>完了した依頼は、社内アーカイブに記録されます。ただし、依頼者の個人情報や詳細は公開されません。</p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="privacy" class="section section--split privacy-section" aria-labelledby="privacy-title">
-        <div class="section__heading">
-          <p class="eyebrow">CONFIDENTIALITY</p>
-          <h2 id="privacy-title">話せないことほど丁寧に扱う</h2>
-        </div>
-        <div class="section__body prose privacy-card">
-          <p>よろずやでは、依頼者の事情を外部へ公開しません。依頼内容、関係者、移動先、預かった記録は、担当者と管理部門のみが確認します。必要な場合でも、本人の意思を超えて情報を広げることはありません。</p>
-          <p>ただし、依頼の達成記録は社内で保存されます。それは、誰かの人生に関わった仕事を、なかったことにしないためです。</p>
-        </div>
-      </section>
-
-      <section class="section message-section" aria-labelledby="message-title">
-        <div class="message-card">
-          <div>
-            <p class="eyebrow">MESSAGE</p>
-            <h2 id="message-title">代表メッセージ</h2>
-            <p class="message-card__name">代表：近藤銅一</p>
-          </div>
-          <div class="prose">
-            <p>私たちは、便利屋ではありません。人の事情を預かり、人の人生の隙間に手を伸ばす仕事をしています。</p>
-            <p>表に出せる依頼もあれば、誰にも言えない依頼もあります。</p>
-            <p>それでも、頼まれた以上、私たちは最後までやります。</p>
-            <p>できることを、<br />最後まで。</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="staff" class="section staff-section" aria-labelledby="staff-title">
-        <div class="staff-card">
-          <div class="staff-card__status" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <p class="eyebrow">STAFF ONLY / ARCHIVE ACCESS</p>
-          <h2 id="staff-title">社員へ</h2>
-          <p>過去依頼の確認、達成書の作成、記録の修正は、社員専用アーカイブから行ってください。社員番号をお持ちの方のみアクセスできます。</p>
-          <p class="staff-card__hint">社員番号は、配属時に共有された指示書をご確認ください。</p>
-          <a class="button button--primary" href="staff-auth/">社員専用ページへ</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <p class="site-footer__brand">よろずや</p>
-        <p>石山県尾羽市 / 創業 明治3年</p>
       </div>
-      <div>
-        <p>© YOROZUYA Archive Division</p>
-        <p>本作品に登場する人物・団体・施設等はすべて架空です。実在の人物・団体・施設とは関係ありません。</p>
-        <p>このページは創作作品内の架空Webページです。AI生成画像または加工画像を含む可能性があります。</p>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__route"><i></i><i></i><i></i></div>
+        <div class="hero__envelope"><span>CONFIDENTIAL</span><b>萬</b></div>
+        <div class="hero__index"><span>依頼記録</span><strong>2060</strong><small>APR / 07</small></div>
+        <p>THE MATTER<br>REMAINS WITH US.</p>
       </div>
-    </footer>
-  </body>
+      <p class="hero__footnote">受付から完了まで、担当者が一貫して伴走します。</p>
+    </section>
+
+    <section class="section principle" aria-labelledby="principle-title">
+      <div class="section-label reveal"><span>01</span><p>OUR ATTITUDE</p></div>
+      <div class="principle__body reveal">
+        <h2 id="principle-title">人の事情に、<br>順番をつけない。</h2>
+        <div class="principle__copy">
+          <p>急ぎの依頼。<br>言葉にできない依頼。<br>誰にも知られず進めなければならない依頼。</p>
+          <p>どの事情にも、その人だけの重さがあります。<br>よろずやは、依頼の大小では判断しません。</p>
+          <p>必要なのは、<br>何を守りたいのか。<br>誰に届けたいのか。<br>どこまで隠さなければならないのか。</p>
+          <p>そこから、私たちは動き始めます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section principle principle--reverse" aria-labelledby="commitment-title">
+      <div class="section-label reveal"><span>02</span><p>OUR COMMITMENT</p></div>
+      <div class="principle__body reveal">
+        <h2 id="commitment-title">できることを、<br>最後まで。</h2>
+        <div class="principle__copy">
+          <p>私たちは、約束を途中で置いていきません。</p>
+          <p>荷物を運ぶだけではなく、<br>その人の生活が続くところまで。</p>
+          <p>手紙を書くことだけではなく、<br>その言葉が届く日まで。</p>
+          <p>記録を残すだけではなく、<br>誰かがそれを見つける時まで。</p>
+          <p>よろずやの仕事は、作業ではありません。<br>依頼者の時間を、次の場所へ渡すことです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy" aria-labelledby="privacy-title">
+      <div class="privacy__mark" aria-hidden="true"><span></span><i></i></div>
+      <div class="privacy__content reveal">
+        <p class="section-kicker">03 / CONFIDENTIALITY POLICY</p>
+        <h2 id="privacy-title">秘密は、<br>依頼の一部です。</h2>
+        <div class="privacy__copy">
+          <p>依頼者の名前。<br>依頼の理由。<br>移動先。<br>預かった記録。<br>届ける相手。</p>
+          <p>必要のない情報は、誰にも渡しません。<br>必要な情報だけを、必要な相手に、必要な時だけ。</p>
+          <p>私たちは、事情を聞きます。<br>けれど、踏み込みすぎません。</p>
+          <p>守るべきものを守るために、<br>言わないことも、仕事のうちです。</p>
+        </div>
+        <dl><div><dt>公開範囲</dt><dd>必要最小限</dd></div><div><dt>記録管理</dt><dd>担当者限定</dd></div><div><dt>第三者照会</dt><dd>原則非回答</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="section message" id="message" aria-labelledby="message-title">
+      <div class="section-label reveal"><span>04</span><p>MESSAGE</p></div>
+      <div class="message__body reveal">
+        <p class="section-kicker">代表メッセージ</p>
+        <h2 id="message-title">代表メッセージ</h2>
+        <div class="message__copy">
+          <p>できないことなんて、本当は少ない。</p>
+          <p>多くの場合、<br>できないのではなく、<br>誰もやり方を考えようとしなかっただけです。</p>
+          <p>よろずやは、便利屋ではありません。<br>人が抱えきれなくなった事情を、形にする会社です。</p>
+          <p>逃げたい人がいるなら、逃げ道を作る。<br>残したい言葉があるなら、記録にする。<br>届けたいものがあるなら、年月を越えてでも届ける。</p>
+          <p>きれいごとだけでは、守れないものがあります。<br>それでも、守らなければならないものがあります。</p>
+          <blockquote>できないを、できるに変える。</blockquote>
+          <p>そのために、私たちは今日も動いています。</p>
+          <p class="message__signature"><span>よろずや代表</span><strong>近藤 銅一</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <header class="section-header reveal">
+        <div><p class="section-kicker">できること</p><h2 id="services-title">事情に合わせて、<br>仕事の形を変えます。</h2></div>
+        <p>決まった商品から選んでいただくのではなく、必要な実務を組み合わせます。ご事情のすべてを、最初から説明する必要はありません。</p>
+      </header>
+      <div class="services__grid">
+        <article class="service-card reveal"><span>01 / RELOCATION</span><h3>所在秘匿を伴う<br>転居支援</h3><p>人間関係や環境から距離を置く必要がある方へ。移動、生活準備、記録整理まで一括で支援します。</p><i aria-hidden="true"></i></article>
+        <article class="service-card reveal"><span>02 / WRITING</span><h3>代筆・記録の補助</h3><p>本人の言葉を損なわず、手紙・記録・報告書として残すための補助を行います。</p><i aria-hidden="true"></i></article>
+        <article class="service-card reveal"><span>03 / DELIVERY</span><h3>定期配送</h3><p>指定された日付、相手、内容に基づき、長期的な配送管理を行います。</p><i aria-hidden="true"></i></article>
+        <article class="service-card reveal"><span>04 / SUPPORT</span><h3>事業・生活の<br>裏方支援</h3><p>配達、DX、各種手続き、現場作業など、表に出ない実務を支えます。</p><i aria-hidden="true"></i></article>
+      </div>
+    </section>
+
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <header class="section-header section-header--compact reveal"><div><p class="section-kicker">依頼の流れ</p><h2 id="process-title">話せるところから、<br>始めます。</h2></div></header>
+      <ol class="process__list">
+        <li class="reveal"><span>01</span><div><p>CONSULTATION</p><h3>相談</h3><p>事情を整理し、必要な支援範囲を確認します。</p></div></li>
+        <li class="reveal"><span>02</span><div><p>PREPARATION</p><h3>準備</h3><p>移動、記録、配送、連絡、環境調整などを分解して進めます。</p></div></li>
+        <li class="reveal"><span>03</span><div><p>EXECUTION</p><h3>実行</h3><p>依頼者の生活や関係者への影響を最小限にしながら、最後まで対応します。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="staff" aria-labelledby="staff-title">
+      <div class="staff__content reveal">
+        <p class="section-kicker">FOR STAFF</p>
+        <h2 id="staff-title">社員の方へ</h2>
+        <div class="staff__copy">
+          <p>過去依頼の整理、達成報告書の作成、記録照合を行う場合は、社員番号で認証してください。</p>
+          <p>未整理の依頼には、依頼者の人生が残されています。<br>確認は慎重に。<br>記録は正確に。<br>判断は、最後まで読んでから。</p>
+        </div>
+        <a class="button button--staff" href="/yorozuya/staff-auth">社員番号認証へ進む<span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="staff__record" aria-hidden="true"><span>INTERNAL RECORD</span><strong>閲覧には<br>社員番号が必要です</strong><small>AUTHORIZED PERSONNEL ONLY</small></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__identity"><a href="#top">よろずや</a><p>石山県尾羽市<br>設立：明治3年<br>代表：近藤銅一</p></div>
+    <div class="site-footer__fiction"><p>本作品に登場する人物・団体・施設・風景等はすべて架空です。<br>実在の人物・団体・施設とは関係ありません。</p><p>画像を使用する場合、AI生成画像または加工画像を含む可能性があります。</p></div>
+    <p class="site-footer__year">EST. 1870<br><span>YOROZUYA</span></p>
+  </footer>
+</body>
 </html>
