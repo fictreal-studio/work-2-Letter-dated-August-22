@@ -1,31 +1,49 @@
 const menuButton = document.querySelector('.menu-button');
-const siteNav = document.querySelector('#site-nav');
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
+const navigation = document.querySelector('.primary-navigation');
 
-const setNavOpen = (isOpen) => {
-  if (!menuButton || !siteNav) return;
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-  siteNav.classList.toggle('is-open', isOpen);
-  document.body.classList.toggle('nav-open', isOpen);
-};
+function closeMenu({ restoreFocus = false } = {}) {
+  if (!menuButton || !navigation) return;
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'メニューを開く');
+  navigation.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
+  if (restoreFocus) menuButton.focus();
+}
 
-if (menuButton && siteNav) {
+if (menuButton && navigation) {
   menuButton.addEventListener('click', () => {
-    setNavOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'メニューを開く' : 'メニューを閉じる');
+    navigation.classList.toggle('is-open', !isOpen);
+    document.body.classList.toggle('menu-open', !isOpen);
+  });
+
+  navigation.addEventListener('click', (event) => {
+    if (event.target.closest('a')) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
+      closeMenu({ restoreFocus: true });
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) closeMenu();
   });
 }
 
-anchorLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const targetId = link.getAttribute('href');
-    if (!targetId || targetId === '#') return;
+const revealItems = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('has-motion');
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      currentObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -7%', threshold: 0.1 });
+  revealItems.forEach((item) => observer.observe(item));
+}
 
-    const target = document.querySelector(targetId);
-    if (!target) return;
-
-    event.preventDefault();
-    setNavOpen(false);
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    window.history.pushState(null, '', targetId);
-  });
-});
