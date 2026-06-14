@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="富谷県永海市で土地管理、建築請負、地域開発を行う東建設の公式サイトです。">
-  <title>東建設 | 富谷県永海市</title>
+  <meta name="description" content="富谷県永海市で建築請負、不動産管理、土地管理、地域開発を行う東建設の公式サイトです。">
+  <title>東建設 | 土地を守り、永海の明日を支える</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">本文へ移動</a>
+
   <aside class="fiction-notice" aria-label="創作ページであることの表示">
     <strong>FICTIONAL STORY INTERFACE</strong>
-    <span>このページは創作作品内の架空Webページです</span>
+    <span>このページは創作作品内の架空 Web ページです</span>
   </aside>
 
   <header class="site-header">
@@ -25,34 +26,39 @@
     </a>
 
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="メニューを開く">
-      <span>目次</span>
+      <span>メニュー</span>
       <i aria-hidden="true"></i>
     </button>
 
     <nav class="primary-navigation" id="primary-navigation" aria-label="主要な案内">
       <a href="#greeting">ご挨拶</a>
+      <a href="#about">東建設について</a>
       <a href="#services">事業内容</a>
+      <a href="#approach">施工と土地管理</a>
       <a href="#company">会社概要</a>
       <a href="#news">お知らせ</a>
-      <a href="#history">沿革</a>
       <a class="primary-navigation__return" href="/search/">検索に戻る</a>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__registry" aria-hidden="true">
-        <span>永海市東町</span>
-        <span>地籍図 第四号</span>
-        <span>明治十八年創業</span>
-      </div>
+      <div class="hero__image" role="img" aria-label="山並みと永海市の集落を背に建つ東建設社屋"></div>
       <div class="hero__content">
-        <p class="section-kicker">土地と暮らしを預かる</p>
-        <h1 id="hero-title">土地を守り、家を築き、<br>永海の明日を支える。</h1>
-        <p class="hero__copy">明治十八年の創業以来、東建設は富谷県永海市の土地と暮らしに向き合い続けてまいりました。</p>
-        <a class="hero__link" href="#greeting">東建設について<span aria-hidden="true">↓</span></a>
+        <p class="eyebrow">ESTABLISHED 1885 / NAGAMI</p>
+        <h1 id="hero-title"><span>土地を守り、</span><span>家を築き、</span><span class="hero__accent">永海の明日を</span><span class="hero__accent">支える。</span></h1>
+        <p class="hero__lead">明治十八年の創業以来、東建設は富谷県永海市の土地と暮らしに向き合い続けてまいりました。</p>
+        <a class="text-link" href="#greeting">東建設について知る<span aria-hidden="true">↓</span></a>
       </div>
       <p class="hero__motto" aria-label="東建設の社是">我らの未来は過去にあり</p>
+    </section>
+
+    <section class="statement" aria-label="東建設の考え方">
+      <p class="statement__number" aria-hidden="true">01</p>
+      <div class="statement__body">
+        <p>家は、人が生きる場所です。<br>土地は、家族と地域の記憶を受け継ぐ器です。</p>
+        <p>私たちは、建てることだけを仕事とは考えていません。そこに住む人の暮らしを守り、その土地に積み重ねられてきた時間を次の世代へ渡すこと。それが、東建設の務めです。</p>
+      </div>
     </section>
 
     <section class="section greeting" id="greeting" aria-labelledby="greeting-title">
@@ -60,49 +66,95 @@
         <p>GREETING</p>
         <h2 id="greeting-title">代表挨拶</h2>
       </header>
+
       <div class="greeting__layout">
-        <figure class="greeting__portrait">
+        <figure class="portrait-card">
           <img src="./assets/president.jpg" width="768" height="960" alt="東建設 代表取締役 東翔琉" loading="lazy" decoding="async">
-          <figcaption><span>PRESIDENT</span>東 翔琉</figcaption>
+          <figcaption><span>代表取締役</span><strong>東 翔琉</strong></figcaption>
         </figure>
-        <div class="greeting__body">
-          <p class="greeting__lead">土地には、そこに生きた者の記憶と、これから生きる者への責任が残ります。</p>
-          <p>東建設の務めは、ただ建物を造り、土地を動かすことではありません。土地と家を預かり、次代へ渡せる姿に整えることにございます。</p>
-          <p>土地は売買されるものであると同時に、受け継がれるものでもあります。時代が移ろうとも、守るべき筋まで変えてよい道理はありません。</p>
-          <p>困っている者には手を差し伸べる。しかし、筋を違える者には厳しく向き合う。それが創業より変わらぬ、東の仕事の仕方です。</p>
+        <div class="prose greeting__body">
+          <p class="prose__lead">この町の暮らしと、先人たちが残してきたものを預かる。</p>
+          <p>東建設は、明治十八年に富谷県永海市で創業いたしました。以来、私たちはこの土地に根を張り、家を建て、道を整え、土地を預かり、地域の暮らしを支えてまいりました。</p>
+          <p>時代が変われば、建物の形も、暮らしの形も変わります。しかし、変えてはならないものもあります。</p>
+          <ul class="principle-list">
+            <li>約束を守ること。</li>
+            <li>土地を粗末に扱わないこと。</li>
+            <li>困っている者に背を向けないこと。</li>
+            <li>受け継いだものを、次の世代へ渡すこと。</li>
+          </ul>
+          <p>東建設にとって、仕事とは単なる請負ではありません。この町に暮らす方々の生活と、先人たちが残してきたものを預かる責任です。</p>
           <blockquote>我らの未来は過去にあり。</blockquote>
-          <p>先人が残した境界と約束を軽んじることなく、永海の土地に責任を持つ企業であり続けます。</p>
-          <p class="greeting__signature">代表取締役　<strong>東 翔琉</strong></p>
+          <p>その言葉を胸に、これからも永海の土地と人に向き合ってまいります。</p>
+          <p class="signature">代表取締役　<strong>東 翔琉</strong></p>
         </div>
       </div>
     </section>
 
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="about__copy">
+        <header class="section-heading section-heading--compact">
+          <p>ABOUT US</p>
+          <h2 id="about-title">東建設について</h2>
+        </header>
+        <div class="prose">
+          <p class="prose__lead">早さや派手さではなく、後の世代に恥じない仕事を。</p>
+          <p>東建設は、富谷県永海市を中心に、建築請負、不動産管理、土地管理、地域開発を行う地場企業です。</p>
+          <p>創業以来、地域の土地所有者、商家、住民の皆様とともに歩み、住まいと土地に関わる相談を一つひとつ引き受けてまいりました。</p>
+          <p>長く残る仕事であるか。後の世代に恥じない判断であるか。その土地にとって筋の通った選択であるか。東建設は、これからも永海の地に根差し、暮らしの土台を支える会社であり続けます。</p>
+        </div>
+      </div>
+      <figure class="archive-figure">
+        <img src="./assets/archive.jpg" width="1200" height="800" alt="地籍図、土地台帳、測量道具が並ぶ東建設の資料机" loading="lazy" decoding="async">
+        <figcaption><span>土地を読み、記録を守る</span>創業以来受け継ぐ土地管理の姿勢</figcaption>
+      </figure>
+    </section>
+
     <section class="section services" id="services" aria-labelledby="services-title">
       <header class="section-heading section-heading--light">
-        <p>OUR WORK</p>
+        <p>OUR BUSINESS</p>
         <h2 id="services-title">事業内容</h2>
       </header>
-      <div class="services__grid">
+      <div class="service-grid">
         <article class="service-card">
-          <span>壱</span>
+          <span class="service-card__number">01</span>
           <h3>建築請負</h3>
-          <p>住宅、社屋、倉庫、地域施設の設計および施工を承ります。土地の履歴と周辺環境を踏まえ、長く残る建築を旨とします。</p>
+          <p>住宅、社屋、倉庫、地域施設などの設計・施工を承ります。土地の性質、周辺環境、将来の維持管理まで見据え、長く使える建物を形にします。</p>
         </article>
         <article class="service-card">
-          <span>弐</span>
+          <span class="service-card__number">02</span>
           <h3>不動産管理</h3>
-          <p>土地、建物、空き家、貸地を継続して管理します。所有者に代わり、保全、利用状況、契約関係を厳正に確認します。</p>
+          <p>貸地、貸家、空き家、事業用地などの管理を行います。所有者様の事情と地域の状況を踏まえ、無理のない活用と保全を提案します。</p>
         </article>
         <article class="service-card">
-          <span>参</span>
+          <span class="service-card__number">03</span>
+          <h3>土地管理・相続相談</h3>
+          <p>境界、相続、借地、売買、名義整理など、土地に関する複雑な相談に対応します。受け継がれてきた土地を次の世代へ正しく渡すための整理を支援します。</p>
+        </article>
+        <article class="service-card">
+          <span class="service-card__number">04</span>
           <h3>地域開発</h3>
-          <p>永海市周辺における造成、道路、生活基盤の整備を行います。地域に積み重ねられた合意と秩序を尊重します。</p>
+          <p>道路、造成、生活基盤、周辺整備など、地域の暮らしに関わる開発を行います。短期的な利益ではなく、永海市の将来に資する開発を重視しています。</p>
         </article>
-        <article class="service-card">
-          <span>肆</span>
-          <h3>土地相談</h3>
-          <p>相続、境界、借地、売買に関する相談を受け付けます。関係者と土地双方の来歴を確認した上で、方策を提示します。</p>
-        </article>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="approach__intro">
+        <p class="eyebrow">CONSTRUCTION &amp; LAND</p>
+        <h2 id="approach-title">土地を知る者が、<br>建物をつくる。</h2>
+        <div class="prose">
+          <p>建物は、図面だけでは完成しません。その土地の水はけ、風の通り、周囲の道、人の流れ、昔からの使われ方。そうしたものを知らなければ、本当に長く使える建物にはなりません。</p>
+          <p>東建設は、建築と土地管理を分けて考えません。土地を見て、暮らしを見て、家を考える。それが、創業以来変わらない私たちの仕事の進め方です。</p>
+        </div>
+      </div>
+      <div class="approach__image" role="img" aria-label="東建設の社屋と周辺の土地"></div>
+      <div class="values" aria-labelledby="values-title">
+        <h3 id="values-title">東建設が大切にする三つのこと</h3>
+        <ol>
+          <li><span>一</span><div><strong>土地の履歴を見る</strong><p>登記や図面だけでなく、その土地がどのように使われてきたかを確認します。</p></div></li>
+          <li><span>二</span><div><strong>暮らしの先を見る</strong><p>建てた直後だけでなく、十年後、二十年後に無理なく使い続けられるかを考えます。</p></div></li>
+          <li><span>三</span><div><strong>地域との関係を見る</strong><p>隣地、道路、商い、人の流れを踏まえ、地域の中で自然に残る形を目指します。</p></div></li>
+        </ol>
       </div>
     </section>
 
@@ -114,51 +166,20 @@
       <div class="company__layout">
         <dl class="company-table">
           <div><dt>会社名</dt><dd>東建設</dd></div>
-          <div><dt>所在地</dt><dd>富谷県永海市 東町四番地一号</dd></div>
-          <div><dt>創業</dt><dd><strong>明治18年</strong></dd></div>
-          <div class="company-table__established"><dt>設立</dt><dd><strong>1885年</strong></dd></div>
+          <div><dt>所在地</dt><dd>富谷県永海市東町四番地一号</dd></div>
+          <div><dt>創業</dt><dd>明治 18 年</dd></div>
+          <div><dt>西暦</dt><dd>1885 年</dd></div>
           <div><dt>代表者</dt><dd>東 翔琉</dd></div>
-          <div><dt>事業内容</dt><dd>建築請負、不動産管理、土地管理、地域開発</dd></div>
+          <div><dt>事業内容</dt><dd>建築請負、不動産管理、土地管理、地域開発、土地相談</dd></div>
           <div><dt>主要地域</dt><dd>富谷県永海市および周辺地域</dd></div>
+          <div><dt>従業員数</dt><dd>非公開</dd></div>
+          <div><dt>取引方針</dt><dd>地域密着、長期管理、紹介制相談対応</dd></div>
         </dl>
-        <aside class="company__ledger" aria-label="土地台帳を模した装飾">
-          <p>東町第四区</p>
-          <strong>地籍管理簿</strong>
-          <span>AZUMA / 1885</span>
+        <aside class="company-seal" aria-label="東建設の創業年を示す装飾">
+          <span>創業</span>
+          <strong>明治十八年</strong>
+          <small>EST. 1885</small>
         </aside>
-      </div>
-      <figure class="company__archive">
-        <img src="./assets/archive.jpg" width="1200" height="800" alt="永海市の地籍図と長年保管された土地台帳" loading="lazy" decoding="async">
-        <figcaption><span>ARCHIVE 04</span>境界と記録を、次代へ渡す。</figcaption>
-      </figure>
-    </section>
-
-    <section class="section news" id="news" aria-labelledby="news-title">
-      <header class="section-heading">
-        <p>INFORMATION</p>
-        <h2 id="news-title">お知らせ</h2>
-      </header>
-      <div class="news-list">
-        <article class="news-item">
-          <time datetime="2039-01-10">2039年01月10日</time>
-          <div><h3>地域協定および一部提携再開について</h3><p>永海市における地域情報伝達および災害時連携の強化を目的として、ウェストテレビを含む関係事業者との業務協定を再開いたしました。</p></div>
-        </article>
-        <article class="news-item">
-          <time datetime="2032-03-20">2032年03月20日</time>
-          <div><h3>東大樹に関する一部報道について</h3><p>当社役員の親族に関する一部報道につきまして、事業運営と直接関係のない事項への回答は差し控えます。</p></div>
-        </article>
-        <article class="news-item news-item--brief">
-          <time datetime="2028-09-03">2028年09月03日</time>
-          <div><h3>東辰也に関するお知らせ</h3><p>東辰也は、去る八月二十二日、逝去いたしました。ここにお知らせ申し上げます。</p></div>
-        </article>
-        <article class="news-item news-item--muted">
-          <time datetime="2024-07-18">2024年07月18日</time>
-          <div><h3>一部役員人事に関するお知らせ</h3><p>今後の事業体制を鑑み、次期経営体制および候補者の記載を改めました。詳細につきましては、社内規定に基づき公表を控えます。</p></div>
-        </article>
-        <article class="news-item">
-          <time datetime="2023-04-01">2023年04月01日</time>
-          <div><h3>東辰也、次期代表候補として地域開発部門へ正式配属</h3><p>東家の後継として事業全般への理解を深めるため、東辰也を地域開発部門へ正式に配属しました。永海市内の土地整備事業における実務を開始します。</p></div>
-        </article>
       </div>
     </section>
 
@@ -168,28 +189,100 @@
         <h2 id="history-title">沿革</h2>
       </header>
       <ol class="timeline">
-        <li><time datetime="1885">1885</time><p><strong>東建設 創業</strong><span>明治十八年、永海市東町にて創業。</span></p></li>
-        <li><time datetime="1912">1912</time><p><strong>土地整備事業を開始</strong><span>永海市周辺における土地整備を請け負う。</span></p></li>
-        <li><time datetime="1968">1968</time><p><strong>不動産管理部門を設置</strong><span>土地および家屋の継続管理を事業化。</span></p></li>
-        <li><time datetime="2001">2001</time><p><strong>東辰也 誕生</strong><span>東家次代として社史に記載。</span></p></li>
-        <li><time datetime="2023">2023</time><p><strong>東辰也、地域開発部門へ配属</strong><span>次期代表候補として実務を開始。</span></p></li>
-        <li class="timeline__revision"><time datetime="2024">2024</time><p><strong>役員候補者の記載を一部変更</strong><span>経営体制の再検討に伴い、候補者欄を改訂。</span></p></li>
-        <li class="timeline__memorial"><time datetime="2028">2028</time><p><strong>東辰也 逝去</strong></p></li>
-        <li><time datetime="2039">2039</time><p><strong>外部企業との協定を再開</strong><span>一部地域事業において連携を再開。</span></p></li>
+        <li><time datetime="1885">1885</time><p><strong>東建設創業</strong><span>富谷県永海市にて創業。</span></p></li>
+        <li><time datetime="1912">1912</time><p><strong>土地整備事業に参画</strong><span>永海市東部の土地整備事業に参画。</span></p></li>
+        <li><time datetime="1948">1948</time><p><strong>施工事業を拡大</strong><span>住宅建築および地域施設の施工を拡大。</span></p></li>
+        <li><time datetime="1968">1968</time><p><strong>不動産管理部門を設置</strong><span>土地と家屋の継続管理を事業化。</span></p></li>
+        <li><time datetime="1989">1989</time><p><strong>管理事業を本格化</strong><span>貸地・貸家管理事業を本格化。</span></p></li>
+        <li><time datetime="2001">2001</time><p><strong>技術継承制度を開始</strong><span>次世代育成を目的とした社内制度を開始。</span></p></li>
+        <li><time datetime="2015">2015</time><p><strong>地域開発部門を再編</strong><span>地域の長期計画に合わせて体制を再編。</span></p></li>
+        <li><time datetime="2026">2026</time><p><strong>一体相談窓口を設置</strong><span>土地管理、相続相談、建築請負の相談窓口を設置。</span></p></li>
+        <li><time datetime="2040">2040</time><p><strong>長期土地管理協定を更新</strong><span>永海市周辺地域の長期土地管理協定を更新。</span></p></li>
       </ol>
+    </section>
+
+    <section class="section news" id="news" aria-labelledby="news-title">
+      <header class="section-heading">
+        <p>INFORMATION</p>
+        <h2 id="news-title">お知らせ</h2>
+      </header>
+      <div class="news-list">
+        <article class="news-item"><time datetime="2060-04-01">2060.04.01</time><div><h3>春季土地相談会のお知らせ</h3><p>相続、空き家、貸地、境界に関するご相談を受け付けます。事前予約制となりますので、相談をご希望の方はお問い合わせ欄よりお申し込みください。</p></div></article>
+        <article class="news-item"><time datetime="2059-12-20">2059.12.20</time><div><h3>年末年始休業のお知らせ</h3><p>誠に勝手ながら、年末年始休業期間中にいただいたお問い合わせは、営業再開後に順次対応いたします。</p></div></article>
+        <article class="news-item"><time datetime="2059-09-12">2059.09.12</time><div><h3>永海市東部地区 管理地整備完了のお知らせ</h3><p>永海市東部地区における管理地の整備が完了いたしました。近隣の皆様にはご理解とご協力をいただき、誠にありがとうございました。</p></div></article>
+        <article class="news-item"><time datetime="2059-05-10">2059.05.10</time><div><h3>施工事例を追加しました</h3><p>住宅改修、倉庫改築、古家解体後の土地整備に関する施工事例を追加しました。</p></div></article>
+        <article class="news-item"><time datetime="2058-11-03">2058.11.03</time><div><h3>地域清掃活動への参加について</h3><p>東建設は、永海市東町周辺の清掃活動に参加いたしました。今後も地域の一員として、暮らしの環境づくりに努めてまいります。</p></div></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__intro">
+        <header class="section-heading section-heading--compact">
+          <p>CONTACT</p>
+          <h2 id="contact-title">お問い合わせ</h2>
+        </header>
+        <p>建築、土地管理、不動産に関するご相談は、下記よりお問い合わせください。内容を確認のうえ、担当者より順次ご連絡いたします。</p>
+        <p class="contact__note">このフォームは創作作品内の架空フォームです。実在の企業には送信されません。</p>
+      </div>
+
+      <form class="contact-form" id="contact-form" data-api-action="contact-preview" data-result-state="idle">
+        <div class="form-field">
+          <label for="contact-name">お名前 <span>必須</span></label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="contact-category">ご相談種別 <span>必須</span></label>
+          <select id="contact-category" name="category" required>
+            <option value="">選択してください</option>
+            <option>建築請負</option>
+            <option>不動産管理</option>
+            <option>土地管理・相続</option>
+            <option>地域開発</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-field form-field--wide">
+          <label for="contact-message">ご相談内容 <span>必須</span></label>
+          <textarea id="contact-message" name="message" rows="7" required></textarea>
+        </div>
+        <div class="form-field form-field--wide">
+          <label for="contact-detail">連絡先 <span>必須</span></label>
+          <input id="contact-detail" name="contact" type="text" aria-describedby="contact-help" required>
+          <small id="contact-help">返信先として使用する架空の電話番号またはメールアドレスをご入力ください。</small>
+        </div>
+        <div class="form-actions form-field--wide">
+          <button class="primary-button" type="submit">内容を確認する</button>
+          <p id="contact-status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <section class="contact-preview" id="contact-preview" aria-labelledby="contact-preview-title" tabindex="-1" hidden>
+        <p class="eyebrow">CONFIRMATION</p>
+        <h3 id="contact-preview-title">入力内容の確認</h3>
+        <dl id="contact-preview-list"></dl>
+        <p>この画面はフロントエンド表示の確認用です。入力内容は送信・保存されません。</p>
+        <button class="secondary-button" id="contact-edit" type="button">入力内容を修正する</button>
+      </section>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div>
+    <div class="site-footer__brand-block">
       <a class="site-footer__brand" href="#top">東建設</a>
-      <address>富谷県永海市 東町四番地一号</address>
+      <p>土地を守り、家を築き、永海の明日を支える。</p>
+      <address>富谷県永海市東町四番地一号</address>
     </div>
+    <nav aria-label="フッター案内">
+      <a href="#greeting">ご挨拶</a>
+      <a href="#services">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
     <div class="site-footer__fiction">
       <p>本ページは創作作品内に登場する架空企業サイトです。</p>
       <p>人物・団体・住所・事業内容はすべて架空であり、実在の企業とは関係ありません。</p>
+      <a href="/search/">検索に戻る</a>
     </div>
-    <a class="site-footer__return" href="/search/">検索に戻る</a>
   </footer>
 </body>
 </html>
