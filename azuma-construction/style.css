@@ -1,0 +1,99 @@
+:root {
+  --paper: #f4f0e6;
+  --paper-light: #faf8f2;
+  --ink: #211d19;
+  --ink-soft: #625b52;
+  --brown: #382820;
+  --brown-deep: #241915;
+  --gold: #ad9360;
+  --gold-pale: #d8c79f;
+  --line: rgba(56, 40, 32, 0.24);
+  --fiction-height: 2rem;
+  --header-height: 6.25rem;
+  --content: 76rem;
+  --serif: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", serif;
+  --sans: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--fiction-height) + var(--header-height) + 1rem);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper-light);
+  font-family: var(--serif);
+  line-height: 1.9;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.34;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 4px, rgba(56, 40, 32, 0.018) 4px 5px),
+    radial-gradient(circle at 20% 30%, rgba(173, 147, 96, 0.08), transparent 26%);
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.fiction-notice {
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: var(--fiction-height);
+  padding-inline: max(1rem, calc((100% - var(--content)) / 2));
+  color: #f8f4ea;
+  background: #171513;
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+
+.fiction-notice strong {
+  color: var(--gold-pale);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+}
+
+.site-header {
+  position: sticky;
+  z-index: 50;
+  inset-block-start: var(--fiction-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  padding-inline: max(2rem, calc((100% - var(--content)) / 2));
+  border-bottom: 1px solid var(--line);
+  background: rgba(250, 248, 242, 0.96);
+  backdrop-filter: blur(10px);
+}
