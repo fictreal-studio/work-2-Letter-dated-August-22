@@ -1,814 +1,100 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>東建設｜富谷県永海市の建設・不動産</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空企業・東建設の公式サイト風ページです。" />
-    <style>
-      /* ── トークン ── */
-      :root {
-        --ink:       #0f0d0b;
-        --ink-mid:   #2c2820;
-        --ink-soft:  #5a5248;
-        --muted:     #8a8078;
-        --paper:     #f5f2ee;
-        --paper-mid: #ede8e0;
-        --white:     #fafaf8;
-        --gold:      #b09050;
-        --gold-dim:  rgba(176,144,80,0.22);
-        --line:      rgba(15,13,11,0.12);
-        --line-bold: rgba(15,13,11,0.28);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="富谷県永海市で土地管理、建築請負、地域開発を行う東建設の公式サイトです。">
+  <title>東建設 | 富谷県永海市</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body id="top">
+  <aside class="fiction-notice" aria-label="創作ページであることの表示">
+    <strong>FICTIONAL STORY INTERFACE</strong>
+    <span>このページは創作作品内の架空Webページです</span>
+  </aside>
 
-      /* ── リセット ── */
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; }
-
-      body {
-        background: var(--paper);
-        color: var(--ink);
-        font-family: "Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",Georgia,serif;
-        line-height: 2;
-        min-height: 100vh;
-      }
-
-      a { color: inherit; text-decoration: none; }
-
-      /* ── フィクション表記 ── */
-      .fiction-bar {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        min-height: 40px;
-        padding: 0.35rem 1.5rem;
-        background: rgba(15,13,11,0.94);
-        border-bottom: 1px solid rgba(176,144,80,0.3);
-        backdrop-filter: blur(12px);
-      }
-      .fiction-bar__label {
-        font-size: 0.62rem;
-        font-weight: 900;
-        letter-spacing: 0.18em;
-        color: var(--gold);
-      }
-      .fiction-bar__text {
-        font-size: 0.68rem;
-        color: rgba(245,242,238,0.6);
-        letter-spacing: 0.06em;
-      }
-
-      /* ── ナビ ── */
-      .site-nav {
-        position: fixed;
-        top: 40px; right: 0;
-        z-index: 90;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 2.5rem 0;
-        width: 3.4rem;
-        height: calc(100vh - 40px);
-        background: rgba(245,242,238,0.0);
-        border-left: 1px solid var(--line);
-      }
-      .site-nav a {
-        writing-mode: vertical-rl;
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
-        color: var(--muted);
-        padding: 1rem 0.85rem;
-        transition: color 0.3s;
-        white-space: nowrap;
-      }
-      .site-nav a:hover { color: var(--ink); }
-      .site-nav__reserve {
-        margin-top: auto;
-        writing-mode: vertical-rl;
-        font-size: 0.68rem;
-        letter-spacing: 0.16em;
-        color: var(--paper);
-        background: var(--ink);
-        padding: 1rem 0.82rem;
-        transition: background 0.3s;
-      }
-      .site-nav__reserve:hover { background: var(--gold); color: var(--white); }
-
-      /* ── ロゴ ── */
-      .site-logo {
-        position: fixed;
-        top: 56px; left: 2rem;
-        z-index: 90;
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: 0.12em;
-        color: var(--ink);
-      }
-
-      /* ── メインラッパー ── */
-      main { padding-right: 3.4rem; }
-
-      /* ══════════════════════════════
-         ヒーロー：障子＋人物シルエット
-      ══════════════════════════════ */
-      .hero {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        min-height: 600px;
-        overflow: hidden;
-        background: #1a1714;
-        display: flex;
-        align-items: flex-end;
-        padding-bottom: 8vh;
-      }
-
-      /* 障子格子 */
-      .shoji {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        grid-template-columns: 1fr 2.4fr 1fr;
-        pointer-events: none;
-      }
-      .shoji__panel {
-        height: 100%;
-        border-right: 2px solid rgba(245,242,238,0.1);
-      }
-      .shoji__panel:last-child { border-right: none; border-left: 2px solid rgba(245,242,238,0.1); }
-      .shoji__panel--inner {
-        position: relative;
-      }
-      /* 横桟 */
-      .shoji__grid {
-        position: absolute;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(245,242,238,0.07) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(245,242,238,0.07) 1px, transparent 1px);
-        background-size: 40px 60px;
-      }
-
-      /* 人物シルエット（CSS描画） */
-      .hero__figure {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: min(38vw, 420px);
-        height: 78vh;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-      }
-      .hero__silhouette {
-        width: 100%;
-        height: 100%;
-      }
-
-      /* 暗幕グラデーション */
-      .hero__veil {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to bottom,
-          rgba(26,23,20,0.55) 0%,
-          rgba(26,23,20,0.15) 40%,
-          rgba(26,23,20,0.08) 60%,
-          rgba(26,23,20,0.72) 100%
-        );
-      }
-
-      /* ヒーローコピー */
-      .hero__copy {
-        position: relative;
-        z-index: 2;
-        padding-left: clamp(2rem, 6vw, 5rem);
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .hero__catch {
-        writing-mode: vertical-rl;
-        font-size: clamp(2.2rem, 6vw, 4.5rem);
-        font-weight: 400;
-        letter-spacing: 0.16em;
-        line-height: 1.1;
-        color: rgba(245,242,238,0.95);
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-      }
-      .hero__catch span { display: block; }
-      .hero__catch-en {
-        font-size: 0.7rem;
-        letter-spacing: 0.22em;
-        color: var(--gold);
-        font-weight: 700;
-        writing-mode: horizontal-tb;
-        margin-top: 1.4rem;
-      }
-
-      /* スクロール矢印 */
-      .hero__scroll {
-        position: absolute;
-        bottom: 2.5rem;
-        right: calc(3.4rem + 2rem);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        z-index: 2;
-      }
-      .hero__scroll span {
-        writing-mode: vertical-rl;
-        font-size: 0.6rem;
-        letter-spacing: 0.2em;
-        color: rgba(245,242,238,0.5);
-      }
-      .hero__scroll::after {
-        content: "";
-        display: block;
-        width: 1px;
-        height: 4rem;
-        background: linear-gradient(rgba(245,242,238,0.5), transparent);
-        animation: scrollline 1.8s ease-in-out infinite;
-      }
-      @keyframes scrollline {
-        0%,100% { opacity: 0.5; transform: scaleY(1) translateY(0); }
-        50% { opacity: 1; transform: scaleY(0.7) translateY(6px); }
-      }
-
-      /* ══════════════════════════════
-         セクション共通
-      ══════════════════════════════ */
-      .section {
-        padding: clamp(5rem, 10vw, 8rem) clamp(2rem, 6vw, 5rem);
-        max-width: 1080px;
-      }
-      .section--full {
-        max-width: none;
-        background: var(--ink);
-        color: var(--paper);
-        padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 6vw, 5rem);
-      }
-
-      .eyebrow {
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.24em;
-        color: var(--gold);
-        margin-bottom: 1.2rem;
-        display: block;
-      }
-      .section__title {
-        font-size: clamp(2.4rem, 6vw, 4.8rem);
-        font-weight: 400;
-        line-height: 1.1;
-        letter-spacing: 0.1em;
-        margin-bottom: 2.4rem;
-      }
-      .section--full .section__title { color: var(--paper); }
-
-      /* ── 区切り線 ── */
-      .divider {
-        width: 2.4rem;
-        height: 1px;
-        background: var(--gold);
-        margin-bottom: 2rem;
-      }
-
-      /* ══════════════════════════════
-         代表挨拶
-      ══════════════════════════════ */
-      .greeting-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: clamp(2rem, 5vw, 5rem);
-        align-items: start;
-      }
-      .greeting__prose p {
-        font-size: clamp(0.95rem, 1.4vw, 1.06rem);
-        color: var(--ink-soft);
-        line-height: 2.1;
-        margin-bottom: 1.2rem;
-      }
-      .greeting__prose p:last-of-type { margin-bottom: 0; }
-      .greeting__sig {
-        text-align: right;
-        margin-top: 2rem;
-        color: var(--ink-mid);
-        letter-spacing: 0.12em;
-        font-size: 0.9rem;
-      }
-      .greeting__sig strong {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: 500;
-        margin-top: 0.3rem;
-      }
-      .greeting__aside {
-        position: sticky;
-        top: 10rem;
-      }
-      .greeting__kanji {
-        writing-mode: vertical-rl;
-        font-size: clamp(5rem, 12vw, 9rem);
-        font-weight: 300;
-        letter-spacing: 0.06em;
-        color: var(--paper-mid);
-        line-height: 1;
-        pointer-events: none;
-        user-select: none;
-      }
-
-      /* ══════════════════════════════
-         事業案内
-      ══════════════════════════════ */
-      .business-list {
-        display: grid;
-        gap: 0;
-        border-top: 1px solid var(--line-bold);
-      }
-      .business-item {
-        display: grid;
-        grid-template-columns: 3.4rem 1fr;
-        gap: 1.5rem;
-        align-items: start;
-        padding: 2.2rem 0;
-        border-bottom: 1px solid var(--line);
-        cursor: default;
-        transition: background 0.25s;
-      }
-      .business-item:hover { background: rgba(15,13,11,0.03); }
-      .business-item__num {
-        font-size: 0.68rem;
-        letter-spacing: 0.16em;
-        color: var(--gold);
-        padding-top: 0.5rem;
-      }
-      .business-item h3 {
-        font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        margin-bottom: 0.7rem;
-      }
-      .business-item p {
-        font-size: 0.95rem;
-        color: var(--ink-soft);
-        line-height: 2;
-      }
-
-      /* ══════════════════════════════
-         沿革（暗背景）
-      ══════════════════════════════ */
-      .timeline {
-        list-style: none;
-        border-top: 1px solid rgba(245,242,238,0.15);
-        margin-top: 2rem;
-      }
-      .timeline li {
-        display: grid;
-        grid-template-columns: 15rem 1fr;
-        gap: 1.5rem;
-        padding: 1.4rem 0;
-        border-bottom: 1px solid rgba(245,242,238,0.1);
-      }
-      .timeline time {
-        font-size: 0.82rem;
-        letter-spacing: 0.14em;
-        color: var(--gold);
-        font-weight: 700;
-        padding-top: 0.1rem;
-      }
-      .timeline p {
-        font-size: 0.95rem;
-        color: rgba(245,242,238,0.72);
-        line-height: 1.9;
-      }
-
-      /* ══════════════════════════════
-         会社概要
-      ══════════════════════════════ */
-      .overview-table {
-        width: 100%;
-        border-top: 1px solid var(--line-bold);
-      }
-      .overview-table tr { border-bottom: 1px solid var(--line); }
-      .overview-table th,
-      .overview-table td {
-        padding: 1.2rem 1rem;
-        text-align: left;
-        font-weight: 400;
-      }
-      .overview-table th {
-        width: 14rem;
-        font-size: 0.82rem;
-        letter-spacing: 0.1em;
-        color: var(--gold);
-        font-weight: 700;
-        vertical-align: top;
-      }
-      .overview-table td {
-        font-size: 0.95rem;
-        color: var(--ink-soft);
-      }
-
-      /* ══════════════════════════════
-         継承
-      ══════════════════════════════ */
-      .succession-body {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: clamp(2rem, 5vw, 4rem);
-        align-items: start;
-      }
-      .succession-prose p {
-        font-size: 0.96rem;
-        color: var(--ink-soft);
-        line-height: 2.1;
-        margin-bottom: 1rem;
-      }
-      .succession-card {
-        background: var(--paper-mid);
-        border: 1px solid var(--line-bold);
-      }
-      .succession-card__head {
-        padding: 0.7rem 1rem;
-        font-size: 0.72rem;
-        letter-spacing: 0.16em;
-        color: var(--white);
-        background: var(--ink);
-      }
-      .succession-card__body {
-        padding: 0;
-      }
-      .succession-card dl { display: grid; }
-      .succession-card div {
-        display: grid;
-        grid-template-columns: 8rem 1fr;
-        border-bottom: 1px solid var(--line);
-      }
-      .succession-card div:last-child { border-bottom: none; }
-      .succession-card dt,
-      .succession-card dd {
-        padding: 0.8rem 0.9rem;
-        font-size: 0.88rem;
-      }
-      .succession-card dt {
-        color: var(--ink-mid);
-        font-weight: 700;
-        background: rgba(15,13,11,0.04);
-        border-right: 1px solid var(--line);
-      }
-      .succession-card dd { color: var(--ink-soft); }
-
-      /* ══════════════════════════════
-         お知らせ
-      ══════════════════════════════ */
-      .news-list {
-        border-top: 1px solid var(--line-bold);
-      }
-      .news-item {
-        display: grid;
-        grid-template-columns: 9rem 1fr;
-        gap: 1.2rem;
-        align-items: baseline;
-        padding: 1.5rem 0;
-        border-bottom: 1px solid var(--line);
-        transition: background 0.25s;
-      }
-      .news-item:hover { background: rgba(15,13,11,0.02); }
-      .news-item time {
-        font-size: 0.78rem;
-        letter-spacing: 0.1em;
-        color: var(--gold);
-        font-weight: 700;
-      }
-      .news-item__body h3 {
-        font-size: 0.98rem;
-        font-weight: 500;
-        letter-spacing: 0.06em;
-        margin-bottom: 0.4rem;
-      }
-      .news-item__body p {
-        font-size: 0.88rem;
-        color: var(--muted);
-        line-height: 1.8;
-      }
-
-      /* ══════════════════════════════
-         フッター
-      ══════════════════════════════ */
-      .site-footer {
-        padding: 3rem clamp(2rem, 6vw, 5rem);
-        border-top: 1px solid var(--line);
-        display: grid;
-        grid-template-columns: 1fr 1.4fr;
-        gap: 2rem;
-        align-items: start;
-        padding-right: calc(3.4rem + clamp(2rem, 6vw, 5rem));
-      }
-      .site-footer__brand {
-        font-size: 1.15rem;
-        letter-spacing: 0.1em;
-        line-height: 1.8;
-        color: var(--ink-mid);
-      }
-      .site-footer__brand small {
-        display: block;
-        font-size: 0.7rem;
-        letter-spacing: 0.18em;
-        color: var(--muted);
-        margin-top: 0.2rem;
-      }
-      .site-footer__disc {
-        font-size: 0.78rem;
-        color: var(--muted);
-        line-height: 1.9;
-      }
-      .site-footer__disc p + p { margin-top: 0.4rem; }
-
-      /* ══════════════════════════════
-         レスポンシブ
-      ══════════════════════════════ */
-      @media (max-width: 860px) {
-        .site-nav { display: none; }
-        main { padding-right: 0; }
-        .greeting-grid,
-        .succession-body,
-        .site-footer { grid-template-columns: 1fr; }
-        .greeting__aside { display: none; }
-        .timeline li { grid-template-columns: 1fr; gap: 0.4rem; }
-        .overview-table th { width: 9rem; }
-        .news-item { grid-template-columns: 1fr; gap: 0.3rem; }
-        .hero__copy { padding-left: 1.5rem; }
-        .hero__scroll { right: 1rem; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .hero__scroll::after { animation: none; }
-      }
-    </style>
-  </head>
-  <body>
-
-    <!-- フィクション表記 -->
-    <div class="fiction-bar" role="banner" aria-label="フィクション表記">
-      <span class="fiction-bar__label">FICTIONAL STORY INTERFACE</span>
-      <span class="fiction-bar__text">このページは創作作品内の架空Webページです</span>
-    </div>
-
-    <!-- ロゴ -->
-    <a class="site-logo" href="#top">東建設</a>
-
-    <!-- 縦書きナビ -->
-    <nav class="site-nav" aria-label="サイト内ナビゲーション">
-      <a href="#greeting">代表</a>
-      <a href="#business">事業</a>
-      <a href="#history">沿革</a>
-      <a href="#overview">概要</a>
-      <a href="#news">告知</a>
-      <a href="#top" class="site-nav__reserve">ご体験のご予約</a>
-    </nav>
-
-    <main id="top">
-
-      <!-- ヒーロー -->
-      <section class="hero" aria-labelledby="hero-title">
-        <!-- 障子 -->
-        <div class="shoji" aria-hidden="true">
-          <div class="shoji__panel"><div class="shoji__grid"></div></div>
-          <div class="shoji__panel shoji__panel--inner"><div class="shoji__grid"></div></div>
-          <div class="shoji__panel"><div class="shoji__grid"></div></div>
-        </div>
-
-        <!-- 人物シルエット（SVG） -->
-        <div class="hero__figure" aria-hidden="true">
-          <svg class="hero__silhouette" viewBox="0 0 300 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
-            <!-- 座像シルエット -->
-            <ellipse cx="150" cy="110" rx="34" ry="38" fill="rgba(245,242,238,0.09)"/>
-            <path d="M80 580 Q90 420 100 340 Q120 270 150 250 Q180 270 200 340 Q210 420 220 580Z" fill="rgba(245,242,238,0.09)"/>
-            <path d="M100 340 Q80 370 60 400 Q50 430 55 470 Q60 490 75 495 Q90 498 100 480 Q108 460 110 430Z" fill="rgba(245,242,238,0.09)"/>
-            <path d="M200 340 Q220 370 240 400 Q250 430 245 470 Q240 490 225 495 Q210 498 200 480 Q192 460 190 430Z" fill="rgba(245,242,238,0.09)"/>
-            <!-- 薄い輪郭線 -->
-            <path d="M100 580 Q105 460 110 390 Q125 300 150 280 Q175 300 190 390 Q195 460 200 580" stroke="rgba(245,242,238,0.14)" stroke-width="1.2" fill="none"/>
-          </svg>
-        </div>
-
-        <!-- 暗幕 -->
-        <div class="hero__veil" aria-hidden="true"></div>
-
-        <!-- コピー -->
-        <div class="hero__copy">
-          <div class="hero__catch" role="heading" aria-level="1" id="hero-title">
-            <span>旧</span><span>き</span><span>に</span><span>倣</span><span>い</span><span>、</span>
-          </div>
-          <div class="hero__catch" aria-hidden="true">
-            <span>今</span><span>に</span><span>還</span><span>る</span><span>。</span>
-          </div>
-          <p class="hero__catch-en">AZUMA CONSTRUCTION</p>
-        </div>
-
-        <!-- スクロールインジケーター -->
-        <div class="hero__scroll" aria-hidden="true">
-          <span>SCROLL</span>
-        </div>
-      </section>
-
-      <!-- コンセプト（白地テキスト帯） -->
-      <section class="section" style="padding-top: clamp(5rem,10vw,9rem); padding-bottom: clamp(3rem,6vw,5rem);">
-        <span class="eyebrow">CONCEPT</span>
-        <p style="font-size:clamp(1rem,1.6vw,1.15rem); color:var(--ink-soft); line-height:2.2; max-width:56rem;">
-          東建設のご提案するこの仕事は、ただ建物を建てることではなく、<br>
-          土地を知り、地に生きた人々の「覚悟」と「記憶」を知る、受け継ぎの一つです。<br>
-          千年前、誰かの手が積み上げた礎は、めぐりきて今、我らの土台へ。
-        </p>
-      </section>
-
-      <!-- 代表挨拶 -->
-      <section class="section" id="greeting" aria-labelledby="greeting-title">
-        <span class="eyebrow">GREETING</span>
-        <div class="divider"></div>
-        <div class="greeting-grid">
-          <div>
-            <h2 class="section__title" id="greeting-title">代表挨拶</h2>
-            <div class="greeting__prose">
-              <p>東建設は、ただ建物を建てる会社ではありません。土地には記憶があり、家には人の覚悟が宿ります。一時の流行で地を荒らし、目先の利で筋を曲げることを、東家はよしとしません。</p>
-              <p>明治十八年の創業以来、我々は富谷県永海市の地に根を下ろし、雨の日も、雪の日も、必要とされる仕事を積み重ねてまいりました。困っている者がいれば手を貸す。守るべきものを踏みにじる者がいれば、決して退かない。それが東建設のあり方であり、東家の務めです。</p>
-              <p>我らの未来は過去にあり。受け継いだものを軽んじる者に、先の道は開けません。この地に生きる人々の暮らしを、これからも静かに、強く、支えてまいります。</p>
-            </div>
-            <p class="greeting__sig">
-              代表取締役
-              <strong>東 翔琉</strong>
-            </p>
-          </div>
-          <div class="greeting__aside" aria-hidden="true">
-            <p class="greeting__kanji">東建設</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 事業案内 -->
-      <section class="section" id="business" aria-labelledby="business-title">
-        <span class="eyebrow">BUSINESS</span>
-        <div class="divider"></div>
-        <h2 class="section__title" id="business-title">事業案内</h2>
-        <div class="business-list" role="list">
-          <div class="business-item" role="listitem">
-            <span class="business-item__num">一</span>
-            <div>
-              <h3>不動産管理</h3>
-              <p>永海市内外に保有する土地・建物の管理を行っております。短期の利益ではなく、地域に残る価値を見極め、土地の性格に合った活用を重んじています。</p>
-            </div>
-          </div>
-          <div class="business-item" role="listitem">
-            <span class="business-item__num">二</span>
-            <div>
-              <h3>建築・改修</h3>
-              <p>住宅、事業所、倉庫、古家の改修まで、暮らしと仕事の土台となる建築を請け負います。派手さよりも、長く保つこと。見栄えよりも、筋が通っていることを大切にしています。</p>
-            </div>
-          </div>
-          <div class="business-item" role="listitem">
-            <span class="business-item__num">三</span>
-            <div>
-              <h3>地域支援</h3>
-              <p>災害時の応急対応、空き家相談、地域行事の設営協力など、永海の暮らしに必要な仕事を担います。困りごとは、見過ごさない。それが東建設の古くからの姿勢です。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 沿革（暗背景） -->
-      <section class="section section--full" id="history" aria-labelledby="history-title">
-        <div style="max-width:1080px;">
-          <span class="eyebrow">HISTORY</span>
-          <div class="divider"></div>
-          <h2 class="section__title" id="history-title">沿革</h2>
-          <ol class="timeline">
-            <li>
-              <time>明治18年（1885年）</time>
-              <p>東家、永海の地にて建築・土地管理業を始める。</p>
-            </li>
-            <li>
-              <time>大正期</time>
-              <p>山林・農地・住宅地の管理を広げ、地域の基盤整備に関わる。</p>
-            </li>
-            <li>
-              <time>昭和期</time>
-              <p>戦後復興に伴い、住宅建築と倉庫建設を本格化。</p>
-            </li>
-            <li>
-              <time>平成期</time>
-              <p>不動産管理部門を整理し、東建設として地域密着型の事業体制を固める。</p>
-            </li>
-            <li>
-              <time>令和期</time>
-              <p>代表 東翔琉のもと、旧来の土地管理と現代の建築技術を接続する体制へ移行。</p>
-            </li>
-            <li>
-              <time>現在</time>
-              <p>次代への継承体制を整備中。</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- 会社概要 -->
-      <section class="section" id="overview" aria-labelledby="overview-title">
-        <span class="eyebrow">COMPANY</span>
-        <div class="divider"></div>
-        <h2 class="section__title" id="overview-title">会社概要</h2>
-        <table class="overview-table">
-          <tbody>
-            <tr><th>商号</th><td>東建設</td></tr>
-            <tr><th>英字表記</th><td>AZUMA CONSTRUCTION</td></tr>
-            <tr><th>所在地</th><td>富谷県永海市東原二丁目七番地</td></tr>
-            <tr><th>創業</th><td>明治18年（1885年）</td></tr>
-            <tr><th>代表者</th><td>東 翔琉</td></tr>
-            <tr><th>事業内容</th><td>不動産管理、建築工事、土地活用、地域支援業務</td></tr>
-            <tr><th>管理地域</th><td>富谷県永海市および周辺地域</td></tr>
-            <tr><th>連絡先</th><td>お問い合わせは現在受け付けておりません</td></tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- 継承 -->
-      <section class="section" style="background:var(--paper-mid);" aria-labelledby="succession-title">
-        <div style="max-width:1080px;">
-          <span class="eyebrow">SUCCESSION</span>
-          <div class="divider"></div>
-          <h2 class="section__title" id="succession-title">継承について</h2>
-          <div class="succession-body">
-            <div class="succession-prose">
-              <p>東建設では、次代への継承準備を段階的に進めております。長く続く家業において、名を継ぐことは権利ではなく責任です。土地を預かる者は、己の自由だけで動くことはできません。家を背負う者は、家の外にいる人々の暮らしまで背負うことになります。</p>
-              <p>現在、次期体制については社内外の状況を踏まえ、慎重に整理を進めております。一部資料に旧候補者名が残っている場合がありますが、最新の体制表をご確認ください。</p>
-            </div>
-            <aside class="succession-card" aria-label="次期体制整理表">
-              <p class="succession-card__head">次期体制整理表</p>
-              <div class="succession-card__body">
-                <dl>
-                  <div><dt>更新日</dt><dd>2032年3月20日</dd></div>
-                  <div><dt>代表</dt><dd>東 翔琉</dd></div>
-                  <div><dt>次期候補</dt><dd>東 ＊＊</dd></div>
-                  <div><dt>旧記載</dt><dd>東 辰也</dd></div>
-                  <div><dt>備考</dt><dd>家内事情により、旧記載を抹消。外部公開資料は順次差替えのこと。</dd></div>
-                </dl>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <!-- お知らせ -->
-      <section class="section" id="news" aria-labelledby="news-title">
-        <span class="eyebrow">NEWS</span>
-        <div class="divider"></div>
-        <h2 class="section__title" id="news-title">お知らせ</h2>
-        <div class="news-list">
-          <article class="news-item">
-            <time>2060年4月1日</time>
-            <div class="news-item__body">
-              <h3>永海市東原地区 管理地整備のお知らせ</h3>
-              <p>本年度の管理地整備を順次実施いたします。近隣の皆様にはご不便をおかけしますが、何卒ご理解をお願いいたします。</p>
-            </div>
-          </article>
-          <article class="news-item">
-            <time>2059年12月12日</time>
-            <div class="news-item__body">
-              <h3>年末年始の対応について</h3>
-              <p>期間中の新規相談受付は停止いたします。緊急の地域対応については、関係者経由で確認いたします。</p>
-            </div>
-          </article>
-          <article class="news-item">
-            <time>2032年3月20日</time>
-            <div class="news-item__body">
-              <h3>代表者候補記載の一部修正について</h3>
-              <p>旧資料に記載された候補者名に誤りがありました。現在、公開資料の差替えを進めております。</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- フッター -->
-    <footer class="site-footer">
-      <div class="site-footer__brand">
-        東建設<br>
+  <header class="site-header">
+    <a class="site-brand" href="#top" aria-label="東建設 ページ上部へ戻る">
+      <span class="site-brand__mark" aria-hidden="true">東</span>
+      <span class="site-brand__text">
+        <strong>東建設</strong>
         <small>AZUMA CONSTRUCTION</small>
-        <small>我らの未来は過去にあり</small>
-      </div>
-      <div class="site-footer__disc">
-        <p>このサイトは創作作品内に登場する架空企業サイトです。会社名・所在地・人物・沿革・事業内容はすべてフィクションです。実在の企業・団体・人物とは関係ありません。</p>
-        <p>本作品に登場する人物・施設・風景等の画像は、AI生成画像または加工画像を含みます。</p>
-      </div>
-    </footer>
+      </span>
+    </a>
 
-  </body>
-</html>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span>目次</span>
+      <i aria-hidden="true"></i>
+    </button>
+
+    <nav class="primary-navigation" id="primary-navigation" aria-label="主要な案内">
+      <a href="#greeting">ご挨拶</a>
+      <a href="#services">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#news">お知らせ</a>
+      <a href="#history">沿革</a>
+      <a class="primary-navigation__return" href="/search/">検索に戻る</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__registry" aria-hidden="true">
+        <span>永海市東町</span>
+        <span>地籍図 第四号</span>
+        <span>明治十八年創業</span>
+      </div>
+      <div class="hero__content">
+        <p class="section-kicker">土地と暮らしを預かる</p>
+        <h1 id="hero-title">土地を守り、家を築き、<br>永海の明日を支える。</h1>
+        <p class="hero__copy">明治十八年の創業以来、東建設は富谷県永海市の土地と暮らしに向き合い続けてまいりました。</p>
+      </div>
+      <p class="hero__motto" aria-label="東建設の社是">我らの未来は過去にあり</p>
+    </section>
+
+    <section class="section greeting" id="greeting" aria-labelledby="greeting-title">
+      <header class="section-heading">
+        <p>GREETING</p>
+        <h2 id="greeting-title">代表挨拶</h2>
+      </header>
+      <div class="greeting__layout">
+        <div class="greeting__portrait" aria-label="代表者肖像のための意匠">
+          <span aria-hidden="true">東</span>
+          <p>土地を量り、<br>家を継ぐ。</p>
+        </div>
+        <div class="greeting__body">
+          <p class="greeting__lead">土地には、そこに生きた者の記憶と、これから生きる者への責任が残ります。</p>
+          <p>東建設の務めは、ただ建物を造り、土地を動かすことではありません。土地と家を預かり、次代へ渡せる姿に整えることにございます。</p>
+          <p>土地は売買されるものであると同時に、受け継がれるものでもあります。時代が移ろうとも、守るべき筋まで変えてよい道理はありません。</p>
+          <p>困っている者には手を差し伸べる。しかし、筋を違える者には厳しく向き合う。それが創業より変わらぬ、東の仕事の仕方です。</p>
+          <blockquote>我らの未来は過去にあり。</blockquote>
+          <p>先人が残した境界と約束を軽んじることなく、永海の土地に責任を持つ企業であり続けます。</p>
+          <p class="greeting__signature">代表取締役　<strong>東 翔琉</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <header class="section-heading section-heading--light">
+        <p>OUR WORK</p>
+        <h2 id="services-title">事業内容</h2>
+      </header>
+      <div class="services__grid">
+        <article class="service-card">
+          <span>壱</span>
+          <h3>建築請負</h3>
+          <p>住宅、社屋、倉庫、地域施設の設計および施工を承ります。土地の履歴と周辺環境を踏まえ、長く残る建築を旨とします。</p>
+        </article>
+        <article class="service-card">
+          <span>弐</span>
+          <h3>不動産管理</h3>
+          <p>土地、建物、空き家、貸地を継続して管理します。所有者に代わり、保全、利用状況、契約関係を厳正に確認します。</p>
+        </article>
+        <article class="service-card">
+          <span>参</span>
+          <h3>地域開発</h3>
+          <p>永海市周辺における造成、道路、生活基盤の整備を行います。地域に積み重ねられた合意と秩序を尊重します。</p>
+        </article>
+        <article class="service-card">
+          <span>肆</span>
