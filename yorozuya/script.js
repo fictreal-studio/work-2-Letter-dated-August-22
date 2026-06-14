@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
-const navLinks = document.querySelectorAll('.site-nav a[href^="#"], .hero__actions a[href^="#"]');
+const navLinks = document.querySelectorAll('.site-nav a[href^="#"], a[data-scroll][href^="#"]');
 
 const setMenuOpen = (isOpen) => {
   if (!menuToggle || !siteNav) return;
