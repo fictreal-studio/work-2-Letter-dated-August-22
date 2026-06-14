@@ -101,39 +101,76 @@ main,
 }
 
 .hero__copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.38fr) minmax(8rem, auto) minmax(0, 1fr);
+  gap: clamp(1rem, 3.4vw, 2.8rem);
+  align-content: center;
+  align-items: center;
   padding: clamp(1.2rem, 4vw, 2rem) 0;
 }
 
 .hero__subname {
-  margin: 0 0 0.75rem;
+  grid-column: 1 / -1;
+  margin: 0;
   color: var(--gold);
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.22em;
 }
 
-.hero h1 {
+.hero__brand {
   margin: 0;
-  font-size: clamp(4.2rem, 13vw, 9rem);
+  color: var(--brown-deep);
+  font-size: clamp(4.2rem, 11vw, 8.4rem);
   font-weight: 500;
-  line-height: 0.96;
+  line-height: 0.94;
   letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+}
+
+.hero__statement {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: clamp(0.65rem, 1.5vw, 1.1rem);
+  min-height: clamp(19rem, 42vw, 30rem);
+  padding: clamp(0.75rem, 2vw, 1.15rem) clamp(0.45rem, 1.2vw, 0.8rem);
+  border-inline: 1px solid var(--line-strong);
 }
 
 .hero__catch {
-  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
   color: var(--brown);
-  font-size: clamp(1.35rem, 3vw, 2.25rem);
+  font-size: clamp(2.1rem, 4.8vw, 4.2rem);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+}
+
+.hero__catch span {
+  display: inline-block;
+}
+
+.hero__catch-en {
+  align-self: end;
+  margin: 0;
+  color: rgba(58, 40, 24, 0.52);
+  font-size: clamp(0.72rem, 1.3vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  line-height: 1.4;
+  writing-mode: vertical-rl;
 }
 
 .hero__lead {
+  grid-column: 1 / -1;
   max-width: 42rem;
-  margin: 1.2rem 0 0;
+  margin: 0;
   color: var(--ink-soft);
   font-size: clamp(1rem, 1.8vw, 1.18rem);
 }
@@ -562,6 +599,11 @@ main,
     min-height: 0;
   }
 
+  .hero__copy {
+    grid-template-columns: minmax(6rem, auto) minmax(8rem, auto) minmax(2.8rem, auto);
+    justify-content: center;
+  }
+
   .section__label {
     position: static;
     writing-mode: horizontal-tb;
@@ -604,8 +646,21 @@ main,
     padding-top: 1.3rem;
   }
 
-  .hero h1 {
-    font-size: clamp(3.6rem, 20vw, 5rem);
+  .hero__copy {
+    grid-template-columns: minmax(5rem, auto) minmax(7rem, auto) minmax(2.4rem, auto);
+    gap: 0.85rem;
+  }
+
+  .hero__brand {
+    font-size: clamp(3.6rem, 18vw, 5rem);
+  }
+
+  .hero__statement {
+    min-height: clamp(17rem, 78vw, 23rem);
+  }
+
+  .hero__catch {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
   }
 
   .hero__visual {
