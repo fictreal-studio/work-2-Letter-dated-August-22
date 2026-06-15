@@ -1,0 +1,5 @@
+interface:
+  display_name: "High Quality Web Frontend Agent"
+  short_description: "WebサイトのCSS、画像、日本語組版、レスポンシブ、導線、アクセシビリティ、公開品質を統合的に設計・実装・評価・改善する制作エージェント"
+  default_prompt: "Use $high-quality-web-frontend-agent to turn supplied goals, references, story materials, company materials, URLs, assets, or frontend files into a researched, implemented, evaluated, and refined high-quality website."
+
