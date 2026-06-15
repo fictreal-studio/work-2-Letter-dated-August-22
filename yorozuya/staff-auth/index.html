@@ -53,4 +53,23 @@
     </section>
   </main>
 </body>
+</html>      </div>
+
+      <form id="employee-auth-form" class="auth-form" data-api-action="verify-employee" data-result-state="idle" novalidate>
+        <div class="field">
+          <label for="employee-id">社員番号</label>
+          <input id="employee-id" name="employeeId" type="text" inputmode="numeric" autocomplete="off" placeholder="例：指示書に記載された番号" aria-describedby="employee-id-help auth-message" required>
+          <small id="employee-id-help">社員番号は、上司からの指示書に記載されています。</small>
+        </div>
+        <button type="submit">認証して進む<span aria-hidden="true">→</span></button>
+        <p id="auth-message" class="auth-message" aria-live="polite"></p>
+      </form>
+
+      <footer class="auth-card__footer">
+        <a href="../">よろずや公式サイトへ戻る</a>
+        <span>YRZ / ARCHIVE GATEWAY</span>
+      </footer>
+    </section>
+  </main>
+</body>
 </html>
