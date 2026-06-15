@@ -612,7 +612,3 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #111;
   box-shadow: 0 0 0 1000px #fff inset;
 }
-.request-card--important {
-  border-color: rgba(126, 88, 48, 0.34);
-  background: linear-gradient(135deg, rgba(255, 250, 240, 0.98), rgba(246, 233, 210, 0.88));
-}
