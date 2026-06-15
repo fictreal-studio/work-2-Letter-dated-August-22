@@ -1,61 +1,56 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>社員専用ページ｜よろずや</title>
-    <meta name="description" content="ARG作品『八月二十二日の手紙』内に登場する架空社内認証ページです。" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <header class="fiction-header" aria-label="フィクション表記">
-      <p class="fiction-header__label">FICTIONAL STORY INTERFACE</p>
-      <p class="fiction-header__text">このページは創作作品内の架空Webページです</p>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="よろずや社員専用アーカイブの社員番号認証ページです。">
+  <title>社員認証 | よろずや</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <aside class="fiction-notice" aria-label="創作ページであることの表示">
+    <strong>FICTIONAL STORY INTERFACE</strong>
+    <span>このページは創作作品内の架空Webページです</span>
+  </aside>
 
-    <main class="auth-page" aria-labelledby="page-title">
-      <section class="auth-card" aria-label="社員番号認証">
-        <div class="auth-card__status" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
+  <header class="internal-header">
+    <a class="brand" href="../" aria-label="よろずや公式サイトへ戻る">
+      <span>よろずや</span>
+      <small>PRIVATE AFFAIRS OFFICE / EST. 1870</small>
+    </a>
+    <p><span aria-hidden="true"></span> INTERNAL NETWORK</p>
+  </header>
+
+  <main id="main-content" class="auth-shell">
+    <section class="auth-card" aria-labelledby="auth-title">
+      <div class="auth-card__status" aria-hidden="true">
+        <span>YOROZUYA INTERNAL</span>
+        <span>2060.04.07</span>
+      </div>
+
+      <div class="auth-card__intro">
+        <p class="eyebrow">EMPLOYEE VERIFICATION / 01</p>
+        <h1 id="auth-title">社員認証</h1>
+        <p>よろずや内部アーカイブへアクセスするには、社員番号を入力してください。</p>
+      </div>
+
+      <form id="employee-auth-form" class="auth-form" data-api-action="verify-employee" data-result-state="idle" novalidate>
+        <div class="field">
+          <label for="employee-id">社員番号</label>
+          <input id="employee-id" name="employeeId" type="text" inputmode="numeric" autocomplete="off" placeholder="例：指示書に記載された番号" aria-describedby="employee-id-help auth-message" required>
+          <small id="employee-id-help">社員番号は、上司からの指示書に記載されています。</small>
         </div>
-        <p class="system-kicker">YOROZUYA INTERNAL</p>
-        <h1 id="page-title">社員専用ページ</h1>
-        <p class="auth-lead">
-          依頼記録、達成書、社内アーカイブの閲覧には社員番号の確認が必要です。配属時に共有された指示書に記載の社員番号を入力してください。
-        </p>
-        <p class="fiction-note-inline">この認証は作品内演出です。実在の社内システムではありません。</p>
+        <button type="submit">認証して進む<span aria-hidden="true">→</span></button>
+        <p id="auth-message" class="auth-message" aria-live="polite"></p>
+      </form>
 
-        <form id="staff-auth-form" class="auth-form" novalidate>
-          <label for="employee-code">社員番号</label>
-          <input
-            id="employee-code"
-            name="employee-code"
-            type="text"
-            inputmode="numeric"
-            autocomplete="off"
-            maxlength="13"
-            placeholder="ABC-1234-5678"
-            aria-describedby="auth-message"
-          />
-          <p class="password-hint">ヒント：配属時に共有された指示書の、アーカイブ認証用社員番号を確認してください。</p>
-          <button type="submit">認証する</button>
-          <p id="auth-message" class="auth-message" aria-live="polite"></p>
-        </form>
-
-        <nav class="support-links" aria-label="補助導線">
-<a href="../../yorozuya/">よろずや公式サイトへ戻る</a>
-<a href="../../briefing/">指示書を確認する</a>
-        </nav>
-      </section>
-    </main>
-
-    <footer class="auth-footer">
-      <p>© YOROZUYA Archive Division</p>
-      <p>本作品に登場する人物・団体・施設等はすべて架空です。実在の人物・団体・施設とは関係ありません。</p>
-    </footer>
-  </body>
+      <footer class="auth-card__footer">
+        <a href="../">よろずや公式サイトへ戻る</a>
+        <span>YRZ / ARCHIVE GATEWAY</span>
+      </footer>
+    </section>
+  </main>
+</body>
 </html>
