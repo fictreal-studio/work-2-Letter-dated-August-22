@@ -272,7 +272,38 @@ p {
   border-radius: 24px;
 }
 
+.info-card {
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.info-card h2,
+.timeline-panel h2,
+.diary-access h2 {
+  margin: 0;
   font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 1.35;
+}
+
+.info-card p:not(.section-label) {
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+}
+
+.data-list,
+.storage-list {
+  display: grid;
+  gap: 0;
+  margin: 1.2rem 0 0;
+}
+
+.data-list div,
+.storage-list div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+}
 
 .log-layout {
   display: grid;
@@ -346,27 +377,13 @@ p {
   border-radius: 999px;
 }
 
-.log-card__header {
-  padding-right: 8rem;
+.log-card header {
+  padding-right: 6.5rem;
 }
-
-.log-card__header h3 {
+.log-card h3 {
   margin: 0;
   font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-  font-weight: 600;
-}
-
-.log-meta {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-}
-
-.log-meta div {
-  grid-template-columns: 4rem 1fr;
-  padding: 0.65rem 0.8rem;
-  background: rgba(248, 240, 227, 0.56);
-  border: 1px solid var(--line);
-  border-radius: 14px;
+  line-height: 1.4;
 }
 
 .log-body {
