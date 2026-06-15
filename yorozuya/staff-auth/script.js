@@ -7,7 +7,7 @@ const submitButton = authForm?.querySelector('button[type="submit"]');
 // 現在はフロントエンド上の仮判定。
 // 本番ではこの処理を削除し、バックエンドAPIで認証・認可を行う。
 // TODO: 指示書ページの社員番号が実装されたら、その既存値をここへ設定する。
-const DEMO_EMPLOYEE_ID = '';
+const DEMO_EMPLOYEE_ID = 'YRZ-2060-0422';
 
 function verifyDemoEmployeeId(employeeId) {
   // TODO: backend APIで社員番号を検証する。
