@@ -346,13 +346,27 @@ p {
   border-radius: 999px;
 }
 
-.log-card header {
-  padding-right: 6.5rem;
+.log-card__header {
+  padding-right: 8rem;
 }
-.log-card h3 {
+
+.log-card__header h3 {
   margin: 0;
   font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-  line-height: 1.4;
+  font-weight: 600;
+}
+
+.log-meta {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.log-meta div {
+  grid-template-columns: 4rem 1fr;
+  padding: 0.65rem 0.8rem;
+  background: rgba(248, 240, 227, 0.56);
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
 
 .log-body {
