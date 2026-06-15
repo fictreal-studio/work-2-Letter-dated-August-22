@@ -212,7 +212,7 @@ h1 {
   width: 100%;
   min-height: 52px;
   padding: 0.78rem 0.9rem;
-  color: var(--ink);
+  color: RGB(240, 240, 240);
   font: 800 1.05rem/1.4 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   letter-spacing: 0.05em;
   background: rgba(255, 255, 255, 0.8);
