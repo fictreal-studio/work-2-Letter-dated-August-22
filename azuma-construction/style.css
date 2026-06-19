@@ -820,168 +820,6 @@ select {
   font-size: 0.88rem;
 }
 
-.contact {
-  display: grid;
-  grid-template-columns: minmax(16rem, 0.65fr) minmax(0, 1.35fr);
-  gap: clamp(4rem, 8vw, 8rem);
-  color: var(--paper-light);
-  background: var(--brown);
-}
-
-.contact__intro > p {
-  max-inline-size: 31rem;
-  color: rgba(251, 250, 246, 0.72);
-}
-
-.contact__note {
-  margin-block-start: 2rem;
-  padding: 1rem;
-  border: 1px solid var(--line-light);
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  line-height: 1.7;
-}
-
-.contact-form {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.6rem 2rem;
-}
-
-.form-field {
-  display: grid;
-  gap: 0.55rem;
-}
-
-.form-field--wide {
-  grid-column: 1 / -1;
-}
-
-.form-field label {
-  font-size: 0.88rem;
-  letter-spacing: 0.08em;
-}
-
-.form-field label span {
-  margin-inline-start: 0.5rem;
-  color: var(--gold-pale);
-  font-family: var(--sans);
-  font-size: 0.62rem;
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-  inline-size: 100%;
-  border: 1px solid rgba(251, 250, 246, 0.42);
-  border-radius: 0;
-  color: var(--paper-light);
-  background: rgba(251, 250, 246, 0.06);
-}
-
-.form-field input,
-.form-field select {
-  min-block-size: 3.2rem;
-  padding-inline: 0.9rem;
-}
-
-.form-field textarea {
-  padding: 0.8rem 0.9rem;
-  resize: vertical;
-}
-
-.form-field select option {
-  color: var(--ink);
-  background: var(--paper-light);
-}
-
-.form-field small {
-  color: rgba(251, 250, 246, 0.6);
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  line-height: 1.6;
-}
-
-.form-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.form-actions p {
-  margin: 0;
-}
-
-.primary-button,
-.secondary-button {
-  min-block-size: 3.3rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0;
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-}
-
-.primary-button {
-  border: 1px solid var(--gold-pale);
-  color: var(--brown-deep);
-  background: var(--gold-pale);
-}
-
-.secondary-button {
-  border: 1px solid var(--brown);
-  background: transparent;
-}
-
-.contact-preview {
-  align-self: start;
-  padding: 2.5rem;
-  color: var(--ink);
-  background: var(--paper-light);
-}
-
-.contact-preview:focus {
-  outline: none;
-}
-
-.contact-preview h3 {
-  margin: 0.7rem 0 2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.contact-preview dl {
-  margin: 0 0 2rem;
-  border-top: 1px solid var(--brown);
-}
-
-.contact-preview dl > div {
-  display: grid;
-  grid-template-columns: 8rem 1fr;
-  border-bottom: 1px solid var(--line);
-}
-
-.contact-preview dt,
-.contact-preview dd {
-  margin: 0;
-  padding: 0.9rem;
-}
-
-.contact-preview dt {
-  color: var(--ink-soft);
-  font-size: 0.78rem;
-}
-
-.contact-preview dd {
-  white-space: pre-wrap;
-}
-
-.contact-preview > p:last-of-type {
-  color: var(--ink-soft);
-  font-family: var(--sans);
-  font-size: 0.72rem;
-}
-
 .site-footer {
   display: grid;
   grid-template-columns: 1.1fr 0.65fr 1.25fr;
@@ -1180,7 +1018,6 @@ select {
   .about,
   .approach,
   .company__layout,
-  .contact,
   .site-footer {
     grid-template-columns: 1fr;
   }
@@ -1225,8 +1062,7 @@ select {
 
   .values ol,
   .timeline,
-  .service-grid,
-  .contact-form {
+  .service-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1259,19 +1095,13 @@ select {
     margin-block-start: 1.6rem;
   }
 
-  .form-field--wide {
-    grid-column: auto;
-  }
 
-  .company-table > div,
-  .contact-preview dl > div {
+  .company-table > div {
     grid-template-columns: 7rem minmax(0, 1fr);
   }
 
   .company-table dt,
-  .company-table dd,
-  .contact-preview dt,
-  .contact-preview dd {
+  .company-table dd {
     padding: 0.9rem 0.7rem;
   }
 
@@ -1311,8 +1141,7 @@ select {
     font-size: 2.05rem;
   }
 
-  .company-table > div,
-  .contact-preview dl > div {
+  .company-table > div {
     grid-template-columns: 5.5rem minmax(0, 1fr);
   }
 }

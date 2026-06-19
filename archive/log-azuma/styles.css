@@ -80,6 +80,7 @@ a {
 .log-card__header p,
 .log-meta dt,
 .data-list dt,
+.hero-meta dt,
 .next-button {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -164,28 +165,7 @@ a {
 }
 
 .hero {
-  position: relative;
-  padding: clamp(4rem, 9vw, 8rem) 0 clamp(2.5rem, 6vw, 5rem);
-}
-
-.hero::after {
-  position: absolute;
-  right: 0;
-  bottom: 3rem;
-  width: min(34vw, 25rem);
-  height: min(34vw, 25rem);
-  pointer-events: none;
-  content: "";
-  background:
-    radial-gradient(
-      circle,
-      transparent 36%,
-      rgba(127, 47, 39, 0.08) 37% 38%,
-      transparent 39%
-    ),
-    linear-gradient(135deg, rgba(111, 79, 47, 0.12), transparent);
-  border: 1px solid rgba(127, 47, 39, 0.1);
-  border-radius: 50%;
+  padding: clamp(4rem, 9vw, 7rem) 0 clamp(2.4rem, 6vw, 4.6rem);
 }
 
 .hero__kicker,
@@ -207,26 +187,46 @@ p {
 }
 
 .hero h1 {
-  max-width: 10em;
+  max-width: 11em;
   margin: 0;
-  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-size: clamp(2.7rem, 7.4vw, 6.2rem);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: 0.02em;
 }
 
-.hero__subtitle {
-  margin: 1.2rem 0 0;
-  color: var(--brown);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+.hero__lead {
+  max-width: 48rem;
+  margin: 1.1rem 0 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.04rem, 1.8vw, 1.25rem);
   font-weight: 700;
 }
 
-.hero__text {
-  max-width: 58rem;
-  margin: 1.1rem 0 0;
-  color: var(--ink-soft);
-  font-size: clamp(1rem, 1.45vw, 1.1rem);
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+}
+
+.hero-meta div {
+  padding: 0.9rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px var(--shadow);
+}
+
+.hero-meta dt {
+  color: var(--gold);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.hero-meta dd {
+  margin: 0.18rem 0 0;
 }
 
 .notice-card,
@@ -437,6 +437,10 @@ p {
 }
 
 @media (max-width: 900px) {
+  .hero-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .archive-bar,
   .overview-grid,
   .log-layout,
@@ -486,10 +490,7 @@ p {
   .hero h1 {
     font-size: clamp(2.45rem, 14vw, 4rem);
   }
-  .hero::after {
-    opacity: 0.38;
-  }
-
+  .hero-meta,
   .data-list div,
   .log-meta,
   .log-meta div {
