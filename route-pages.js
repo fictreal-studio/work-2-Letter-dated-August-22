@@ -1,19 +1,19 @@
 const routePasswords = {
   'staff-auth-form': {
     expected: 'YRZ-2060-0422',
-    success: '/yorozuya/archive/',
+    success: '../archive/',
     ok: '社員番号を確認しました。社員用記録へ移動します。',
     ng: '社員番号が一致しません。指示書の番号を確認してください。',
   },
   'log-azuma-form': {
     expected: '1885',
-    success: '/archive/log-azuma/#record-open',
+    success: '#record-open',
     ok: '認証しました。東家メイドログを表示します。',
     ng: 'パスワードが一致しません。東建設の創業年を確認してください。',
   },
   'log-nishi-form': {
     expected: '1995',
-    success: '/archive/log-nishi/#record-open',
+    success: '#record-open',
     ok: '認証しました。仁士家メイドログを表示します。',
     ng: 'パスワードが一致しません。ウェストテレビの設立年を確認してください。',
   },
