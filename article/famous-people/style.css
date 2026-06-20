@@ -1,0 +1,662 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f3ea;
+  --paper-strong: #fffdf8;
+  --ink: #24211d;
+  --body: #403a32;
+  --muted: #70675b;
+  --rule: #d8cbb7;
+  --rule-dark: #aa9a82;
+  --accent: #7d4f36;
+  --azuma: #48675c;
+  --nishi: #286075;
+  --focus: #145fc2;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-break: strict;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(92, 72, 44, .045) 1px, transparent 1px) 0 0 / 4rem 4rem,
+    linear-gradient(180deg, #fbf8f1 0, var(--paper) 34rem);
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: .08em;
+  text-underline-offset: .22em;
+}
+
+a:hover { color: var(--accent); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 30;
+  transform: translateY(-160%);
+  padding: .75rem 1rem;
+  color: #fff;
+  background: var(--ink);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.fiction-header {
+  display: flex;
+  justify-content: center;
+  gap: .75rem 1rem;
+  flex-wrap: wrap;
+  padding: .65rem 1rem;
+  color: #fbf5ec;
+  background: #20201d;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.fiction-header strong {
+  font-size: .75rem;
+  letter-spacing: .08em;
+}
+
+.site-masthead,
+.site-footer,
+.archive-main,
+.interview-main {
+  width: min(74rem, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.35rem 0;
+  border-bottom: 2px solid var(--ink);
+}
+
+.media-name,
+.archive-hero h1,
+.interview-header h1,
+.section-heading h2,
+.person-card h3,
+.catch,
+.hero-copy p,
+.profile-block h2,
+.editor-note h2 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
+}
+
+.media-name {
+  margin: 0;
+  font-size: clamp(1.55rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.masthead-sub {
+  margin: .3rem 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.published-date {
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: right;
+}
+
+.archive-main,
+.interview-main {
+  padding: clamp(1.25rem, 4vw, 3rem) 0 0;
+}
+
+.archive-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 32rem);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  align-items: end;
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--rule-dark);
+}
+
+.archive-hero h1,
+.interview-header h1 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.archive-hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5.2rem);
+}
+
+.interview-header h1 {
+  max-width: 60rem;
+  font-size: clamp(2rem, 5.1vw, 4.2rem);
+}
+
+.archive-lead,
+.interview-lead {
+  margin: 0;
+  color: var(--body);
+  font-size: clamp(1rem, 1.6vw, 1.13rem);
+  line-height: 2.05;
+}
+
+.archive-note,
+.editor-note {
+  color: #4d463d;
+  background: #efe4d3;
+  border-left: .3rem solid var(--accent);
+}
+
+.archive-note {
+  margin: 1.25rem 0 0;
+  padding: .85rem 1rem;
+  line-height: 1.75;
+}
+
+.section-label,
+.article-meta strong,
+.profile-label {
+  margin: 0;
+  color: var(--accent);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.people-section {
+  padding: clamp(1.5rem, 5vw, 3rem) 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.person-card {
+  display: grid;
+  min-width: 0;
+  background: var(--paper-strong);
+  border: 1px solid var(--rule);
+  box-shadow: 0 .8rem 1.8rem rgba(50, 42, 31, .06);
+}
+
+.work-visual,
+.portrait {
+  position: relative;
+  overflow: hidden;
+  background: #e7ddcf;
+  isolation: isolate;
+}
+
+.work-visual {
+  min-height: 10rem;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--rule);
+}
+
+.portrait {
+  width: 5rem;
+  aspect-ratio: 1;
+  border: 2px solid var(--paper-strong);
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px var(--rule);
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  position: absolute;
+  left: .65rem;
+  bottom: .55rem;
+  z-index: 2;
+  padding: .22rem .45rem;
+  color: #fbf8f1;
+  background: rgba(36, 33, 29, .68);
+  font-size: .72rem;
+  line-height: 1.3;
+}
+
+.portrait figcaption {
+  left: 50%;
+  bottom: .35rem;
+  width: max-content;
+  max-width: 8.5rem;
+  transform: translateX(-50%);
+  font-size: .62rem;
+}
+
+.image-kondo {
+  --person: rgba(94, 65, 47, .68);
+  --role: rgba(125, 79, 54, .36);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.55), transparent 44%),
+    repeating-linear-gradient(0deg, rgba(36,33,29,.14) 0 1px, transparent 1px 1.15rem),
+    #eadfd0;
+}
+
+.image-azuma {
+  --person: rgba(55, 78, 66, .72);
+  --role: rgba(72, 103, 92, .34);
+  background:
+    repeating-linear-gradient(90deg, rgba(36,33,29,.16) 0 2px, transparent 2px 1.25rem),
+    linear-gradient(145deg, transparent 0 36%, rgba(72, 103, 92, .28) 36% 56%, transparent 56%),
+    #e1e7de;
+}
+
+.image-nishi {
+  --person: rgba(36, 81, 100, .68);
+  --role: rgba(40, 96, 117, .34);
+  background:
+    radial-gradient(circle at 78% 24%, rgba(255,255,255,.62) 0 7%, transparent 7.5%),
+    repeating-linear-gradient(90deg, rgba(36,33,29,.16) 0 .24rem, transparent .24rem .9rem),
+    #dfeaf0;
+}
+
+.work-visual::before,
+.work-visual::after,
+.portrait::before,
+.portrait::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.work-visual::before {
+  left: 13%;
+  bottom: 18%;
+  width: 24%;
+  height: 46%;
+  border-radius: 44% 44% 8% 8%;
+  background: var(--person);
+}
+
+.work-visual::after {
+  right: 9%;
+  bottom: 18%;
+  width: 39%;
+  height: 28%;
+  border: 2px solid rgba(36, 33, 29, .34);
+  border-top-width: .55rem;
+  background: rgba(255, 253, 248, .38);
+  box-shadow: -2.4rem -2.1rem 0 -.9rem var(--role);
+}
+
+.portrait::before {
+  left: 50%;
+  top: 22%;
+  width: 32%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: var(--person);
+  transform: translateX(-50%);
+}
+
+.portrait::after {
+  left: 25%;
+  right: 25%;
+  bottom: 19%;
+  height: 31%;
+  border-radius: 999px 999px 0 0;
+  background: var(--person);
+  opacity: .74;
+}
+
+.person-card__body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .75rem 1rem;
+  padding: 1rem;
+}
+
+.person-card h3 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  line-height: 1.25;
+}
+
+.person-card__info {
+  min-width: 0;
+}
+
+.kana,
+.title,
+.card-copy {
+  margin: 0;
+}
+
+.kana,
+.title {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.catch {
+  grid-column: 1 / -1;
+  margin: .25rem 0 0;
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.48;
+}
+
+.card-copy {
+  grid-column: 1 / -1;
+  color: var(--body);
+  line-height: 1.85;
+}
+
+.button-link,
+.back-link {
+  min-height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  padding: 0 1rem;
+  color: #fffdf8;
+  background: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button-link {
+  grid-column: 1 / -1;
+  margin-top: .25rem;
+}
+
+.button-link:hover,
+.back-link:hover {
+  color: #fffdf8;
+  background: var(--accent);
+}
+
+.interview-header {
+  display: grid;
+  gap: .85rem;
+  padding-bottom: 1.25rem;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.hero-photo {
+  position: relative;
+  display: grid;
+  min-height: clamp(22rem, 48vw, 34rem);
+  align-items: end;
+  margin: 1.25rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: var(--paper-strong);
+}
+
+.hero-photo .work-visual {
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
+  aspect-ratio: auto;
+  border: 0;
+}
+
+.hero-photo figcaption {
+  top: .7rem;
+  bottom: auto;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(39rem, calc(100% - 2rem));
+  margin: 1rem;
+  padding: clamp(1rem, 3vw, 2rem);
+  color: #fffdf8;
+  background: rgba(36, 33, 29, .82);
+}
+
+.hero-copy p {
+  margin: 0;
+  font-size: clamp(1.55rem, 4.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.32;
+}
+
+.profile-block {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem 1.5rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: var(--paper-strong);
+  border: 1px solid var(--rule);
+}
+
+.profile-block .portrait {
+  width: clamp(6.5rem, 18vw, 10rem);
+  border-radius: .5rem;
+}
+
+.profile-block h2 {
+  margin: .2rem 0 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.profile-data {
+  display: grid;
+  gap: .45rem;
+  margin: .75rem 0 0;
+}
+
+.profile-data div {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: .75rem;
+  padding-top: .45rem;
+  border-top: 1px solid var(--rule);
+}
+
+.profile-data dt {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.profile-data dd {
+  margin: 0;
+  color: var(--body);
+  line-height: 1.65;
+}
+
+.article-prose {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2rem) 0;
+}
+
+.article-prose p {
+  margin: 0 0 1.2rem;
+  color: var(--body);
+  font-size: 1.04rem;
+  line-height: 2.1;
+}
+
+.qa {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.qa-item {
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--rule-dark);
+}
+
+.qa-item h2 {
+  margin: 0 0 .7rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.qa-label {
+  display: inline-block;
+  margin-right: .45rem;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.editor-note {
+  margin-top: 2rem;
+  padding: 1.25rem;
+}
+
+.editor-note h2 {
+  margin: 0 0 .65rem;
+  font-size: 1.35rem;
+}
+
+.editor-note p:last-child {
+  margin-bottom: 0;
+}
+
+.keyword {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.keyword--azuma { color: var(--azuma); }
+.keyword--nishi { color: var(--nishi); }
+
+.article-bottom {
+  display: grid;
+  gap: 1rem;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 0 3rem;
+}
+
+.disclaimer {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.8;
+}
+
+.site-footer {
+  padding: 1.5rem 0 3rem;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.7;
+  border-top: 1px solid var(--rule);
+}
+
+.site-footer p { margin: .35rem 0 0; }
+
+@media (max-width: 980px) {
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .site-masthead,
+  .archive-hero,
+  .profile-block {
+    grid-template-columns: 1fr;
+  }
+
+  .published-date {
+    text-align: left;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    min-height: 27rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .fiction-header {
+    justify-content: flex-start;
+    font-size: .78rem;
+  }
+
+  .site-masthead,
+  .site-footer,
+  .archive-main,
+  .interview-main {
+    width: min(100% - 1rem, 74rem);
+  }
+
+  .person-card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    width: 4.5rem;
+  }
+
+  .profile-data div {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+  }
+
+  .hero-copy {
+    width: calc(100% - 1rem);
+    margin: .5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
