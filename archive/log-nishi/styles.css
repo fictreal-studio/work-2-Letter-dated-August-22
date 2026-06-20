@@ -76,7 +76,9 @@ a {
 .hero__kicker,
 .section-label,
 .log-card header p,
+.log-card__header p,
 .data-list dt,
+.log-meta dt,
 .hero-meta dt,
 .storage-list dt,
 .access-form label,
@@ -229,6 +231,7 @@ p {
 
 .hero-meta dt,
 .data-list dt,
+.log-meta dt,
 .storage-list dt {
   color: var(--blue-deep);
   font-size: 0.74rem;
@@ -238,7 +241,8 @@ p {
 
 .hero-meta dd,
 .data-list dd,
-.storage-list dd {
+.storage-list dd,
+.log-meta dd {
   margin: 0.18rem 0 0;
 }
 
@@ -290,7 +294,8 @@ p {
 }
 
 .data-list,
-.storage-list {
+.storage-list,
+.log-meta {
   display: grid;
   gap: 0;
   margin: 1.2rem 0 0;
@@ -299,10 +304,25 @@ p {
 .data-list div,
 .storage-list div {
   display: grid;
-  grid-template-columns: 7rem 1fr;
+  grid-template-columns: 9rem 1fr;
   gap: 1rem;
   padding: 0.75rem 0;
   border-top: 1px solid var(--line);
+}
+
+.log-meta {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.log-meta div {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem;
+  padding: 0.65rem 0.8rem;
+  background: rgba(246, 248, 247, 0.68);
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
 
 .log-layout {
@@ -315,7 +335,11 @@ p {
 .timeline-panel {
   position: sticky;
   top: 7.2rem;
+  max-block-size: calc(100svh - 8.4rem);
   padding: 1.25rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 .timeline-panel ol {
@@ -490,6 +514,9 @@ p {
   }
   .timeline-panel {
     position: static;
+    max-block-size: none;
+    overflow: visible;
+    scrollbar-gutter: auto;
   }
 }
 
@@ -524,7 +551,9 @@ p {
   }
   .hero-meta,
   .data-list div,
-  .storage-list div {
+  .storage-list div,
+  .log-meta,
+  .log-meta div {
     grid-template-columns: 1fr;
   }
   .log-card--key::before {
