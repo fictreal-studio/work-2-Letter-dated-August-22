@@ -400,6 +400,83 @@ h1 { font-size: clamp(3.2rem, 9vw, 7.2rem); }
   color: var(--ink-soft);
 }
 
+.paired-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(24rem, 0.95fr);
+  gap: 1rem;
+  align-items: stretch;
+  padding: clamp(1rem, 2.4vw, 1.4rem);
+  margin-top: 1rem;
+  background:
+    linear-gradient(90deg, rgba(215, 190, 138, 0.11), transparent 48%, rgba(158, 215, 210, 0.1)),
+    var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: 26px;
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.paired-dashboard__copy h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.paired-dashboard__copy p:not(.request-id) {
+  margin: 0.85rem 0 0;
+  color: var(--ink-soft);
+}
+
+.paired-dashboard__preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.paired-dashboard__preview article {
+  min-height: 100%;
+  padding: 1rem;
+  background: rgba(247, 242, 232, 0.055);
+}
+
+.paired-dashboard__preview article:first-child {
+  background: linear-gradient(180deg, rgba(215, 190, 138, 0.13), rgba(247, 242, 232, 0.055));
+}
+
+.paired-dashboard__preview article:last-child {
+  background: linear-gradient(180deg, rgba(158, 215, 210, 0.13), rgba(247, 242, 232, 0.055));
+}
+
+.paired-dashboard__preview span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.paired-dashboard__preview strong {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.paired-dashboard__preview p {
+  margin: 0.7rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.paired-dashboard .card-actions {
+  grid-column: 1 / -1;
+  padding-top: 0;
+}
+
 .internal-note {
   display: grid;
   gap: 0.35rem;
@@ -554,7 +631,8 @@ h1 { font-size: clamp(3.2rem, 9vw, 7.2rem); }
 @media (max-width: 980px) {
   .hero,
   .request-list,
-  .summary-grid {
+  .summary-grid,
+  .paired-dashboard {
     grid-template-columns: 1fr;
   }
 
@@ -583,6 +661,7 @@ h1 { font-size: clamp(3.2rem, 9vw, 7.2rem); }
 
   .access-panel,
   .request-meta,
+  .paired-dashboard__preview,
   .modal-actions { grid-template-columns: 1fr; }
 
   .request-card__header {

@@ -1,0 +1,36 @@
+const REQUIRED_PASSWORD = '20380821';
+const STORAGE_KEY = 'sharedObservationUnlocked';
+
+const lockPanel = document.querySelector('#record-lock');
+const content = document.querySelector('.shared-log');
+const form = document.querySelector('#record-lock-form');
+const input = document.querySelector('#record-password');
+const message = document.querySelector('#record-lock-message');
+
+const unlock = () => {
+  if (lockPanel) lockPanel.hidden = true;
+  if (content) content.hidden = false;
+};
+
+if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+  unlock();
+}
+
+if (form && input) {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (input.value.trim() === REQUIRED_PASSWORD) {
+      sessionStorage.setItem(STORAGE_KEY, 'true');
+      if (message) {
+        message.textContent = '認証しました。記録を表示します。';
+        message.classList.add('is-success');
+      }
+      unlock();
+      return;
+    }
+    if (message) {
+      message.textContent = '入力値が一致しません。関連記録の日付を確認してください。';
+      message.classList.remove('is-success');
+    }
+  });
+}

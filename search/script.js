@@ -64,7 +64,8 @@ const searchEntries = [
     restricted: true,
   },
   {
-    keywords: ['日記', '二人の日記', '大樹', '辰也', '鏡花', '東辰也', '仁士鏡花'],
+    keywords: ['二人の日記'],
+    exactQueries: ['二人の日記'],
     title: '二人の日記',
     url: '../diary/couple/',
     description: '辰也と鏡花が新しい生活の中で残した記録。大樹が生まれるまでの日々が記されている。',
@@ -144,9 +145,12 @@ const renderResults = (query) => {
     return;
   }
 
-  const matches = searchEntries.filter((entry) =>
-    entry.keywords.some((keyword) => normalize(keyword).includes(normalizedQuery) || normalizedQuery.includes(normalize(keyword))),
-  );
+  const matches = searchEntries.filter((entry) => {
+    if (entry.exactQueries) {
+      return entry.exactQueries.some((keyword) => normalize(keyword) === normalizedQuery);
+    }
+    return entry.keywords.some((keyword) => normalize(keyword).includes(normalizedQuery) || normalizedQuery.includes(normalize(keyword)));
+  });
 
   resultsList.replaceChildren();
 

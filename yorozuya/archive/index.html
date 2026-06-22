@@ -46,7 +46,7 @@
         </article>
         <article class="summary-card">
           <p>封緘中</p>
-          <strong>2</strong>
+          <strong>3</strong>
           <span>依頼人保護のため詳細が制限されている記録</span>
         </article>
         <article class="summary-card">
@@ -72,6 +72,32 @@
           <button type="button" data-filter="封緘中">封緘中</button>
           <button type="button" data-filter="引っ越し">引っ越し</button>
           <button type="button" data-filter="手紙">手紙</button>
+        </div>
+      </section>
+
+      <section class="paired-dashboard" aria-labelledby="paired-dashboard-title">
+        <div class="paired-dashboard__copy">
+          <p class="request-id">INTERNAL-SHARED</p>
+          <h2 id="paired-dashboard-title">東家仁士家内部観察記録</h2>
+          <p>
+            東家側と仁士家側に残された同日付の観察ログを、左列に東家、右列に仁士家として対照表示する共有記録。
+          </p>
+        </div>
+        <div class="paired-dashboard__preview" aria-label="左右対照プレビュー">
+          <article>
+            <span>LEFT</span>
+            <strong>東家</strong>
+            <p>東家側に保管された同日付の内部観察ログ。</p>
+          </article>
+          <article>
+            <span>RIGHT</span>
+            <strong>仁士家</strong>
+            <p>仁士家側に保管された同日付の内部観察ログ。</p>
+          </article>
+        </div>
+        <div class="card-actions">
+          <button type="button" data-open-record="sharedObservation">共有観察記録を開く</button>
+          <button type="button" data-open-record="firstLetters">手紙へ</button>
         </div>
       </section>
 
@@ -117,22 +143,7 @@
           <dl class="request-meta"><div><dt>受付日</dt><dd>2024/07/12</dd></div><div><dt>記録種別</dt><dd>非公開支援</dd></div></dl>
           <p class="request-summary">依頼者の身元と移転先を秘匿したまま実施された転居支援記録。関係者保護のため、一部情報は伏せられている。</p>
           <div class="card-actions">
-            <button type="button" data-open-record="movingReport">達成報告書へ進む</button>
-          </div>
-        </article>
-
-        <article class="request-card request-card--important" data-tags="記録確認済み 要達成書作成 手紙 手紙配送記録 初回配送 2038 0822 仁士家 東家 東大樹">
-          <header class="request-card__header">
-            <div>
-              <p class="request-id">YRZ-2038-0822-FIRST</p>
-              <h2>初回手紙の配送</h2>
-            </div>
-            <span class="status status--report">記録確認済み / 要達成書作成</span>
-          </header>
-          <dl class="request-meta"><div><dt>受付日</dt><dd>2038/08/22</dd></div><div><dt>記録種別</dt><dd>初回配送</dd></div></dl>
-          <p class="request-summary">仁士鏡花様の逝去当日、よろずやより三通の手紙が配送された記録。宛先は仁士家、東家、東大樹様。担当者は内容確認後、達成書を作成すること。</p>
-          <div class="card-actions">
-            <button type="button" data-open-record="firstLetters">記録を確認する</button>
+            <button type="button" data-open-record="movingReport">達成報告書を開く</button>
           </div>
         </article>
 
@@ -148,7 +159,7 @@
           <p class="request-summary">指定日に指定の宛先へ手紙を届ける長期配送記録。配送者情報および保管場所は非公開。</p>
           <div class="card-actions">
             <button type="button" data-open-record="letters">手紙記録を開く</button>
-            <button type="button" data-report-pending>達成書を作成する</button>
+            <button type="button" data-report-pending>達成書を作る</button>
           </div>
         </article>
       </section>

@@ -22,7 +22,22 @@
     <p>SHARED DIARY / VOLUME 02</p>
   </header>
 
-  <main id="main-content">
+  <section class="record-lock" id="record-lock" aria-labelledby="lock-title">
+    <p class="record-lock__kicker">INTERNAL RECORD AUTHENTICATION</p>
+    <h1 id="lock-title">二人の日記</h1>
+    <p>閲覧には、該当記録に紐づく8桁の日付を入力してください。</p>
+    <form id="record-lock-form" novalidate>
+      <label for="record-password">確認日付</label>
+      <div class="record-lock__field">
+        <input id="record-password" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="8桁の日付" required>
+        <button type="submit">記録を開く</button>
+      </div>
+      <p class="record-lock__hint">ヒント：二人で家を出た日。</p>
+      <p class="record-lock__message" id="record-lock-message" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <main id="main-content" hidden>
     <section class="hero" aria-labelledby="page-title">
       <div class="hero__copy">
         <p class="eyebrow">知られずの村・家族の記録</p>
@@ -124,23 +139,6 @@
       </article>
     </section>
 
-    <section class="unlock" aria-labelledby="unlock-title">
-      <div class="unlock__date" aria-hidden="true"><span>08</span><strong>22</strong><small>OUR FIRST DAY</small></div>
-      <div class="unlock__content">
-        <p class="eyebrow">NEXT RECORD</p>
-        <h2 id="unlock-title">次の記録を開く</h2>
-        <p>この先の記録は、鏡花が一人で残したものです。<br>解錠には、二人が親になった日付が必要です。</p>
-        <form id="diary-unlock-form" data-api-action="verify-password" novalidate>
-          <label for="diary-password">記録の日付</label>
-          <div class="unlock__field">
-            <input id="diary-password" name="datePassword" type="password" inputmode="numeric" autocomplete="off" maxlength="8" pattern="[0-9]{8}" placeholder="8桁の数字" aria-describedby="password-hint password-message" required>
-            <button type="submit">記録を開く <span aria-hidden="true">→</span></button>
-          </div>
-          <p id="password-hint" class="unlock__hint">ヒント：大樹が生まれた日</p>
-          <p id="password-message" class="unlock__message" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">

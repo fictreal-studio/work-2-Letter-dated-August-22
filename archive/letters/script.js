@@ -1,4 +1,4 @@
-const PASSWORD = '20380822';
+const PASSWORD = '20390822';
 
 const letters = [
   { year: 2039, age: 14, body: `大樹へ。
