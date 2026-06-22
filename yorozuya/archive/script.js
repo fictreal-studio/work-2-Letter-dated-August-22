@@ -1,13 +1,12 @@
 const RECORDS = {
 azuma: { url: '../../archive/log-azuma/index.html' },
 nishi: { url: '../../archive/log-nishi/index.html' },
-sharedObservation: { password: '20380821', url: '../../archive/azuma-nishi-observation/index.html', hint: 'ヒント：大樹様が一人で東を訪れた日。' },
-tatsuya: { password: '20010913', url: '../../diary/tatsuya/index.html', hint: 'ヒント：東家の内部情報に残された、辰也が生まれた日の記録を確認してください。' },
-kyokaEarly: { password: '20030527', url: '../../diary/kyoka-1/index.html', hint: 'ヒント：仁士家の内部情報に残された、鏡花が生まれた日の記録を確認してください。' },
+sharedObservation: { url: '../../archive/azuma-nishi-observation/index.html' },
+tatsuya: { url: '../../diary/tatsuya/index.html' },
+kyokaEarly: { url: '../../diary/kyoka-1/index.html' },
 movingReport: { password: '20240707', url: '../../archive/completion-report/index.html', hint: 'ヒント：よろずやに依頼があった日。' },
-kyokaLate: { password: '20250822', url: '../../diary/kyoka-2/index.html', hint: 'ヒント：二人にとって、家族が一人増えた日の記録を確認してください。' },
+kyokaLate: { url: '../../diary/kyoka-2/index.html' },
 letters: { url: '../../archive/letters/index.html' },
-firstLetters: { url: '../../archive/letters-2/index.html' },
 };
 
 const state = {

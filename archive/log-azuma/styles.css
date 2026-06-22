@@ -310,7 +310,10 @@ p {
 .timeline-panel {
   position: sticky;
   top: 7.2rem;
+  max-height: calc(100vh - 8.4rem);
   padding: 1.25rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border-radius: 22px;
 }
 
@@ -458,6 +461,8 @@ p {
   }
   .timeline-panel {
     position: static;
+    max-height: none;
+    overflow: visible;
   }
   .overview-grid {
     display: grid;
