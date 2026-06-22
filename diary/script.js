@@ -22,7 +22,7 @@ if (diaryRoot) {
 
       if (!isValid) {
         setProtectedVisibility(false);
-        if (authMessage) authMessage.textContent = '認証に失敗しました。入力内容を確認してください。';
+        if (authMessage) authMessage.textContent = 'パスワードが違います。';
         return;
       }
 
