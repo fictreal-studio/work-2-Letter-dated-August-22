@@ -40,7 +40,7 @@ authForm?.addEventListener('submit', (event) => {
   showResult('success', '認証しました。アーカイブへ接続します。');
   submitButton.disabled = true;
   window.setTimeout(() => {
-    window.location.href = '../archive/';
+    window.location.href = '../archive/index.html';
   }, 700);
 });
 
