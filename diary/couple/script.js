@@ -29,7 +29,7 @@ if (form && input) {
       return;
     }
     if (message) {
-      message.textContent = '入力値が一致しません。関連記録の日付を確認してください。';
+      message.textContent = 'パスワードが違います。';
       message.classList.remove('is-success');
     }
   });

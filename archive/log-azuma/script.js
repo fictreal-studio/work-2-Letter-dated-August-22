@@ -19,7 +19,7 @@ if (form) {
       openLog();
       return;
     }
-    if (message) message.textContent = '記録を開くことができません。数字をもう一度確認してください。';
+    if (message) message.textContent = 'パスワードが違います。';
   });
 }
 

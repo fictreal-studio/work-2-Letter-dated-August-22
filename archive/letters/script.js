@@ -949,7 +949,7 @@ form.addEventListener('submit', (event) => {
     openArchive();
     return;
   }
-  message.textContent = '記録を開くことができません。日付をもう一度確認してください。';
+  message.textContent = 'パスワードが違います。';
   message.classList.add('is-error');
 });
 

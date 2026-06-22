@@ -82,7 +82,7 @@ if (unlockForm) {
       return;
     }
 
-    showModalMessage('該当する記録を確認できません。関連資料をもう一度確認してください。');
+    showModalMessage('パスワードが違います。');
   });
 }
 

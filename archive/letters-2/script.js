@@ -32,7 +32,7 @@ unlockForm.addEventListener('submit', (event) => {
     return;
   }
 
-  unlockMessage.textContent = '記録を開くことができません。日付をもう一度確認してください。';
+  unlockMessage.textContent = 'パスワードが違います。';
   unlockMessage.classList.add('is-error');
 });
 
