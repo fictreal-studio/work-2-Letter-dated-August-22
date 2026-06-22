@@ -6,6 +6,7 @@
   <meta name="description" content="東辰也と仁士鏡花が知られずの村で残した、夫婦と家族の記録。">
   <title>二人の日記 | 知られずの村の記録</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -21,7 +22,22 @@
     <p>SHARED DIARY / VOLUME 02</p>
   </header>
 
-  <main id="main-content">
+  <section class="record-lock" id="record-lock" aria-labelledby="lock-title">
+    <p class="record-lock__kicker">INTERNAL RECORD AUTHENTICATION</p>
+    <h1 id="lock-title">二人の日記</h1>
+    <p>閲覧には、該当記録に紐づく8桁の日付を入力してください。</p>
+    <form id="record-lock-form" novalidate>
+      <label for="record-password">確認日付</label>
+      <div class="record-lock__field">
+        <input id="record-password" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="8桁の日付" required>
+        <button type="submit">記録を開く</button>
+      </div>
+      <p class="record-lock__hint">ヒント：二人で家を出た日。</p>
+      <p class="record-lock__message" id="record-lock-message" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <main id="main-content" hidden>
     <section class="hero" aria-labelledby="page-title">
       <div class="hero__copy">
         <p class="eyebrow">知られずの村の家族記録</p>
